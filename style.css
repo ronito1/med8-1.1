@@ -5734,7 +5734,7 @@ footer .f-item.link li:last-child {
 
 footer .f-item a {
   font-weight: 600;
-  color: #96aac1;
+  color: #000000;
 }
 
 footer .f-item a:hover {
@@ -5761,7 +5761,7 @@ footer .address h5 {
 }
 
 footer .address span {
-  color: #96aac1;
+  color: #ff0000;
 }
 
 footer .address span i {

@@ -417,55 +417,35 @@ h2[data-animation="animated slideInRight"] {
   transform: scale(0.9);
 }
 
-
+/* 
 /* From Uiverse.io by mobinkakei */ 
-.btn {
-  width: 140px;
-  height: 50px;
-  background: linear-gradient(to top, #ffffff99, #000000, #030000);
-  color: #fff;
-  border-radius: 100px;
-  border: none;
-  outline: none;
-  cursor: pointer;
-  position: relative;
-  box-shadow: 0 15px 30px rgb(251, 251, 251);
-  overflow: hidden;
-  margin-left: 200px;
-}
-
-.btn span {
-  font-size: 12px;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  transition: top 0.5s;
-}
-
 .btn-text-one {
-  position: absolute;
-  width: 100%;
-  top: 50%;
-  left: 0;
-  transform: translateY(-50%);
+  color: #fbff00;
+  font-weight: bolder;
+  margin-left: 200px;
+  font-size: 30px;
+}
+/* ... existing code ... */
+
+/* Media query for mobile devices */
+@media (max-width: 600px) {
+  .input-wrapper {
+    display: none; /* Hide input wrapper on mobile */
+  }
+
+  .Subscribe-btn {
+    display: none; /* Hide subscribe button on mobile */
+  }
+
+  .btn-text-one {
+    display: none; /* Hide button text on mobile */
+  }
+  .subscribe-section{
+    display: none;
+  }
 }
 
-.btn-text-two {
-  position: absolute;
-  color: #ffffff;
-  width: 100%;
-  top: 150%;
-  left: 0;
-  transform: translateY(-50%);
-}
-
-.btn:hover .btn-text-one {
-  top: -100%;
-}
-
-.btn:hover .btn-text-two {
-  top: 50%;
-}
-
+/* ... existing code ... */
     </style>
 </head>
 
@@ -1647,9 +1627,7 @@ h2[data-animation="animated slideInRight"] {
                 >Subscribe
               </button>
         </div>
-        <button class="btn">
-            <span class="btn-text-one">100K+</span>
-            <span class="btn-text-two">Clients</span>
+            <span class="btn-text-one">100K+ Clients</span>
         </button>   
      </div>
         </div>

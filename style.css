@@ -137,9 +137,11 @@ a img, iframe {
 
 p {
   color: #666666;
-  margin: 0 0 15px;
+  /* margin: 0 0 15px; */
   text-transform: none;
   font-weight: 400;
+    margin-top: 0;
+    margin-bottom: 1rem;
 }
 
 hr {

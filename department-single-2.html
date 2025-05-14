@@ -38,15 +38,123 @@
     <!-- ========== Google Fonts ========== -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;600;700;800&display=swap" rel="stylesheet">
 
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" />
+
+    <link rel='stylesheet' id='swiper-css' href='https://www.procuredental.co.in/wp-content/plugins/elementor/assets/lib/swiper/v8/css/swiper.min.css?ver=8.4.5' type='text/css' media='all' />
+    <link rel='stylesheet' id='e-swiper-css' href='https://www.procuredental.co.in/wp-content/plugins/elementor/assets/css/conditionals/e-swiper.min.css?ver=3.25.11' type='text/css' media='all' />
+
+    <style>
+        .entry-content img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .entry-content h2 {
+            color: #333; /* Adjust this color as needed */
+            font-size: 24px; /* Adjust the size as needed */
+        }
+
+        .entry-content h3 {
+            color: #555; /* Adjust this color as needed */
+            font-size: 20px; /* Adjust the size as needed */
+        }
+
+        .entry-content p {
+            line-height: 1.6;
+            color: #666; /* Adjust this color as needed */
+            font-size: 16px; /* Adjust the size as needed */
+        }
+
+        .p{
+            font-size: medium;
+        }
+
+        .swiper-container {
+            width: 100%; /* Make it responsive */
+            max-width: 600px; /* Set a max width */
+            margin: 0 auto; /* Center the container */
+            height: 100%; /* Allow height to adjust based on content */
+        }
+
+        .swiper-slide {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+            font-size: 16px; /* Adjust as needed */
+            color: #666; /* Adjust as needed */
+            height: auto; /* Allow height to adjust based on content */
+        }
+
+        .swiper-button-next, .swiper-button-prev {
+            color: #FFAB15; /* Adjust as needed */
+        }
+
+        .swiper-pagination-bullet {
+            background: #FFAB15; /* Adjust as needed */
+        }
+
+        .swiper-pagination {
+            bottom: 10px; /* Adjust position as needed */
+        }
+      
+        /* Custom style for h2 elements on this page */
+        .department-single h2 {
+            color: red; /* Change the color to red */
+            font-size: 40px;
+        }
+
+         /* Custom style for h2 elements on this page */
+         .department-single h3 {
+            color: rgb(0, 0, 0); 
+            font-size: 25px;
+        }
+
+        .video-container {
+            display: flex;
+            justify-content: left; /* Center the videos */
+            margin: 20px 0; /* Add some margin for spacing */
+            gap: 10px;
+        }
+    
+        .video01 {
+        flex: 0 1 40%; /* Allow the video to take up to 40% of the row */
+        max-width: 600px; /* Set a max width for each video */
+        }
+
+        .video01 iframe {
+        width: 360px; /* Makes the iframe responsive */
+        height: 210px; /* Set a fixed height for consistency */
+        }
+
+        .td-testimonial-one-author-name-designation .td-testimonial-one-author-name::before {
+            content: "\f10d"; /* Unicode for the quote icon */
+            font-family: "Font Awesome 5 Free"; /* Adjust based on your icon font */
+            font-weight: 900; /* Adjust based on your icon font */
+            margin-right: 5px; /* Space between icon and text */
+            color: #FFAB15; /* Change color as needed */
+        }
+
+    </style>
+
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
 </head>
 
-<body>
+<body class="department-single">
 
     <!-- Preloader Start -->
     <div class="se-pre-con"></div>
     <!-- Preloader Ends -->
 
-    <!-- Start Header Top 
+   <!-- Start Header Top 
     ============================================= -->
     <div class="top-bar-area inc-pad inc-border">
         <div class="container">
@@ -223,6 +331,7 @@
         <!-- End Navigation -->
 
     </header>
+
     <!-- Start Breadcrumb 
     ============================================= -->
     <div class="breadcrumb-area bg-gradient text-center">
@@ -232,11 +341,11 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 offset-lg-2">
-                    <h1>Department Single</h1>
+                    <h1>Dental Implants</h1>
                     <ul class="breadcrumb">
-                        <li><a href="#"><i class="fas fa-home"></i> Home</a></li>
-                        <li><a href="#">Department</a></li>
-                        <li class="active">Single</li>
+                        <li><a href="index.html"><i class="fas fa-home"></i> Procure Dental Care</a></li>
+                        <li><a href="#"> Bengaluru </a></li>
+                        <li class="active"> Dental Implants</li>
                     </ul>
                 </div>
             </div>
@@ -250,52 +359,120 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 info">
-                    <div class="thumb">
-                        <img src="assets/img/2440x1578.png" alt="Thumb">
-                        <div class="title">
-                            <h3>Dental Care and Surgery</h3>
-                            <span>Available Doctors: 57</span>
-                        </div>
-                    </div>
-                    <p>
-                        Savings her pleased are several started females met. Short her not among being any. Thing of judge fruit charm views do. Miles mr an forty along as he. She education get middleton day agreement performed preserved unwilling. Do however as pleased offence outward beloved by present. By outward neither he so covered amiable greater. Juvenile proposal betrayed he an informed weddings followed. Precaution day see imprudence sympathize principles. At full leaf give quit to in they up. 
-                    </p>
-                    <a class="btn btn-md btn-gradient" href="#"><i class="fas fa-file-pdf"></i> Download Docs</a>
-                    <h4>Services features</h4>
-                    <ul>
-                        <li>Stretchers and Stretcher Accessories</li>
-                        <li>International Drug Database</li>
-                        <li>Cushions and Mattresses</li>
-                        <li>Cholesterol and lipid tests</li>
-                        <li>Critical Care Medicine Specialists</li>
-                        <li>Emergency Assistance</li>
-                    </ul>
-                    <p>
-                        Cardiology is a branch of internal medicine. A cardiologist is not the same as a cardiac surgeon. A cardiac surgeon opens the chest and performs heart surgery. A cardiologist specializes in diagnosing and treating diseases of the cardiovascular system. The cardiologist will carry out tests, and they may some do procedures, such as heart catheterizations, angioplasty, or inserting a pacemaker. Heart disease relates specifically to the heart, while cardiovascular disease affects the heart, the blood vessels, or both. Early detection and early treatment are the keys in beating cardiovascular diseases- the number one cause of disability and death for both men and women accounting for one third of deaths. At Medify, our interdisciplinary team of heart specialists has developed a powerful program for identifying, treating and managing heart and vascular conditions for patients of all ages. We’ve built our stellar reputation upon the premise that minutes always count – whether it is improving your heart health, providing a diagnosis or urgent surgical intervention, our award winning team of renowned surgeons, physicians, researchers.
-                    </p>
-                </div>
-                <div class="col-lg-4 sidebar">
+                    <div class="entry-content">
+                        <section>
+                            <h2>Dental Implants</h2>
+                            <p>A dental implant is a titanium screw surgically placed into the jawbone to replace missing teeth. It serves as a strong foundation for artificial teeth, providing a natural look and function.</p>
+                            <img src="https://www.procuredental.co.in/wp-content/uploads/2024/08/dental-implants-1024x576.jpeg" alt="Dental Implants" class="img-fluid" />
 
-                    <!-- Single Widget -->
+<br>
+<br>
+
+                        <h3>Why choose dental implant over bridges?</h3>
+                            <p>Dental implants are typically more durable and preserve natural teeth compared to bridges. Implants fuse with the jawbone, providing a stable base for artificial teeth, while bridges rely on adjacent teeth for support, potentially compromising their structure.</p>
+
+                        <h3>Healing period</h3>
+                            <p>The healing period for a dental implant typically takes 3 to 6 months. This is the time it takes for the implant to fuse with the jawbone, a process called osseointegration.</p>
+                        </section>
+
+                        
+
+
+
+                        <br>
+                        <br>
+                        <section>
+                            <h2>Before and After Treatment</h2>
+                            <img src="https://www.procuredental.co.in/wp-content/uploads/2024/08/Creative-and-Minimal-Portfolio-Presentation.zip-17.jpg" alt="Before and After" />
+                        </section>
+                        <br>
+                        <br>
+                        
+                         <section>
+                            <h2>Our Videos</h2>
+                            <div class="video-container">
+                                <div class="video01">
+                                    <iframe src="https://www.youtube.com/embed/video_id_1" frameborder="0" allowfullscreen></iframe>
+                                </div>
+                                <div class="video01">
+                                    <iframe src="https://www.youtube.com/embed/video_id_2" frameborder="0" allowfullscreen></iframe>
+                                </div>
+                                <div class="video01">
+                                    <iframe src="https://www.youtube.com/embed/video_id_3" frameborder="0" allowfullscreen></iframe>
+                                </div>
+                            </div>
+                        </section>
+
+
+                        <br>
+                        <br>
+                        
+                            <h2>Our Testimonials</h2>
+                            <div class="td-testimonial-one-slider-wrapper">
+                                <div id="td-testimonial-5585" class="row td-testimonial-one-slider">
+                                    <div class="col-12">
+                                        <div class="td-testimonial-one-item">
+                                            <div class="td-testimonial-one-author-image td-cover-bg" style="background-image: url();"></div>
+                                            <div class="td-testimonial-one-top-image">
+                                                <img decoding="async" src="" alt="" title="Dental Implants">
+                                            </div>
+                                            <div class="td-testimonial-one-desc">
+                                                <p>Have been to procure dental Bellandur the last few months. I thought changing my dentist would be a bit tough. But Dr. Reyshma made the transition so easy. Had a wonderful experience throughout my <strong><b>dental implantation</b></strong> which I was very stressed about. Thank you so much Dr. Reyshma.</p>
+                                            </div>
+                                            <div class="td-testimonial-one-author-name-designation">
+                                                <div class="td-testimonial-quote td-primary-color">
+                                                    <i class="flaticon-quotation"></i>
+                                                </div>
+                                                <h4 class="td-testimonial-one-author-name">Sunitha Aravindhan</h4>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Repeat for other testimonials -->
+                                    <div class="col-12">
+                                        <div class="td-testimonial-one-item">
+                                            <div class="td-testimonial-one-author-image td-cover-bg" style="background-image: url();"></div>
+                                            <div class="td-testimonial-one-top-image">
+                                                <img decoding="async" src="" alt="" title="Dental Implants">
+                                            </div>
+                                            <div class="td-testimonial-one-desc">
+                                                <p>Came for <strong><b>implants</b></strong> for my Father to procure dental Bellandur and consulted Dr. Rayshma. Extremely good experience. Very considerate and good doctor. Highly recommended.</p>
+                                            </div>
+                                            <div class="td-testimonial-one-author-name-designation">
+                                                <div class="td-testimonial-quote td-primary-color">
+                                                    <i class="flaticon-quotation"></i>
+                                                </div>
+                                                <h4 class="td-testimonial-one-author-name">Monicka Tewari</h4>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                       
+                    </div>
+                </div>
+
+                <div class="col-lg-4 sidebar">
                     <div class="widget link">
                         <div class="title">
                             <h4>Our Departments</h4>
                         </div>
                         <ul>
                             <li>
-                                <a href="#"><i class="fas fa-angle-right"></i> Medecine and Health</a>
+                                <a href="#">Dental Implants</a>
                             </li>
                             <li class="active">
                                 <a href="#"><i class="fas fa-angle-right"></i> Dental Care and Surgery</a>
                             </li>
                             <li>
-                                <a href="#"><i class="fas fa-angle-right"></i> Eye Treatment</a>
+                                <a href="#"><i class="fas fa-angle-right"></i> Root canal</a>
                             </li>
                             <li>
-                                <a href="#"><i class="fas fa-angle-right"></i> Children Chare</a>
+                                <a href="#"><i class="fas fa-angle-right"></i> Surgery</a>
                             </li>
                             <li>
-                                <a href="#"><i class="fas fa-angle-right"></i> Nuclear magnetic</a>
+                                <a href="#"><i class="fas fa-angle-right"></i> Cosmic surgery</a>
                             </li>
                         </ul>
                     </div>
@@ -349,23 +526,11 @@
                     </div>
                     <!-- End Single Widget -->
 
-                    <!-- Single Widget -->
-                    <div class="widget doctor">
-                        <div class="title">
-                            <h4>Expert Doctor</h4>
-                        </div>
-                        <div class="thumb">
-                            <img src="assets/img/800x800.png" alt="Thumb">
-                            <div class="overlay">
-                                <h4>Jessica Jones</h4>
-                                <h5>Cargiologist</h5>
-                            </div>
-                        </div>
-                    </div>
+                  
                     <!-- End Single Widget -->
 
                     <!-- Single Widget -->
-                    <div class="widget opening-hours">
+                    <!-- <div class="widget opening-hours">
                         <div class="title">
                             <h4>Opening Hours</h4>
                         </div>
@@ -380,7 +545,7 @@
                               <div class="float-right closed"> Closed </div>
                             </li>
                         </ul>
-                    </div>
+                    </div> -->
                     <!-- End Single Widget -->
                 </div>
                 <!-- End Widget Items -->
@@ -507,6 +672,80 @@
     <script src="assets/js/jquery.nice-select.min.js"></script>
     <script src="assets/js/bootsnav.js"></script>
     <script src="assets/js/main.js"></script>
+
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            slidesPerView: 1,
+            spaceBetween: 10,
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            loop: true,
+        });
+    </script>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- Include jQuery Easing if needed -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+
+    <!-- Slick Slider CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" />
+
+    <!-- Slick Slider JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Slick Slider Initialization -->
+    <script>
+        $(document).ready(function () {
+            $("#td-testimonial-5585").slick({
+                slidesToShow: 1, // Show one slide at a time
+                autoplay: true,
+                autoplaySpeed: 4000, // Interval
+                speed: 1500, // Slide speed
+                dots: false,
+                arrows: true,
+                prevArrow: '<i class="slick-arrow slick-prev flaticon-long-left-arrow"></i>',
+                nextArrow: '<i class="slick-arrow slick-next flaticon-long-right-arrow"></i>',
+                infinite: true,
+                pauseOnHover: false,
+                centerMode: false,
+                responsive: [
+                    {
+                        breakpoint: 1025,
+                        settings: {
+                            slidesToShow: 1, // 992-1024
+                            arrows: false,
+                        }
+                    },
+                    {
+                        breakpoint: 992,
+                        settings: {
+                            slidesToShow: 1, // 768-991
+                            arrows: false,
+                        }
+                    },
+                    {
+                        breakpoint: 768,
+                        settings: {
+                            slidesToShow: 1, // 0-767
+                            arrows: false,
+                        }
+                    }
+                ]
+            });
+        });
+    </script>
 
 </body>
 </html>

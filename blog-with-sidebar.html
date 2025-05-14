@@ -39,6 +39,29 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;600;700;800&display=swap" rel="stylesheet">
 
 </head>
+<style>
+    
+    
+    @media (max-width: 768px) {
+      .mobile-button {
+          padding: 4px 12px; /* Adjust padding for less height */
+          font-size: 14px; /* Adjust font size */
+      }
+    }
+    
+    @media (max-width: 768px) {
+      .navbar-header {
+          display: flex;
+          align-items: center; /* Center items vertically */
+          justify-content: space-between; /* Space between logo and button */
+      }
+    
+      .navbar-header .logo {
+          max-height: 40px; /* Ensure the logo fits */
+          margin-right: 200px; /* Add space between logo and button */
+      }
+    }
+</style>
 
 <body>
 
@@ -102,7 +125,7 @@
                 <div class="attr-nav extra-color">
                     <div class="themedraft-button-wrapper td-button-el-widget" style="display: flex; align-items: center;">
                         <!-- From Uiverse.io by mobinkakei --> 
-                        <button class="cta" onclick="window.location.href='contact.html';">
+                        <button class="cta mobile-button" onclick="window.location.href='contact.html';">
                             <span class="span"> Contact Now!</span>
                             <span class="second">
                                 <svg
@@ -673,7 +696,7 @@
         <div class="container">
             <div class="row align-center">
                 <div class="col-lg-6">
-                    <p>100k+ Satisfied Clients</p>
+                    <p>Copyright @ ProcureDental</p>
                 </div>
                 <div class="col-lg-6 text-right social">
                     <ul>

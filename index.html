@@ -205,7 +205,7 @@ footer .social ul li a {
 /* From Uiverse.io by mobinkakei */ 
 .cta {
   display: flex;
-  padding: 11px 33px;
+  padding: 10px 30px;  /* Increased horizontal padding for more oval shape */
   text-decoration: none;
   font-size: 25px;
   color: white;
@@ -213,10 +213,11 @@ footer .social ul li a {
   transition: 1s;
   box-shadow: 6px 6px 0 black;
   transform: skewX(-15deg);
-  border: none;
+  border: 1px solid transparent;
   cursor: pointer;
   margin-top: 16px;
   margin-left: 5px;
+  border-radius: 50px;  /* Added border-radius for oval shape */
 }
 
 @media (max-width: 768px) {
@@ -236,7 +237,8 @@ footer .social ul li a {
 
 .cta:hover {
   transition: 0.5s;
-  box-shadow: 10px 10px 0 #fbc638;
+  /* Removed box-shadow to prevent lines on hover */
+  transform: none; /* Removed transform on hover */
 }
 
 .cta .second {
@@ -446,6 +448,47 @@ h2[data-animation="animated slideInRight"] {
 }
 
 /* ... existing code ... */
+
+/* WhatsApp Float Button */
+.whatsapp-float {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #25d366;
+    color: #FFF;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 2px 2px 3px #999;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.whatsapp-float:hover {
+    background-color: #128C7E;
+    color: #FFF;
+    transform: scale(1.1);
+}
+
+.whatsapp-float i {
+    margin-top: 0;
+}
+
+@media screen and (max-width: 767px) {
+    .whatsapp-float {
+        width: 50px;
+        height: 50px;
+        font-size: 25px;
+        bottom: 20px;
+        right: 20px;
+    }
+}
     </style>
 </head>
 
@@ -637,12 +680,12 @@ h2[data-animation="animated slideInRight"] {
    <!-- Start Banner 
     ============================================= -->
     <div class="banner-area inc-shape content-less">
-        <div id="bootcarousel" class="carousel text-light text-large slide carousel-fade animate_text" data-ride="carousel">
+        <div id="bootcarousel" class="carousel text-light text-large slide carousel-fade animate_text" data-ride="carousel" data-interval="5000">
 
             <!-- Wrapper for slides -->
             <div class="carousel-inner carousel-zoom">
                 <div class="carousel-item active">
-                    <div class="slider-thumb bg-cover" style="background-image: url(assets/img/2440x1578.png);"></div>
+                    <div class="slider-thumb bg-cover" style="background-image: url(assets/img/a.jpg);"></div>
                     <div class="box-table">
                         <div class="box-cell shadow dark">
                             <div class="container">
@@ -660,7 +703,7 @@ h2[data-animation="animated slideInRight"] {
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <div class="slider-thumb bg-cover" style="background-image: url(assets/img/2440x1578.png);"></div>
+                    <div class="slider-thumb bg-cover" style="background-image: url(assets/img/b.jpg);"></div>
                     <div class="box-table">
                         <div class="box-cell shadow dark">
                             <div class="container">
@@ -1746,6 +1789,11 @@ h2[data-animation="animated slideInRight"] {
     <script src="assets/js/jquery.nice-select.min.js"></script>
     <script src="assets/js/bootsnav.js"></script>
     <script src="assets/js/main.js"></script>
+
+    <!-- WhatsApp Button -->
+    <a href="https://wa.me/919731568006" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
 
 </body>
 </html>

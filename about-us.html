@@ -59,6 +59,47 @@
           }
         }
         
+        /* WhatsApp Float Button */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background-color: #25d366;
+            color: #FFF;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            text-align: center;
+            font-size: 30px;
+            box-shadow: 2px 2px 3px #999;
+            z-index: 100;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .whatsapp-float:hover {
+            background-color: #128C7E;
+            color: #FFF;
+            transform: scale(1.1);
+        }
+
+        .whatsapp-float i {
+            margin-top: 0;
+        }
+
+        @media screen and (max-width: 767px) {
+            .whatsapp-float {
+                width: 50px;
+                height: 50px;
+                font-size: 25px;
+                bottom: 20px;
+                right: 20px;
+            }
+        }
+        
         </style>
 </head>
 
@@ -284,7 +325,7 @@
                         <li>
                             <h5>More Experience</h5>
                             <p>
-                                Be confident in the treatment plan and your doctor’s abilities. 
+                                Be confident in the treatment plan and your doctor's abilities. 
                             </p>
                         </li>
                         <li>
@@ -296,13 +337,13 @@
                         <li>
                             <h5>Seamless care</h5>
                             <p>
-                                We’re committed to delivering  compassionate healthcare.
+                                We're committed to delivering  compassionate healthcare.
                             </p>
                         </li>
                         <li>
                             <h5>Unparalleled expertise</h5>
                             <p>
-                                Don’t doubt that you are getting the expert care that you deserve. 
+                                Don't doubt that you are getting the expert care that you deserve. 
                             </p>
                         </li>
                     </ul>
@@ -725,6 +766,11 @@
     <script src="assets/js/jquery.nice-select.min.js"></script>
     <script src="assets/js/bootsnav.js"></script>
     <script src="assets/js/main.js"></script>
+
+    <!-- WhatsApp Button -->
+    <a href="https://wa.me/919731568006" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
 
 </body>
 </html>

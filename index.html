@@ -99,48 +99,6 @@ footer {
     margin-right: 200px; /* Reduced space between logo and subscribe text */
 }
 
-.subscribe-text {
-    color: #ffffff; /* Bright color for the subscribe text */
-    font-family: 'Inter', sans-serif; /* Modern font */
-    margin-right: 20px;
-    font-weight: bold; /* Make the text bold */
-    font-size: 18px;
-
-
-}
-
-.subscribe-section input[type="email"] {
-    padding: 8px; /* Padding for the input field */
-    width: 350px; /* Adjusted width of the input field */
-    border: 2px solid #ccc; /* Added border for better visibility */
-    border-radius: 5px 0 0 5px; /* Rounded corners on the left */
-
-}
-
-.subscribe-section .send-icon {
-    display: inline-block; /* Make it inline with the input */
-    color: #000000; /* Color for the send icon */
-    font-size: 20px; /* Adjusted size of the icon */
-    cursor: pointer; /* Pointer cursor on hover */
-    transition: color 0.3s; /* Smooth transition */
-    background-color: #ffcc00; /* Background color for the icon */
-    border: 2px solid #ccc; /* Match border with input */
-    border-radius: 0 5px 5px 0; /* Rounded corners on the right */
-    padding: 9px; /* Padding for the icon */
-}
-
-.subscribe-section .send-icon:hover {
-    color: #ffffff; /* Darker shade on hover */
-}
-
-.client-count {
-    color: #ffcc00; /* Color for the client count */
-    margin-left: 200px; /* Space between send icon and client count */
-    font-family: 'Inter', sans-serif; /* Modern font */
-    font-weight: bold; /* Make the text bold */
-    font-size: 18px;
-
-}
 
 /* Other footer styles remain the same */
 footer .f-item {
@@ -148,13 +106,13 @@ footer .f-item {
 }
 
 footer .f-item h4 {
-    color: #ff0000; /* White text for headings */
+    color: #ffffff; /* White text for headings */
     margin-bottom: 15px;
 }
 
 footer .f-item p,
 footer .f-item ul li {
-    color: #000000; /* Light gray text for paragraphs and list items */
+    color: #ffffff; /* Light gray text for paragraphs and list items */
 }
 
 footer .social ul {
@@ -168,7 +126,7 @@ footer .social ul li {
 }
 
 footer .social ul li a {
-    color: #000000; /* White color for social icons */
+    color: #ffffff; /* White color for social icons */
     font-size: 18px; /* Size of social icons */
 }
 
@@ -341,8 +299,9 @@ h2[data-animation="animated slideInRight"] {
 .icon {
   width: 30px;
   fill: rgb(255, 255, 255);
-  margin-left: 8px;
-  transition: all 0.3s;
+  margin-right: 25px; /* Increase this value for more space */
+  display: flex; /* Use flexbox for alignment */
+  align-items: center; /* Center the icon vertically */
 }
 .input {
   max-width: 170px;
@@ -489,6 +448,120 @@ h2[data-animation="animated slideInRight"] {
         right: 20px;
     }
 }
+
+.fun-factor-area {
+    background: transparent !important; /* Force background to be transparent */
+}
+
+@keyframes fadeInScale {
+    0% {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.animated-icon {
+    animation: fadeInScale 0.5s ease forwards;
+}
+
+/* Add specific delays for each icon */
+.animated-icon:nth-child(1) {
+    animation-delay: 0s; /* No delay for the first icon */
+}
+
+.animated-icon:nth-child(2) {
+    animation-delay: 0.2s; /* 200ms delay for the second icon */
+}
+
+.animated-icon:nth-child(3) {
+    animation-delay: 0.4s; /* 400ms delay for the third icon */
+}
+
+/* Add this to your CSS file */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate {
+    animation: fadeInUp 0.5s ease forwards;
+}
+
+/* Add this to your CSS file */
+@keyframes flickerFadeIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.1);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.flicker-fade-in {
+    animation: flickerFadeIn 0.5s ease forwards;
+}
+
+.process h2 {
+    margin-bottom: 10px; /* Adjust this value to reduce space */
+}
+
+.fun-factor-area {
+    padding-top: 10px; /* Adjust this value to reduce space */
+}
+
+.time-input {
+    width: 200px; /* Adjust the width as needed */
+    padding: 5px; /* Optional: adjust padding */
+}
+
+@media (max-width: 768px) {
+        .fun-fact-items .item {
+            margin-left: 30px; /* Adjust margin for mobile */
+            text-align: center; /* Center text on mobile */
+        }
+        .fun-fact-items .row {
+            flex-direction: column; /* Stack items vertically */
+        }
+        .fun-factor-area {
+            display: none; /* Hide fun factor area on mobile */
+        }
+    }
+
+    @media (max-width: 768px) {
+        .department-items .item {
+            width: 100%;
+            display: block;
+        }
+    }
+
+    @media (max-width: 768px) { /* Adjust the max-width as needed */
+        .hide-on-mobile {
+            display: none;
+        }
+    }
+
+    @media (min-width: 769px) { /* Adjust the min-width as needed */
+        .hide-on-pc {
+            display: none;
+        }
+    }
+
     </style>
 </head>
 
@@ -744,97 +817,113 @@ h2[data-animation="animated slideInRight"] {
         <div class="container">
             <div class="row align-center">
                 <div class="col-lg-7 process">
-                    <h2>
+                    <h2 style="font-family: 'Inter', sans-serif; font-weight: 600; color: #333; margin-bottom: 10px;"> <!-- Reduced margin -->
                         How to get a <br> consultation from us?
                     </h2>
-                    <p>
+                    <p style="font-family: 'Inter', sans-serif; font-weight: 400; color: #666; margin-bottom: 0;"> <!-- Adjusted margin -->
                         Badies she basket season age her uneasy saw. Discourse unwilling am no described dejection incommode no listening of. Before nature his parish boy.
-                    </p>
-                    <div class="row">
-                        <div class="col-lg-4 col-md-4 single-item">
-                            <div class="item">
-                                <i class="flaticon-calendar-1"></i>
-                                <h5>Make Appointment</h5>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-4 single-item">
-                            <div class="item">
-                                <i class="flaticon-doctor"></i> 
-                                <h5>Select A Doctor</h5>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-4 single-item">
-                            <div class="item">
-                                <i class="flaticon-heartbeat-1"></i>
-                                <h5>Confirm Consultation</h5>
+                        Badies she basket season age her uneasy saw. Discourse unwilling am no described dejection incommode no listening of. Before nature his parish boy.</p>
+                    <!-- Start Fun Factor Area -->
+                    <div class="fun-factor-area half-bg-light-bottom default-padding-bottom" style="background: transparent; max-width: 800px; margin: 0 auto; margin-left: -50px;"> <!-- Adjusted padding -->
+                        <div class="container">
+                            <div class="fun-fact-items bg-text-light text-center">
+                                <div class="row">
+                                    <div class="col-lg-4 col-md-4 item" style="margin-bottom: 100px;"> <!-- Increased margin-bottom -->
+                                        <div class="fun-fact">
+                                            <i class="flaticon-calendar-1" style="font-size: 3.5em; margin-bottom: 10px; font-weight: bold;"></i>
+                                            <div>
+                                                <div class="timer" data-to="110" data-speed="2000" style="font-size: 2em; margin-left: 2px; margin-top:2px;"></div>
+                                                <span class="medium" style="font-size: 1.1em;">Satisfied Patients</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-md-4 item" style="margin-bottom: 100px;"> <!-- Increased margin-bottom -->
+                                        <div class="fun-fact">
+                                            <i class="flaticon-doctor" style="font-size: 3.5em; margin-bottom: 10px; font-weight: bold;"></i>
+                                            <div>
+                                                <div class="timer" data-to="89" data-speed="2000" style="font-size: 2em; margin-left: 2px; margin-top:2px;"></div>
+                                                <span class="medium" style="font-size: 1.1em;">Regular Doctors</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-md-4 item" style="margin-bottom: 100px;"> <!-- Increased margin-bottom -->
+                                        <div class="fun-fact">
+                                            <i class="flaticon-heartbeat-1" style="font-size: 3.5em; margin-bottom: 10px; font-weight: bold;"></i>
+                                            <div>
+                                                <div class="timer" data-to="100" data-speed="2000" style="font-size: 2em; margin-right: 1.5px; margin-top:2px;"></div>
+                                                <span class="medium" style="font-size: 1.1em;">Departments</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
+                    </div>
+                    <!-- End Fun Factor Area -->
+            
                 <div class="col-lg-5 form">
-                    <div class="appoinment-box text-center wow fadeInRight">
+                    <div class="appoinment-box text-center wow fadeInRight" style="margin-top: -250px;"> <!-- Adjusted margin-top -->
                         <div class="heading">
                             <h4>Make an Appointment</h4>
                         </div>
-                        <form action="#">
+                        <form action="#" onsubmit="return sendEmail();">
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="form-group">
-                                        <input class="form-control" id="f_name" name="name" placeholder="Name" type="text">
+                                        <input class="form-control" id="f_name" name="name" placeholder="Name" type="text" required>
                                     </div>
                                 </div>
                                 <div class="col-md-12">
                                     <div class="form-group">
-                                        <input class="form-control" id="f_phone" name="phone" placeholder="Phone" type="text">
+                                        <input class="form-control" id="f_phone" name="phone" placeholder="Phone" type="text" required>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <select>
-                                            <option value="1">Male</option>
-                                            <option value="2">Female</option>
-                                            <option value="3">Child</option>
+                                        <select id="f_gender" required>
+                                            <option value="">Select Gender</option>
+                                            <option value="Male">Male</option>
+                                            <option value="Female">Female</option>
+                                            <option value="Child">Child</option>
                                         </select>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <select>
-                                            <option value="1">Department</option>
-                                            <option value="2">Medecine</option>
-                                            <option value="4">Dental Care</option>
-                                            <option value="5">Traumatology</option>
+                                        <select id="f_department" required>
+                                            <option value="">Select Department</option>
+                                            <option value="Medicine">Medicine</option>
+                                            <option value="Dental Care">Dental Care</option>
+                                            <option value="Traumatology">Traumatology</option>
                                         </select>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <input class="form-control" id="f_date" name="date" placeholder="Date" type="text">
+                                        <input class="form-control" id="f_date" name="date" placeholder="Date" type="date" required>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <input class="form-control" id="f_time" name="time" placeholder="Time" type="text">
+                                        <input type="time" id="f_time" name="time" required class="form-control time-input" />
                                     </div>
                                 </div>
                                 <div class="col-md-12">
                                     <button type="submit" name="submit" id="f_submit">
-                                        Book Appoinment
+                                        Book Appointment
                                     </button>
                                 </div>
                             </div>
                         </form>
                     </div>
+                    </div>
                 </div>
+                </div>
+
             </div>
-        </div>
-    </div>
+        
     <!-- End Consultation -->
-
-
-
-
-
 
 
 
@@ -849,8 +938,8 @@ h2[data-animation="animated slideInRight"] {
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 offset-lg-2">
+                    <h4></h4>
                     <div class="site-heading text-center">
-                        <h4>Branches</h4>
                         <h2>Our Branches</h2>
                         <p>
                             While mirth large of on front. Ye he greater related adapted proceed entered an. Through it examine express promise no. Past add size game cold girl off how old
@@ -862,7 +951,7 @@ h2[data-animation="animated slideInRight"] {
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <div class="department-items department-carousel owl-carousel owl-theme">
+                    <div class="department-items department-carousel owl-carousel owl-theme" data-dots="false"> <!-- Disable dots -->
                         <!-- Single Item -->
                         <div class="item">
                             <div class="thumb">
@@ -906,27 +995,6 @@ h2[data-animation="animated slideInRight"] {
                         </div>
                         <!-- End Single Item -->
                         <!-- Single Item -->
-                        <!-- <div class="item">
-                            <div class="thumb">
-                                <img src="assets/img/3.png" alt="Thumb">
-                            </div>
-                            <div class="info">
-                                <h4><a href="#">Primary Care</a></h4>
-                                <p>
-                                    Sudden up my excuse to suffer ladies though or. Bachelor possible marianne one directly confined the mention process.  
-                                </p>
-                               <div class="head-of">
-                                    <p>
-                                        <strong>Department head: </strong> Prof. Shikla Brotha
-                                    </p>
-                               </div>
-                                <div class="bottom">
-                                    <a href="#"><i class="fas fa-arrow-right"></i></a>
-                                </div>
-                            </div>
-                        </div> -->
-                        <!-- End Single Item -->
-                        <!-- Single Item -->
                         <div class="item">
                             <div class="thumb">
                                 <img src="assets/img/800x600.png" alt="Thumb">
@@ -951,11 +1019,6 @@ h2[data-animation="animated slideInRight"] {
                 </div>
             </div>
         </div>
-        <!-- Shape -->
-        <div class="shape-bottom shape">
-            <img src="assets/img/shape/8.png" alt="Shape">
-        </div>
-        <!-- End Shape -->
     </div>
     <!-- End Services -->
 
@@ -1074,66 +1137,63 @@ h2[data-animation="animated slideInRight"] {
     <!-- Start About
     ============================================= -->
     <div class="about-area default-padding bg-gray relative">
+        <div class="container">
+            <div class="row">
+                <!-- Move the info section to the left -->
+                <div class="col-lg-6 info">
+                    <h5>Has been working since 2000</h5>
+                    <h2>A Great Place to Work. A Great Place to <strong>Receive Care</strong>. Leading Medicine.</h2>
+                    <p>
+                        Pursuit chamber as elderly amongst on. Distant however warrant farther to of. My justice wishing prudent waiting in be. Who decisively attachment has dispatched. Fruit defer in party me built under first. Forbade him but savings sending ham general.
+                    </p>
+                    <ul>
+                        <li>
+                            <div class="icon">
+                                <i class="flaticon-calendar"></i>
+                            </div>
+                            <div class="content">
+                                <h5><a href="#">Online Appoinment</a></h5>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="icon">
+                                <i class="flaticon-drugs"></i>
+                            </div>
+                            <div class="content">
+                                <h5><a href="#">Health Queries</a></h5>
+                            </div>
+                        </li>
+                    </ul>
+                    <a class="btn btn-md btn-gradient" href="#"><i class="fas fa-angle-right"></i> Make Appoinment</a>
+                </div>
+                
+                
+                
 
-        <!-- Shape -->
-       <div class="shape-left-top shape">
-           <img src="assets/img/shape/1.png" alt="Shape">
-       </div>
-       <!-- End Shape -->
-
-       <div class="container">
-           <div class="row">
-
-               <div class="col-lg-6 thumb">
-                   <div class="thumb-box">
-                       <img src="assets/img/800x800.png" alt="Thumb">
-                       <div class="intro-video">
-                           <div class="video">
-                               <a href="https://www.youtube.com/watch?v=5vY-D42NFP4" class="popup-youtube relative theme video-play-button item-center">
-                                   <i class="fa fa-play"></i>
-                               </a>
-                           </div>
-                           <div class="content">
-                               <h5>Let's see our intro video</h5>
-                               <p>
-                                   If your smile is not becoming to you, then you should be coming.
-                               </p>
-                           </div>
-                       </div>
-                   </div>
-               </div>
-
-               <div class="col-lg-6 info">
-                   <h5>Has been working since 2000</h5>
-                   <h2>A Great Place to Work. A Great Place to <strong>Receive Care</strong>. Leading Medicine.</h2>
-                   <p>
-                       Pursuit chamber as elderly amongst on. Distant however warrant farther to of. My justice wishing prudent waiting in be. Who decisively attachment has dispatched. Fruit defer in party me built under first. Forbade him but savings sending ham general.
-                   </p>
-                   <ul>
-                       <li>
-                           <div class="icon">
-                               <i class="flaticon-calendar"></i>
-                           </div>
-                           <div class="content">
-                               <h5><a href="#">Online Appoinment</a></h5>
-                           </div>
-                       </li>
-                       <li>
-                           <div class="icon">
-                               <i class="flaticon-drugs"></i>
-                           </div>
-                           <div class="content">
-                               <h5><a href="#">Health Queries</a></h5>
-                           </div>
-                       </li>
-                   </ul>
-                   <a class="btn btn-md btn-gradient" href="#"><i class="fas fa-angle-right"></i> Make Appoinment</a>
-               </div>
-
-           </div>
-       </div>
-   </div>
-   <!-- End About -->
+                <!-- Move the image and intro video to the right -->
+                <div class="col-lg-6 thumb" style="margin-top: 10px;"> <!-- Added margin-top -->
+                    <div class="thumb-box">
+                        <img src="assets/img/800x800.png" alt="Thumb">
+                        <div class="intro-video">
+                            <div class="content">
+                                <h5>Let's see our intro video</h5> <!-- Moved title above the video icon -->
+                                <p>
+                                    If your smile is not becoming to you, then you should be coming.
+                                
+                            </div>
+                        </p>
+                            <div class="video">
+                                <a href="https://www.youtube.com/watch?v=5vY-D42NFP4" class="popup-youtube relative theme video-play-button item-center">
+                                    <i class="fa fa-play"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End About -->
 
 
 
@@ -1164,30 +1224,89 @@ h2[data-animation="animated slideInRight"] {
                                 <a href="" data-target="#tab1" data-toggle="tab" class="active nav-link">
                                     <i class="flaticon-cardiologist"></i>
                                     <span>Cardiologists</span>
-                                </a>
-                            </li>
+                                    </a>
+                                
+                                    <div class="row hide-on-pc">
+                                        <div class="col-lg-6 thumb">
+                                            <img src="assets/img/800x800.png" alt="Thumb">
+                                        </div>
+                                        <div class="col-lg-6 info-box">
+                                            <div class="info">
+                                                <h4>Dr. Aron</h4>
+                                                <span>MBBS, BMBS, MBChB, MBBCh</span>
+                                                <p>
+                                                    Delightful unreserved impossible few estimating men favourable see entreaties. She propriety immediate was improving. He or entrance humoured likewise moderate. 
+                                                </p>
+                                                <a class="btn btn-sm btn-gradient cirlce" href="#"><i class="fas fa-angle-right"></i> Read More</a>
+                                            </div>
+                            
+                                        </li>
+                            
                             <li class="nav-item">
                                 <a href="" data-target="#tab2" data-toggle="tab" class="nav-link">
                                     <i class="flaticon-dermatologist"></i>
                                     <span>Dermatologists</span>
                                 </a>
+                             
+                                <div class="row hide-on-pc">
+                                    <div class="col-lg-6 thumb">
+                                        <img src="assets/img/800x800.png" alt="Thumb">
+                                    </div>
+                                    <div class="col-lg-6 info-box">
+                                        <div class="info">
+                                            <h4>Dr. Barry</h4>
+                                            <span>MBBS, BMBS, MBChB, MBBCh</span>
+                                            <p>
+                                                Delightful unreserved impossible few estimating men favourable see entreaties. She propriety immediate was improving. He or entrance humoured likewise moderate. 
+                                            </p>
+                                            <a class="btn btn-sm btn-gradient cirlce" href="#"><i class="fas fa-angle-right"></i> Read More</a>
+                                        </div>
+
                             </li>
                             <li class="nav-item">
                                 <a href="" data-target="#tab3" data-toggle="tab" class="nav-link">
                                     <i class="flaticon-paramedic"></i>
                                     <span>Medicine Specialists</span>
                                 </a>
+                                <div class="row hide-on-pc">
+                                    <div class="col-lg-6 thumb">
+                                        <img src="assets/img/800x800.png" alt="Thumb">
+                                    </div>
+                                    <div class="col-lg-6 info-box">
+                                        <div class="info">
+                                            <h4>Dr. Com</h4>
+                                            <span>MBBS, BMBS, MBChB, MBBCh</span>
+                                            <p>
+                                                Delightful unreserved impossible few estimating men favourable see entreaties. She propriety immediate was improving. He or entrance humoured likewise moderate. 
+                                            </p>
+                                            <a class="btn btn-sm btn-gradient cirlce" href="#"><i class="fas fa-angle-right"></i> Read More</a>
+                                        </div>
+
                             </li>
                             <li class="nav-item">
                                 <a href="" data-target="#tab4" data-toggle="tab" class="nav-link">
                                     <i class="flaticon-therapist"></i>
                                     <span>Family Physicians</span>
                                 </a>
+                                <div class="row hide-on-pc">
+                                    <div class="col-lg-6 thumb">
+                                        <img src="assets/img/800x800.png" alt="Thumb">
+                                    </div>
+                                    <div class="col-lg-6 info-box">
+                                        <div class="info">
+                                            <h4>Dr. Dom</h4>
+                                            <span>MBBS, BMBS, MBChB, MBBCh</span>
+                                            <p>
+                                                Delightful unreserved impossible few estimating men favourable see entreaties. She propriety immediate was improving. He or entrance humoured likewise moderate. 
+                                            </p>
+                                            <a class="btn btn-sm btn-gradient cirlce" href="#"><i class="fas fa-angle-right"></i> Read More</a>
+                                        </div>
+
                             </li>
                         </ul>
                     </div>
 
-                    <div class="col-lg-8">
+                    <div class="col-lg-8 hide-on-mobile">
                         <div id="tabsContent" class="tab-content wow fadeInUp" data-wow-delay="0.5s">
                             
                             <div id="tab1" class="tab-pane fade active show">
@@ -1208,7 +1327,7 @@ h2[data-animation="animated slideInRight"] {
                                         </div>
                                     </div>
                                 </div>
-                                <div class="item">
+                                <!-- <div class="item">
                                     <div class="row">
                                         <div class="col-lg-6 thumb">
                                             <img src="assets/img/800x800.png" alt="Thumb">
@@ -1224,7 +1343,7 @@ h2[data-animation="animated slideInRight"] {
                                             </div>
                                         </div>
                                     </div>
-                                </div>
+                                </div> -->
                             </div>
 
                             <div id="tab2" class="tab-pane fade">
@@ -1303,7 +1422,7 @@ h2[data-animation="animated slideInRight"] {
 
     <!-- Start Top Entry
     ============================================= -->
-    <div class="top-entry-area relative default-padding text-center">
+    <div class="top-entry-area relative default-padding text-center hide-on-mobile">
         <div class="container">
             <div class="item-box">
                 <div class="row align-center">
@@ -1393,7 +1512,9 @@ h2[data-animation="animated slideInRight"] {
                                 <!-- Single Item -->
                                 <div class="pf-item development capital">
                                     <div class="effect-box">
-                                        <img src="assets/img/800x800.png" alt="thumb">
+                                        <a href="assets/img/800x800.png" class="item popup-link">
+                                            <img src="assets/img/800x800.png" alt="thumb">
+                                        </a>
                                         <div class="info">
                                           <h4><a href="#">General Surgery</a></h4>
                                           <a href="assets/img/800x800.png" class="item popup-link"><i class="fa fa-plus"></i></a>
@@ -1404,7 +1525,9 @@ h2[data-animation="animated slideInRight"] {
                                 <!-- Single Item -->
                                 <div class="pf-item consulting branding">
                                     <div class="effect-box">
-                                        <img src="assets/img/800x600.png" alt="thumb">
+                                        <a href="assets/img/800x600.png" class="item popup-link">
+                                            <img src="assets/img/800x600.png" alt="thumb">
+                                        </a>
                                         <div class="info">
                                           <h4><a href="#">Primary Care</a></h4>
                                           <a href="assets/img/800x600.png" class="item popup-link"><i class="fa fa-plus"></i></a>
@@ -1415,7 +1538,9 @@ h2[data-animation="animated slideInRight"] {
                                 <!-- Single Item -->
                                 <div class="pf-item consulting finance">
                                     <div class="effect-box">
-                                        <img src="assets/img/800x800.png" alt="thumb">
+                                        <a href="assets/img/800x800.png" class="item popup-link">
+                                            <img src="assets/img/800x800.png" alt="thumb">
+                                        </a>
                                         <div class="info">
                                           <h4><a href="#">Cardiology</a></h4>
                                           <a href="assets/img/800x800.png" class="item popup-link"><i class="fa fa-plus"></i></a>
@@ -1426,7 +1551,9 @@ h2[data-animation="animated slideInRight"] {
                                 <!-- Single Item -->
                                 <div class="pf-item finance">
                                     <div class="effect-box">
-                                        <img src="assets/img/800x800.png" alt="thumb">
+                                        <a href="assets/img/800x800.png" class="item popup-link">
+                                            <img src="assets/img/800x800.png" alt="thumb">
+                                        </a>
                                         <div class="info">
                                           <h4><a href="#">Cancer Care</a></h4>
                                           <a href="assets/img/800x800.png" class="item popup-link"><i class="fa fa-plus"></i></a>
@@ -1437,7 +1564,9 @@ h2[data-animation="animated slideInRight"] {
                                 <!-- Single Item -->
                                 <div class="pf-item capital development">
                                     <div class="effect-box">
-                                        <img src="assets/img/800x600.png" alt="thumb">
+                                        <a href="assets/img/800x600.png" class="item popup-link">
+                                            <img src="assets/img/800x600.png" alt="thumb">
+                                        </a>
                                         <div class="info">
                                           <h4><a href="#">Dental Care</a></h4>
                                           <a href="assets/img/800x600.png" class="item popup-link"><i class="fa fa-plus"></i></a>
@@ -1448,7 +1577,9 @@ h2[data-animation="animated slideInRight"] {
                                 <!-- Single Item -->
                                 <div class="pf-item consulting branding">
                                     <div class="effect-box">
-                                        <img src="assets/img/800x600.png" alt="thumb">
+                                        <a href="assets/img/800x600.png" class="item popup-link">
+                                            <img src="assets/img/800x600.png" alt="thumb">
+                                        </a>
                                         <div class="info">
                                           <h4><a href="#">Eye Care</a></h4>
                                           <a href="assets/img/800x600.png" class="item popup-link"><i class="fa fa-plus"></i></a>
@@ -1489,6 +1620,7 @@ h2[data-animation="animated slideInRight"] {
             </div>
         </div>
     </div>
+    
     <!-- End Choose Us -->
 
     <!-- Start Testomonials 
@@ -1609,11 +1741,37 @@ h2[data-animation="animated slideInRight"] {
                                         <span class="alert-error"></span>
                                     </div>
                                 </div>
-                                <div class="col-lg-12">
-                                    <div class="form-group comments">
-                                        <textarea class="form-control" id="comments" name="comments" placeholder="Tell Us About Project *"></textarea>
+                               <div class="col-md-6">
+                                    <div class="form-group">
+                                        <select id="f_gender" required>
+                                            <option value="">Select Gender</option>
+                                            <option value="Male">Male</option>
+                                            <option value="Female">Female</option>
+                                            <option value="Child">Child</option>
+                                        </select>
                                     </div>
                                 </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <select id="f_department" required>
+                                            <option value="">Select Department</option>
+                                            <option value="Medicine">Medicine</option>
+                                            <option value="Dental Care">Dental Care</option>
+                                            <option value="Traumatology">Traumatology</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <input class="form-control" id="f_date" name="date" placeholder="Date" type="date" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <input type="time" id="f_time" name="time" required class="form-control time-input" />
+                                    </div>
+                                </div>
+
                                 <div class="col-lg-12">
                                     <button type="submit" name="submit" id="submit">
                                         Send Message
@@ -1636,46 +1794,46 @@ h2[data-animation="animated slideInRight"] {
 <!-- Start Footer 
 ============================================= -->
 <footer class="bg-dark text-light">
-    <div class="subscribe-section">
-        <div class="subscribe-container">
-            <img src="assets/img/footer-logo1.png" alt="Logo" class="footer-logo">
-            <div class="input-wrapper">
-              <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                <g data-name="Layer 2">
-                  <g data-name="inbox">
-                    <rect
-                      width="24"
-                      height="24"
-                      transform="rotate(180 12 12)"
-                      opacity="0"
-                    ></rect>
+        <!-- <div class="subscribe-section">
+            <div class="subscribe-container">
+                <img src="assets/img/footer-logo1.png" alt="Logo" class="footer-logo">
+                <div class="input-wrapper">
+                <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <g data-name="Layer 2">
+                    <g data-name="inbox">
+                        <rect
+                        width="24"
+                        height="24"
+                        transform="rotate(180 12 12)"
+                        opacity="0"
+                        ></rect>
+                        <path
+                        d="M20.79 11.34l-3.34-6.68A3 3 0 0 0 14.76 3H9.24a3 3 0 0 0-2.69 1.66l-3.34 6.68a2 2 0 0 0-.21.9V18a3 3 0 0 0 3 3h12a3 3 0 0 0 3-3v-5.76a2 2 0 0 0-.21-.9zM8.34 5.55a1 1 0 0 1 .9-.55h5.52a1 1 0 0 1 .9.55L18.38 11H16a1 1 0 0 0-1 1v2a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1v-2a1 1 0 0 0-1-1H5.62z"
+                        ></path>
+                    </g>
+                    </g>
+                </svg>
+                <input type="text" name="text" class="input" placeholder="info@gmail.com" />
+                <button class="Subscribe-btn">
+                    <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="30"
+                    height="10"
+                    viewBox="0 0 38 15"
+                    class="arrow"
+                    >
                     <path
-                      d="M20.79 11.34l-3.34-6.68A3 3 0 0 0 14.76 3H9.24a3 3 0 0 0-2.69 1.66l-3.34 6.68a2 2 0 0 0-.21.9V18a3 3 0 0 0 3 3h12a3 3 0 0 0 3-3v-5.76a2 2 0 0 0-.21-.9zM8.34 5.55a1 1 0 0 1 .9-.55h5.52a1 1 0 0 1 .9.55L18.38 11H16a1 1 0 0 0-1 1v2a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1v-2a1 1 0 0 0-1-1H5.62z"
-                    ></path>
-                  </g>
-                </g>
-              </svg>
-              <input type="text" name="text" class="input" placeholder="info@gmail.com" />
-              <button class="Subscribe-btn">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="30"
-                  height="10"
-                  viewBox="0 0 38 15"
-                  class="arrow"
-                >
-                  <path
-                    d="M10 7.519l-.939-.344h0l.939.344zm14.386-1.205l-.981-.192.981.192zm1.276 5.509l.537.843.148-.094.107-.139-.792-.611zm4.819-4.304l-.385-.923h0l.385.923zm7.227.707a1 1 0 0 0 0-1.414L31.343.448a1 1 0 0 0-1.414 0 1 1 0 0 0 0 1.414l5.657 5.657-5.657 5.657a1 1 0 0 0 1.414 1.414l6.364-6.364zM1 7.519l.554.833.029-.019.094-.061.361-.23 1.277-.77c1.054-.609 2.397-1.32 3.629-1.787.617-.234 1.17-.392 1.623-.455.477-.066.707-.008.788.034.025.013.031.021.039.034a.56.56 0 0 1 .058.235c.029.327-.047.906-.39 1.842l1.878.689c.383-1.044.571-1.949.505-2.705-.072-.815-.45-1.493-1.16-1.865-.627-.329-1.358-.332-1.993-.244-.659.092-1.367.305-2.056.566-1.381.523-2.833 1.297-3.921 1.925l-2.948 1.517c-.92.439-1.673.743-2.221.87-.276.064-.429.065-.492.057-.043-.006.066.003.155.127.07.099.024.131.038-.063.014-.187.078-.49.243-.94l-1.878-.689zm14.343-1.053c-.361 1.844-.474 3.185-.413 4.161.059.95.294 1.72.811 2.215.567.544 1.242.546 1.664.459a2.34 2.34 0 0 0 .502-.167l.15-.076.049-.028.018-.011c.013-.008.013-.008-.524-.852l-.536-.844.019-.012c-.038.018-.064.027-.084.032-.037.008.053-.013.125.056.021.02-.151-.135-.198-.895-.046-.734.034-1.887.38-3.652l-1.963-.384zm2.257 5.701l.791.611.024-.031.08-.101.311-.377 1.093-1.213c.922-.954 2.005-1.894 2.904-2.27l-.771-1.846c-1.31.547-2.637 1.758-3.572 2.725l-1.184 1.314-.341.414-.093.117-.025.032c-.01.013-.01.013.781.624zm5.204-3.381c.989-.413 1.791-.42 2.697-.307.871.108 2.083.385 3.437.385v-2c-1.197 0-2.041-.226-3.19-.369-1.114-.139-2.297-.146-3.715.447l.771 1.846z"
-                  ></path></svg
-                >Subscribe
-              </button>
+                        d="M10 7.519l-.939-.344h0l.939.344zm14.386-1.205l-.981-.192.981.192zm1.276 5.509l.537.843.148-.094.107-.139-.792-.611zm4.819-4.304l-.385-.923h0l.385.923zm7.227.707a1 1 0 0 0 0-1.414L31.343.448a1 1 0 0 0-1.414 0 1 1 0 0 0 0 1.414l5.657 5.657-5.657 5.657a1 1 0 0 0 1.414 1.414l6.364-6.364zM1 7.519l.554.833.029-.019.094-.061.361-.23 1.277-.77c1.054-.609 2.397-1.32 3.629-1.787.617-.234 1.17-.392 1.623-.455.477-.066.707-.008.788.034.025.013.031.021.039.034a.56.56 0 0 1 .058.235c.029.327-.047.906-.39 1.842l1.878.689c.383-1.044.571-1.949.505-2.705-.072-.815-.45-1.493-1.16-1.865-.627-.329-1.358-.332-1.993-.244-.659.092-1.367.305-2.056.566-1.381.523-2.833 1.297-3.921 1.925l-2.948 1.517c-.92.439-1.673.743-2.221.87-.276.064-.429.065-.492.057-.043-.006.066.003.155.127.07.099.024.131.038-.063.014-.187.078-.49.243-.94l-1.878-.689zm14.343-1.053c-.361 1.844-.474 3.185-.413 4.161.059.95.294 1.72.811 2.215.567.544 1.242.546 1.664.459a2.34 2.34 0 0 0 .502-.167l.15-.076.049-.028.018-.011c.013-.008.013-.008-.524-.852l-.536-.844.019-.012c-.038.018-.064.027-.084.032-.037.008.053-.013.125.056.021.02-.151-.135-.198-.895-.046-.734.034-1.887.38-3.652l-1.963-.384zm2.257 5.701l.791.611.024-.031.08-.101.311-.377 1.093-1.213c.922-.954 2.005-1.894 2.904-2.27l-.771-1.846c-1.31.547-2.637 1.758-3.572 2.725l-1.184 1.314-.341.414-.093.117-.025.032c-.01.013-.01.013.781.624zm5.204-3.381c.989-.413 1.791-.42 2.697-.307.871.108 2.083.385 3.437.385v-2c-1.197 0-2.041-.226-3.19-.369-1.114-.139-2.297-.146-3.715.447l.771 1.846z"
+                    ></path></svg
+                    >Subscribe
+                </button>
+            </div>
+                <span class="btn-text-one">100K+ Clients</span>
+            </button>   
         </div>
-            <span class="btn-text-one">100K+ Clients</span>
-        </button>   
-     </div>
+            </div>
         </div>
-    </div>
-    
+        -->
     
     <div class="container">
         <div class="f-items default-padding">
@@ -1733,7 +1891,7 @@ h2[data-animation="animated slideInRight"] {
                                 </div>
                                 <div class="info">
                                     <h5>Email:</h5>
-                                    <span>info@procuredental.co.in</span>
+                                    <a href="mailto:info@procuredental.co.in" class="contact-link">info@procuredental.co.in</a>
                                 </div>
                             </li>
                             <li>
@@ -1742,7 +1900,7 @@ h2[data-animation="animated slideInRight"] {
                                 </div>
                                 <div class="info">
                                     <h5>Phone:</h5>
-                                    <span>+91 9731568006</span>
+                                    <a href="tel:+919731568006" class="contact-link">+91 9731568006</a>
                                 </div>
                             </li>
                         </ul>
@@ -1794,6 +1952,40 @@ h2[data-animation="animated slideInRight"] {
     <a href="https://wa.me/919731568006" class="whatsapp-float" target="_blank">
         <i class="fab fa-whatsapp"></i>
     </a>
+
+    <script>
+        document.addEventListener('scroll', function() {
+            const consultationArea = document.querySelector('.consultation-area');
+            const icons = consultationArea.querySelectorAll('.animated-icon');
+            const rect = consultationArea.getBoundingClientRect();
+            if (rect.top < window.innerHeight && rect.bottom >= 0) {
+                icons.forEach((icon, index) => {
+                    icon.classList.add('flicker-fade-in');
+                    icon.style.animationDelay = `${index * 0.1}s`; // Stagger the animation
+                });
+            }
+        });
+    </script>
+
+    <script>
+      function sendEmail() {
+        const name = document.getElementById('f_name').value;
+        const phone = document.getElementById('f_phone').value;
+        const gender = document.getElementById('f_gender').value;
+        const department = document.getElementById('f_department').value;
+        const date = document.getElementById('f_date').value;
+        const time = document.getElementById('f_time').value;
+
+        const subject = 'Appointment Request';
+        const body = `Name: ${name}\nPhone: ${phone}\nGender: ${gender}\nDepartment: ${department}\nDate: ${date}\nTime: ${time}`;
+
+        // Update the email address here
+        const mailtoLink = `mailto:info@procuredental.co.in?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+        window.location.href = mailtoLink;
+
+        return false; // Prevent form submission
+    }
+    </script>
 
 </body>
 </html>

@@ -47,6 +47,8 @@
     <link rel='stylesheet' id='swiper-css' href='https://www.procuredental.co.in/wp-content/plugins/elementor/assets/lib/swiper/v8/css/swiper.min.css?ver=8.4.5' type='text/css' media='all' />
     <link rel='stylesheet' id='e-swiper-css' href='https://www.procuredental.co.in/wp-content/plugins/elementor/assets/css/conditionals/e-swiper.min.css?ver=3.25.11' type='text/css' media='all' />
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
     <style>
         .entry-content img {
             max-width: 100%;
@@ -133,12 +135,38 @@
         height: 210px; /* Set a fixed height for consistency */
         }
 
-        .td-testimonial-one-author-name-designation .td-testimonial-one-author-name::before {
-            content: "\f10d"; /* Unicode for the quote icon */
-            font-family: "Font Awesome 5 Free"; /* Adjust based on your icon font */
-            font-weight: 900; /* Adjust based on your icon font */
-            margin-right: 5px; /* Space between icon and text */
-            color: #FFAB15; /* Change color as needed */
+        .td-testimonial-one-author-name-designation {
+            display: flex; /* Use flexbox to align items in a row */
+            align-items: center; /* Center items vertically */
+        }
+
+        .td-testimonial-quote {
+            margin-left: 10px; /* Space between the author name and the quote icon */
+        }
+
+        .author-profile-pic {
+            width: 40px; /* Set a width for the profile picture */
+            height: 40px; /* Set a height for the profile picture */
+            border-radius: 50%; /* Make it circular */
+            margin-right: 10px; /* Space between the image and the author name */
+        }
+
+        /* Media query for mobile view */
+        @media (max-width: 768px) {
+            .video-container {
+                flex-direction: column; /* Stack videos vertically */
+                align-items: center; /* Center videos */
+            }
+
+            .video01 {
+                flex: 0 1 100%; /* Take full width on mobile */
+                max-width: 100%; /* Remove max width restriction */
+                margin-bottom: 20px; /* Add space between stacked videos */
+            }
+
+            .video01 iframe {
+                height: 200px; /* Adjust height for mobile if needed */
+            }
         }
 
         
@@ -162,8 +190,6 @@
           margin-right: 200px; /* Add space between logo and button */
       }
     }
-    
-    
     .whatsapp-float {
         position: fixed;
         bottom: 30px;
@@ -483,10 +509,11 @@
                                                 <p>Have been to procure dental Bellandur the last few months. I thought changing my dentist would be a bit tough. But Dr. Reyshma made the transition so easy. Had a wonderful experience throughout my <strong><b>dental implantation</b></strong> which I was very stressed about. Thank you so much Dr. Reyshma.</p>
                                             </div>
                                             <div class="td-testimonial-one-author-name-designation">
-                                                <div class="td-testimonial-quote td-primary-color">
-                                                    <i class="flaticon-quotation"></i>
-                                                </div>
+                                                <img src="assets/img/icon/1.jpg" alt="Profile Picture" class="author-profile-pic">
                                                 <h4 class="td-testimonial-one-author-name">Sunitha Aravindhan</h4>
+                                                <div class="td-testimonial-quote td-primary-color">
+                                                    <i class="fas fa-quote-right"></i>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -501,10 +528,11 @@
                                                 <p>Came for <strong><b>implants</b></strong> for my Father to procure dental Bellandur and consulted Dr. Rayshma. Extremely good experience. Very considerate and good doctor. Highly recommended.</p>
                                             </div>
                                             <div class="td-testimonial-one-author-name-designation">
-                                                <div class="td-testimonial-quote td-primary-color">
-                                                    <i class="flaticon-quotation"></i>
-                                                </div>
+                                                <img src="assets/img/icon/2.jpg" alt="Profile Picture" class="author-profile-pic">
                                                 <h4 class="td-testimonial-one-author-name">Monicka Tewari</h4>
+                                                <div class="td-testimonial-quote td-primary-color">
+                                                    <i class="fas fa-quote-right"></i>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -517,30 +545,6 @@
                 </div>
 
                 <div class="col-lg-4 sidebar">
-                    <div class="widget link">
-                        <div class="title">
-                            <h4>Our Departments</h4>
-                        </div>
-                        <ul>
-                            <li>
-                                <a href="#">Dental Implants</a>
-                            </li>
-                            <li class="active">
-                                <a href="#"><i class="fas fa-angle-right"></i> Dental Care and Surgery</a>
-                            </li>
-                            <li>
-                                <a href="#"><i class="fas fa-angle-right"></i> Root canal</a>
-                            </li>
-                            <li>
-                                <a href="#"><i class="fas fa-angle-right"></i> Surgery</a>
-                            </li>
-                            <li>
-                                <a href="#"><i class="fas fa-angle-right"></i> Cosmic surgery</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <!-- End Single Widget -->
-
                     <!-- Single Widget -->
                     <div class="widget appoinment">
                         <div class="title">
@@ -717,11 +721,12 @@
 </footer>
 <!-- End Footer -->
     <!-- End Footer -->
-<!-- WhatsApp Button -->
-<a href="https://wa.me/919731568006" class="whatsapp-float" target="_blank">
-    <i class="fab fa-whatsapp"></i>
-</a>
-    
+
+    <a href="https://wa.me/919731568006" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+
     <!-- jQuery Frameworks
     ============================================= -->
     <script src="assets/js/jquery-1.12.4.min.js"></script>

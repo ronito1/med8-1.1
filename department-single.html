@@ -545,35 +545,13 @@
                 </div>
 
                 <div class="col-lg-4 sidebar">
-                    <div class="widget link">
-                        <div class="title">
-                            <h4>Our Departments</h4>
-                        </div>
-                        <ul>
-                            <li>
-                                <a href="#">Dental Implants</a>
-                            </li>
-                            <li class="active">
-                                <a href="#"><i class="fas fa-angle-right"></i> Dental Care and Surgery</a>
-                            </li>
-                            <li>
-                                <a href="#"><i class="fas fa-angle-right"></i> Root canal</a>
-                            </li>
-                            <li>
-                                <a href="#"><i class="fas fa-angle-right"></i> Surgery</a>
-                            </li>
-                            <li>
-                                <a href="#"><i class="fas fa-angle-right"></i> Cosmic surgery</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <!-- End Single Widget -->
-
                     <!-- Single Widget -->
                     <div class="widget appoinment">
                         <div class="title">
                             <h4>Make an Appointment</h4>
                         </div>
+                        <form action="#" onsubmit="return sendEmail();">
+
                         <div class="appoinment-box">
                             <form action="#">
                                 <div class="row">
@@ -601,9 +579,14 @@
                                             </select>
                                         </div>
                                     </div>
-                                    <div class="col-md-12">
-                                        <div class="form-group comments">
-                                            <textarea class="form-control" id="comments" name="comments" placeholder="Your Message"></textarea>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <input class="form-control" id="f_date" name="date" placeholder="Date" type="date" required>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <input type="time" id="f_time" name="time" required class="form-control time-input" />
                                         </div>
                                     </div>
                                     <div class="col-md-12">

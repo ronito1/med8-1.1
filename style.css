@@ -395,7 +395,7 @@ input {
  .text-light h6, 
  .text-light p, 
  .text-light a {
-  color: #000000;
+  color: #ffffff;
 }
 
 .shadow {
@@ -724,7 +724,7 @@ input {
 }
 
 .bg-dark {
-  background: #9e9b9bd7 !important;
+  background: #24333e !important;
 }
 
 .bg-dark-hard {
@@ -4440,12 +4440,20 @@ body,
   overflow: hidden;
 }
 
+.gallery-area .effect-box a.item {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
 .gallery-area .effect-box img {
   -webkit-transition: all 0.35s ease-in-out;
   -moz-transition: all 0.35s ease-in-out;
   -ms-transition: all 0.35s ease-in-out;
   -o-transition: all 0.35s ease-in-out;
   transition: all 0.35s ease-in-out;
+  width: 100%;
+  height: auto;
 }
 
 .gallery-area .effect-box:hover img {
@@ -5714,7 +5722,7 @@ footer .item {
 }
 
 footer .f-item p {
-  color: #000000;
+  color: #ffffff;
 }
 
 footer .f-item.branches {
@@ -5761,11 +5769,11 @@ footer .f-item.link li:last-child {
 
 footer .f-item a {
   font-weight: 600;
-  color: #000000;
+  color: #ffffff;
 }
 
 footer .f-item a:hover {
-  color: #ffffff;
+  color: #d4ff00;
 }
 
 footer .f-item.link li::after {
@@ -5818,8 +5826,7 @@ footer .footer-bottom li {
 }
 
 footer .footer-bottom {
-  background: rgba(255, 255, 255, 0.03);
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  background: #24333e !important;
   padding: 20px 0;
 }
 
@@ -5947,4 +5954,32 @@ footer .footer-bottom p {
   100% {
     fill: white;
   }
+}
+
+footer .f-item.contact-info .info a.contact-link {
+    color: #ffffff;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+}
+
+footer .f-item.contact-info .info a.contact-link:hover {
+    color: #d4ff00;
+    transform: translateX(5px);
+}
+
+footer .f-item.contact-info .info a.contact-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 1px;
+    bottom: -2px;
+    left: 0;
+    background-color: #d4ff00;
+    transition: width 0.3s ease;
+}
+
+footer .f-item.contact-info .info a.contact-link:hover::after {
+    width: 100%;
 }

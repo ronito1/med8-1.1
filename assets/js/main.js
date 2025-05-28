@@ -200,11 +200,15 @@
             # Doctor Carousel
          ===============================================*/
         $('.doctors-carousel').owlCarousel({
-            loop: false,
+            loop: true,
             nav: false,
-            margin:30,
+            margin: 30,
             dots: true,
             autoplay: true,
+            autoplayTimeout: 2000,
+            autoplaySpeed: 800,
+            smartSpeed: 800,
+            autoplayHoverPause: false,
             items: 1,
             navText: [
                 "<i class='fa fa-angle-left'></i>",
@@ -217,11 +221,15 @@
             # Tips Carousel
          ===============================================*/
         $('.tips-carousel').owlCarousel({
-            loop: false,
+            loop: true,
             nav: false,
-            margin:30,
+            margin: 30,
             dots: true,
             autoplay: true,
+            autoplayTimeout: 2000,
+            autoplaySpeed: 800,
+            smartSpeed: 800,
+            autoplayHoverPause: false,
             items: 1,
             navText: [
                 "<i class='fa fa-angle-left'></i>",
@@ -234,7 +242,7 @@
             # Department Carousel
          ===============================================*/
         $('.department-carousel').owlCarousel({
-            loop: false,
+            loop: true,
             margin: 30,
             nav: false,
             navText: [
@@ -242,7 +250,44 @@
                 "<i class='fa fa-angle-right'></i>"
             ],
             dots: true,
-            autoplay: false,
+            autoplay: true,
+            autoplayTimeout: 2000,
+            autoplaySpeed: 800,
+            smartSpeed: 800,
+            autoplayHoverPause: true,
+            responsive: {
+                0: {
+                    items: 1
+                },
+                800: {
+                    items: 2
+                },
+                1000: {
+                    items: 3
+                }
+            }
+        });
+
+
+
+
+          /* ==================================================
+            # Department Carousel
+         ===============================================*/
+         $('.service-carousel').owlCarousel({
+            loop: true,
+            margin: 30,
+            nav: false,
+            navText: [
+                "<i class='fa fa-angle-left'></i>",
+                "<i class='fa fa-angle-right'></i>"
+            ],
+            dots: true,
+            autoplay: true,
+            autoplayTimeout: 2000,
+            autoplaySpeed: 800,
+            smartSpeed: 800,
+            autoplayHoverPause: true,
             responsive: {
                 0: {
                     items: 1
@@ -263,9 +308,13 @@
         $('.testimonials-carousel').owlCarousel({
             loop: true,
             nav: false,
-            margin:30,
+            margin: 30,
             dots: true,
-            autoplay: false,
+            autoplay: true,
+            autoplayTimeout: 2000,
+            autoplaySpeed: 800,
+            smartSpeed: 800,
+            autoplayHoverPause: false,
             items: 1,
             navText: [
                 "<i class='fa fa-angle-left'></i>",

@@ -38,6 +38,24 @@
     <!-- ========== Google Fonts ========== -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;600;700;800&display=swap" rel="stylesheet">
 
+    <style>
+        #f_submit {
+            background-color: red;
+            color: white;
+            padding: 12px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            width: 100%;
+            margin-top: 10px;
+        }
+
+        .sidebar {
+            overflow: visible;
+            padding-bottom: 20px;
+        }
+    </style>
+
 </head>
 
 <body>
@@ -364,191 +382,63 @@
                     <!-- Start Sidebar -->
                     <div class="sidebar wow fadeInLeft col-lg-4 col-md-12">
                         <aside>
-                            <div class="sidebar-item search">
-                                <div class="title">
-                                    <h4>Search</h4>
+                            <div class="appoinment-box text-center wow fadeInRight">
+                                <div class="heading">
+                                    <h4>Make an Appointment</h4>
                                 </div>
-                                <div class="sidebar-info">
-                                    <form>
-                                        <input type="text" name="text" class="form-control">
-                                        <button type="submit"><i class="fas fa-search"></i></button>
-                                    </form>
-                                </div>
-                            </div>
-                            <div class="sidebar-item recent-post">
-                                <div class="title">
-                                    <h4>Recent Post</h4>
-                                </div>
-                                <ul>
-                                    <li>
-                                        <div class="thumb">
-                                            <a href="#">
-                                                <img src="assets/img/800x800.png" alt="Thumb">
-                                            </a>
-                                        </div>
-                                        <div class="info">
-                                            <a href="#">Participate in staff meetingness dedicated</a>
-                                            <div class="meta-title">
-                                                <span class="post-date"><i class="fas fa-clock"></i> 12 Feb, 2020</span>
+                                <form action="#" onsubmit="return sendEmail();">
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <input class="form-control" id="f_name" name="name" placeholder="Name" type="text" required>
                                             </div>
                                         </div>
-                                    </li>
-                                    <li>
-                                        <div class="thumb">
-                                            <a href="#">
-                                                <img src="assets/img/800x800.png" alt="Thumb">
-                                            </a>
-                                        </div>
-                                        <div class="info">
-                                            <a href="#">Future Plan & Strategy for Consutruction </a>
-                                            <div class="meta-title">
-                                                <span class="post-date"><i class="fas fa-clock"></i> 05 Jul, 2019</span>
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <input class="form-control" id="f_phone" name="phone" placeholder="Phone" type="text" required>
                                             </div>
                                         </div>
-                                    </li>
-                                    <li>
-                                        <div class="thumb">
-                                            <a href="#">
-                                                <img src="assets/img/800x800.png" alt="Thumb">
-                                            </a>
-                                        </div>
-                                        <div class="info">
-                                            <a href="#">Melancholy particular devonshire alteration</a>
-                                            <div class="meta-title">
-                                                <span class="post-date"><i class="fas fa-clock"></i> 29 Aug, 2020</span>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <select id="f_gender" required>
+                                                    <option value="">Select Gender</option>
+                                                    <option value="Male">Male</option>
+                                                    <option value="Female">Female</option>
+                                                    <option value="Child">Child</option>
+                                                </select>
                                             </div>
                                         </div>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="sidebar-item category">
-                                <div class="title">
-                                    <h4>category list</h4>
-                                </div>
-                                <div class="sidebar-info">
-                                    <ul>
-                                        <li>
-                                            <a href="#">national <span>69</span></a>
-                                        </li>
-                                        <li>
-                                            <a href="#">national <span>25</span></a>
-                                        </li>
-                                        <li>
-                                            <a href="#">sports <span>18</span></a>
-                                        </li>
-                                        <li>
-                                            <a href="#">megazine <span>37</span></a>
-                                        </li>
-                                        <li>
-                                            <a href="#">health <span>12</span></a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="sidebar-item gallery">
-                                <div class="title">
-                                    <h4>Gallery</h4>
-                                </div>
-                                <div class="sidebar-info">
-                                    <ul>
-                                        <li>
-                                            <a href="#">
-                                                <img src="assets/img/800x800.png" alt="thumb">
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                <img src="assets/img/800x800.png" alt="thumb">
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                <img src="assets/img/800x800.png" alt="thumb">
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                <img src="assets/img/800x800.png" alt="thumb">
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                <img src="assets/img/800x800.png" alt="thumb">
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                <img src="assets/img/800x800.png" alt="thumb">
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="sidebar-item archives">
-                                <div class="title">
-                                    <h4>Archives</h4>
-                                </div>
-                                <div class="sidebar-info">
-                                    <ul>
-                                        <li><a href="#">Aug 2020</a></li>
-                                        <li><a href="#">Sept 2020</a></li>
-                                        <li><a href="#">Nov 2020</a></li>
-                                        <li><a href="#">Dec 2020</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="sidebar-item social-sidebar">
-                                <div class="title">
-                                    <h4>follow us</h4>
-                                </div>
-                                <div class="sidebar-info">
-                                    <ul>
-                                        <li class="facebook">
-                                            <a href="#">
-                                                <i class="fab fa-facebook-f"></i>
-                                            </a>
-                                        </li>
-                                        <li class="twitter">
-                                            <a href="#">
-                                                <i class="fab fa-twitter"></i>
-                                            </a>
-                                        </li>
-                                        <li class="pinterest">
-                                            <a href="#">
-                                                <i class="fab fa-pinterest"></i>
-                                            </a>
-                                        </li>
-                                        <li class="linkedin">
-                                            <a href="#">
-                                                <i class="fab fa-linkedin-in"></i>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="sidebar-item tags">
-                                <div class="title">
-                                    <h4>tags</h4>
-                                </div>
-                                <div class="sidebar-info">
-                                    <ul>
-                                        <li><a href="#">Fashion</a>
-                                        </li>
-                                        <li><a href="#">study</a>
-                                        <li><a href="#">Education</a>
-                                        </li>
-                                        <li><a href="#">nation</a>
-                                        </li>
-                                        <li><a href="#">health</a>
-                                        </li>
-                                        <li><a href="#">food</a>
-                                        </li>
-                                    </ul>
-                                </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <select id="f_department" required>
+                                                    <option value="">Select Department</option>
+                                                    <option value="Medicine">Medicine</option>
+                                                    <option value="Dental Care">Dental Care</option>
+                                                    <option value="Traumatology">Traumatology</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <input class="form-control" id="f_date" name="date" placeholder="Date" type="date" required>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <input type="time" id="f_time" name="time" required class="form-control time-input" />
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <button type="submit" name="submit" id="f_submit" class="btn btn-primary btn-block">
+                                                Book Appointment
+                                            </button>
+                                        </div>
+                                    </div>
+                                </form>
                             </div>
                         </aside>
                     </div>
-                    <!-- End Start Sidebar -->
+                    <!-- End Sidebar -->
                 </div>
             </div>
         </div>

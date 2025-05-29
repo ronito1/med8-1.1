@@ -418,6 +418,7 @@ h2[data-animation="animated slideInRight"] {
     color: #FFF;
     width: 60px;
     height: 60px;
+    margin-bottom: 10px;
     border-radius: 50%;
     text-align: center;
     font-size: 30px;
@@ -630,6 +631,16 @@ h2[data-animation="animated slideInRight"] {
         }
         100% {
             transform: translateX(-100%); /* Move to the left */
+        }
+    }
+
+    .sticky-footer {
+        display: none; /* Hide by default */
+    }
+
+    @media (max-width: 768px) { /* Adjust the max-width as needed for your mobile breakpoint */
+        .sticky-footer {
+            display: block; /* Show on mobile devices */
         }
     }
     </style>

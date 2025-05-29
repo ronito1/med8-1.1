@@ -243,7 +243,35 @@
         }
     }
 
-    </style>
+    
+    .sticky-footer {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: #fff; /* Change to your desired background color */
+        padding: 10px 0; /* Adjust padding as needed */
+        box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* Optional shadow for effect */
+        z-index: 1000; /* Ensure it stays above other content */
+    }
+
+    .sticky-footer .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .sticky-footer .social ul {
+        display: flex;
+        list-style: none;
+        padding: 0;
+    }
+
+    .sticky-footer .social li {
+        margin-left: 10px; /* Adjust spacing between icons */ 
+}  
+</style>
+
 
     <!-- Swiper JS -->
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
@@ -863,6 +891,24 @@
             return false;
         }
     </script>
+
+  <!-- Start Sticky Footer 
+    ============================================= -->
+    <div class="sticky-footer">
+        <div class="container">
+            <div class="row align-center">
+                <div class="col-lg-12 info mobile-only"> <!-- Added mobile-only class -->
+                    <div class="marquee">
+                        <p class="footer-text">
+                            Working Hours: <a href="#">10am - 8pm</a> | 
+                            Email: <a href="#">info@procuredental.co.in</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Sticky Footer -->
 
 </body>
 </html>

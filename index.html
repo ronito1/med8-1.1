@@ -580,6 +580,33 @@ h2[data-animation="animated slideInRight"] {
         }
     }
 
+    .sticky-footer {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: #fff; /* Change to your desired background color */
+        padding: 10px 0; /* Adjust padding as needed */
+        box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* Optional shadow for effect */
+        z-index: 1000; /* Ensure it stays above other content */
+    }
+
+    .sticky-footer .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .sticky-footer .social ul {
+        display: flex;
+        list-style: none;
+        padding: 0;
+    }
+
+    .sticky-footer .social li {
+        margin-left: 10px; /* Adjust spacing between icons */
+    }
+
     </style>
 </head>
 
@@ -2000,6 +2027,48 @@ h2[data-animation="animated slideInRight"] {
         return false; // Prevent form submission
     }
     </script>
+
+    <!-- Start Sticky Footer 
+    ============================================= -->
+    <div class="sticky-footer">
+        <div class="container">
+            <div class="row align-center">
+                <div class="col-lg-6 info">
+                    <p> Working Hours: <a href="#"> 10am - 8pm</a>
+                    </p>
+                </div>
+                <div class="col-lg-6 text-right item-flex">
+                    <div class="info">
+                        <ul>
+                            <li>
+                            <p> Email: <a href="#">info@procuredental.co.in</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="social">
+                        <ul>
+                            <li>
+                                <a href="#">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="fab fa-linkedin-in"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Sticky Footer -->
 
 </body>
 </html>

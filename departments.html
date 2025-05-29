@@ -64,6 +64,26 @@
 
 
     .sticky-footer {
+        display: none; /* Hide by default */
+    }
+
+    @media (max-width: 768px) { /* Adjust the max-width as needed for your mobile breakpoint */
+        .sticky-footer {
+            display: block; /* Show on mobile devices */
+        }
+    }
+
+    .mobile-only {
+        display: none; /* Hide by default */
+    }
+
+    @media (max-width: 768px) { /* Adjust the max-width as needed for your mobile breakpoint */
+        .mobile-only {
+            display: block; /* Show on mobile devices */
+        }
+    }
+        
+    .sticky-footer {
         position: fixed;
         bottom: 0;
         left: 0;

@@ -2285,10 +2285,9 @@ nav.navbar.bootsnav {
   nav.navbar.bootsnav.navbar-default.navbar-fixed.navbar-transparent.inc-topbar {
     margin-top: 47px;
   }
-
+/* 
   .navbar-brand > img {
-    height: 40px !important;
-  }
+  } */
 
   nav.navbar.bootsnav.navbar-transparent.pad-top {
     background: #ffffff none repeat scroll 0 0 !important;

@@ -275,12 +275,19 @@ h2[data-animation="animated slideInRight"] {
         display: flex;
         align-items: center; /* Center items vertically */
         justify-content: space-between; /* Space between logo and button */
+        margin-bottom: 10px;
     }
 
     .navbar-header .logo {
         max-height: 40px; /* Ensure the logo fits */
         margin-right: 270px; /* Add space between logo and button */
         margin-top: 8px;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar-header .logo {
+        margin-top: 15px; /* Adjust the value as needed for more space */
     }
 }
 
@@ -576,7 +583,6 @@ h2[data-animation="animated slideInRight"] {
             bottom: 0;
             left: 0;
             right: 0;
-            margin-bottom: 50px;
             background-color: white; /* Change as needed */
             z-index: 1000; /* Ensure it stays above other content */
         }
@@ -873,7 +879,7 @@ button:focus:not(:focus-visible) {
 
 @media (max-width: 768px) { /* Adjust the max-width as needed for your mobile view */
     .top-bar-area {
-        margin-bottom: 50px; /* Adjust the value as needed for more space */
+        margin-bottom: 36px; /* Adjust the value as needed for more space */
     }
 }
 </style>
@@ -952,7 +958,7 @@ button:focus:not(:focus-visible) {
 
                 <!-- Start Header Navigation -->
                 <div class="navbar-header" style="display: flex; justify-content: space-between; align-items: center;">
-                    <a class="navbar-brand" href="index.html" style="margin-left: 0;">
+                    <a class="navbar-brand" href="index.html" style="margin-left: 0; margin-top: 4px; margin-right: 0;">
                         <img src="assets/img/logo.png" class="logo" alt="Logo" style="max-height: 40px;">
                     </a>
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu" style="margin-right: 0;">

@@ -366,8 +366,100 @@ button:focus:not(:focus-visible) {
     border-radius: 5px; /* Optional: Add rounded corners */
 }
 
+/* Custom styles for the navigation button */
+.attr-nav {
+    display: flex;
+    align-items: center;
+}
 
-</style>
+/* Stylish bullet points */
+.stylish-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.stylish-list li {
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 15px;
+    font-size: 16px;
+    color: #333;
+    transition: all 0.3s ease;
+}
+
+.stylish-list li:before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #f01313;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.stylish-list li:hover {
+    transform: translateX(5px);
+    color: #f01313;
+}
+
+@media (max-width: 768px) {
+  .mobile-button {
+      padding: 4px 12px; /* Adjust padding for less height */
+      font-size: 14px; /* Adjust font size */
+  }
+}
+
+/* Service Item Hover Effects */
+.item-box-1 .info {
+    transition: all 0.3s ease;
+    padding: 20px;
+    border-radius: 10px;
+    background: #fff;
+}
+
+.item-box-1 .info:hover {
+    transform: translateY(-10px);
+}
+
+.item-box-1 .info .icon {
+    transition: all 0.3s ease;
+}
+
+.item-box-1 .info:hover .icon {
+    transform: scale(1.1);
+}
+
+.item-box-1 .info h4 {
+    transition: all 0.3s ease;
+}
+
+.item-box-1 .info:hover h4 {
+    color: #f01313;
+}
+
+.item-box-1 .info p {
+    transition: all 0.3s ease;
+}
+
+.item-box-1 .info:hover p {
+    color: #666;
+}
+
+.item-box-1 .info .btn {
+    transition: all 0.3s ease;
+    opacity: 0.8;
+}
+
+.item-box-1 .info:hover .btn {
+    opacity: 1;
+    transform: translateY(-2px);
+}
+
+/* Add smooth transition for all elements */
+.item-box-1 .info * {
+    transition: all 0.3s ease;
+}
+
+    </style>
 
 </head>
 
@@ -557,7 +649,7 @@ button:focus:not(:focus-visible) {
                 <div class="info-box">
                     <h5>At Delta Dental Care, your smile is not just our priority, it's our passion.                    </h5>
                     <h2>Trusted Dental Excellence Rooted in Care</h2>
-                    <ul style="list-style-type: padding-left:20px;">
+                    <ul class="stylish-list">
                         <li>At Delta Dental Care, we are committed to delivering compassionate, advanced, and affordable dental solutions to individuals and families across Bengaluru.</li>
                         <li>We offer a full spectrum of treatments from preventive care and pediatric dentistry to advanced procedures like dental implants, aligners, cosmetic smile designing, and laser-assisted therapies.</li>
                         <li>Our clinics are thoughtfully designed to be patient-friendly and equipped with the latest technology to ensure precision, safety, and comfort.</li>
@@ -788,10 +880,8 @@ button:focus:not(:focus-visible) {
     </div>
     <!-- End Services -->
 
-
-    <!-- Start Team 
-    ============================================= -->
-    <div class="team-default-area bg-gray default-padding bottom-less">
+    <!-- Start Team -->
+    <div class="team-default-area bg-gray default-padding" style="padding: 60px 0; margin-top: -30px;">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 offset-lg-2">
@@ -919,9 +1009,8 @@ button:focus:not(:focus-visible) {
     </div>
     <!-- End Team -->
 
-    <!-- Start Testomonials 
-    ============================================= -->
-    <div class="testimonials-area overflow-hidden carousel-shadow default-padding">
+    <!-- Start Testimonials -->
+    <div class="testimonials-area overflow-hidden carousel-shadow" style="padding: 60px 0; margin-top: -30px;">
         <div class="container">
             <div class="row align-center">
                 <div class="col-lg-4 text-light">
@@ -946,7 +1035,7 @@ button:focus:not(:focus-visible) {
                             </div>
                             <div class="info">
                                 <p>
-                                    Delta Dental Care is one of the best clinics I’ve visited. The doctors are very professional and explain everything in detail. Highly recommended!
+                                    Delta Dental Care is one of the best clinics I've visited. The doctors are very professional and explain everything in detail. Highly recommended!
                                 </p>
                             </div>
                         </div>
@@ -990,105 +1079,102 @@ button:focus:not(:focus-visible) {
             </div>
         </div>
     </div>
-    <!-- End Testomonials Area -->
+    <!-- End Testimonials Area -->
 
-    <!-- Start Footer 
-============================================= -->
-<footer class="bg-dark text-light">
-    <div class="container">
-        <div class="f-items default-padding">
-            <div class="row">
-                <div class="col-lg-4 col-md-6 item">
-                    <div class="f-item about">
-                        <p>
-                            Procure Dental is a leading chain of dental clinics in Bengaluru, dedicated to providing exceptional, professional dental care to the city's residents. Our clinics in Bellandur, Sadashivanagar, Nagarbhavi, OMBR Layout, BTM, Yelahanka, and Vijaya Bank Layout offer a welcoming atmosphere equipped with the latest dental technology.
-                        </p>
-                        <div class="address">
+    <!-- Start Footer -->
+    <footer class="bg-dark text-light" style="margin-top: -30px;">
+        <div class="container">
+            <div class="f-items default-padding">
+                <div class="row">
+                    <div class="col-lg-4 col-md-6 item">
+                        <div class="f-item about">
+                            <p>
+                                Procure Dental is a leading chain of dental clinics in Bengaluru, dedicated to providing exceptional, professional dental care to the city's residents. Our clinics in Bellandur, Sadashivanagar, Nagarbhavi, OMBR Layout, BTM, Yelahanka, and Vijaya Bank Layout offer a welcoming atmosphere equipped with the latest dental technology.
+                            </p>
+                            <div class="address">
+                                <ul>
+                                    <li>
+                                       
+                                    </li>
+                                    <li>
+                                     
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="single-item col-lg-2 col-md-6 item">
+                        <div class="f-item link">
+                            <h4 class="widget-title">Quick Links</h4>
+                            <ul>
+                                <li><a href="#">Home</a></li>
+                                <li><a href="#">About Us</a></li>
+                                <li><a href="#">Our Team</a></li>
+                                <li><a href="#">Services</a></li>
+                                <li><a href="#">Testimonials</a></li>
+                                <li><a href="#">Contact</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="single-item col-lg-4 col-md-6 item">
+                        <div class="f-item recent-posts">
+                            <h4 class="widget-title">Recent Posts</h4>
+                            <ul>
+                                <li>The Impact of E-Cigarettes on Oral Health - April 24, 2025</li>
+                                <li>The Relationship Between Hormones and Oral Health - April 15, 2025</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="single-item col-lg-2 col-md-6 item">
+                        <div class="f-item contact-info">
+                            <h4 class="widget-title">Contact Us</h4>
                             <ul>
                                 <li>
-                                   
-                                   
+                                    <div class="icon">
+                                        <i class="flaticon-email"></i>
+                                    </div>
+                                    <div class="info">
+                                        <h5>Email:</h5>
+                                        <span>deltadentalblr@gmail.com</span>
+                                    </div>
                                 </li>
                                 <li>
-                                 
+                                    <div class="icon">
+                                        <i class="flaticon-call"></i>
+                                    </div>
+                                    <div class="info">
+                                        <h5>Phone:</h5>
+                                        <span>+91 9731568006</span>
+                                    </div>
                                 </li>
                             </ul>
                         </div>
                     </div>
                 </div>
-                
-                <div class="single-item col-lg-2 col-md-6 item">
-                    <div class="f-item link">
-                        <h4 class="widget-title">Quick Links</h4>
-                        <ul>
-                            <li><a href="#">Home</a></li>
-                            <li><a href="#">About Us</a></li>
-                            <li><a href="#">Our Team</a></li>
-                            <li><a href="#">Services</a></li>
-                            <li><a href="#">Testimonials</a></li>
-                            <li><a href="#">Contact</a></li>
-                        </ul>
+            </div>
+        </div>
+        <!-- Start Footer Bottom -->
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="row align-center">
+                    <div class="col-lg-6">
+                        <p>Copyright @ ProcureDental</p>
                     </div>
-                </div>
-
-                <div class="single-item col-lg-4 col-md-6 item">
-                    <div class="f-item recent-posts">
-                        <h4 class="widget-title">Recent Posts</h4>
+                    <div class="col-lg-6 text-right social">
                         <ul>
-                            <li>The Impact of E-Cigarettes on Oral Health - April 24, 2025</li>
-                            <li>The Relationship Between Hormones and Oral Health - April 15, 2025</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="single-item col-lg-2 col-md-6 item">
-                    <div class="f-item contact-info">
-                        <h4 class="widget-title">Contact Us</h4>
-                        <ul>
-                            <li>
-                                <div class="icon">
-                                    <i class="flaticon-email"></i>
-                                </div>
-                                <div class="info">
-                                    <h5>Email:</h5>
-                                    <span>deltadentalblr@gmail.com</span>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="icon">
-                                    <i class="flaticon-call"></i>
-                                </div>
-                                <div class="info">
-                                    <h5>Phone:</h5>
-                                    <span>+91 9731568006</span>
-                                </div>
-                            </li>
+                            <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                            <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                            <li><a href="#"><i class="fab fa-youtube"></i></a></li>
                         </ul>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- Start Footer Bottom -->
-    <div class="footer-bottom">
-        <div class="container">
-            <div class="row align-center">
-                <div class="col-lg-6">
-                    <p>Copyright @ ProcureDental</p>
-                </div>
-                <div class="col-lg-6 text-right social">
-                    <ul>
-                        <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                        <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                        <li><a href="#"><i class="fab fa-youtube"></i></a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- End Footer Bottom -->
-</footer>
-<!-- End Footer -->
+        <!-- End Footer Bottom -->
+    </footer>
     <!-- End Footer -->
 
     <!-- jQuery Frameworks

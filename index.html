@@ -41,868 +41,947 @@
 
     <style>
         /* Custom styles for the navigation button */
-.attr-nav {
-    display: flex;
-    align-items: center; /* Center vertically */
-}
-
-.td-button-el-widget {
-    margin-left: auto; /* Push the button to the right */
-    
-}
-
-
-/* Footer Styles */
-footer {
-    padding: 20px 0; /* Reduced padding */
-    background-color: #ffffff; /* Dark background */
-}
-
-.subscribe-section {
-    background-color: #ff0000d7; /* Slightly lighter background for contrast */
-    padding: 10px; /* Reduced padding */
-    border-radius: 5px; /* Rounded corners */
-    margin-bottom: 20px; /* Space below the subscribe section */
-    margin-top: -20px;
-}
-
-.subscribe-container {
-    display: flex; /* Use Flexbox for horizontal alignment */
-    align-items: center; /* Center items vertically */
-    justify-content: flex-start; /* Align items to the start */
-    max-width: 1200px; /* Set a max width for responsiveness */
-    margin: 0 auto; /* Center the container */
-}
-
-
-
-.footer-logo {
-    height: 50px; /* Adjust logo height */
-    margin-top: 35px;
-    margin-right: 200px; /* Reduced space between logo and subscribe text */
-}
-
-
-/* Other footer styles remain the same */
-footer .f-item {
-    margin-bottom: 30px;
-}
-
-footer .f-item h4 {
-    color: #ffffff; /* White text for headings */
-    margin-bottom: 15px;
-}
-
-footer .f-item p,
-footer .f-item ul li {
-    color: #ffffff; /* Light gray text for paragraphs and list items */
-}
-
-footer .social ul {
-    list-style: none;
-    padding: 0;
-}
-
-footer .social ul li {
-    display: inline;
-    margin-left: 15px; /* Space between social icons */
-}
-
-footer .social ul li a {
-    color: #ffffff; /* White color for social icons */
-    font-size: 18px; /* Size of social icons */
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-    .subscribe-container {
-        flex-direction: column; /* Stack items on smaller screens */
-        align-items: flex-start; /* Align items to the start */
-    }
-
-    .subscribe-section input[type="email"] {
-        width: 100%; /* Full width on smaller screens */
-        margin-bottom: 10px; /* Space below input */
-    }
-
-    .client-count {
-        margin-left: 0; /* Remove left margin on smaller screens */
-    }
-}
-
-.f-items .row {
-    display: flex; /* Use flexbox for layout */
-    flex-wrap: wrap; /* Allow wrapping */
-}
-
-.f-item {
-    margin-bottom: 30px; /* Space between items */
-}
-
-.contact-info {
-    text-align: left; /* Align text to the left */
-}
-
-/* From Uiverse.io by mobinkakei */ 
-.cta {
-  display: flex;
-  padding: 10px 30px;  /* Increased horizontal padding for more oval shape */
-  text-decoration: none;
-  font-size: 25px;
-  color: white;
-  background: #f01313;
-  transition: 1s;
-  box-shadow: 6px 6px 0 black;
-  transform: skewX(-15deg);
-  border: 1px solid transparent;
-  cursor: pointer;
-  margin-top: 16px;
-  margin-left: 5px;
-  border-radius: 50px;  /* Added border-radius for oval shape */
-}
-
-@media (max-width: 768px) {
-    .themedraft-button {
-        display: none; /* Hides the button */
-    .cta {
-        display: none;
-    }
-    .button {
-        display: none;
-    }
-    }
-}
-.cta:focus {
-  outline: none;
-}
-
-.cta:hover {
-  transition: 0.5s;
-  /* Removed box-shadow to prevent lines on hover */
-  transform: none; /* Removed transform on hover */
-}
-
-.cta .second {
-  transition: 0.5s;
-  margin-right: 0px;
-}
-
-.cta:hover .second {
-  transition: 0.5s;
-  margin-right: 45px;
-}
-
-.span {
-  transform: skewX(15deg);
-}
-
-.second {
-  width: 20px;
-  margin-left: 30px;
-  position: relative;
-  top: 12%;
-}
-
-.one {
-  transition: 0.4s;
-  transform: translateX(-60%);
-}
-
-.two {
-  transition: 0.5s;
-  transform: translateX(-30%);
-}
-
-.cta:hover .three {
-  animation: color_anim 1s infinite 0.2s;
-}
-
-.cta:hover .one {
-  transform: translateX(0%);
-  animation: color_anim 1s infinite 0.6s;
-}
-
-.cta:hover .two {
-  transform: translateX(0%);
-  animation: color_anim 1s infinite 0.4s;
-}
-
-@keyframes color_anim {
-  0% {
-    fill: white;
-  }
-
-  50% {
-    fill: #fbc638;
-  }
-
-  100% {
-    fill: white;
-  }
-}
-
-h4[data-animation="animated slideInDown"],
-h2[data-animation="animated slideInRight"] {
-    color: white; /* Change the text color to white */
-}
-
-@media (max-width: 768px) {
-    .mobile-button {
-        padding: 4px 12px; /* Adjust padding for less height */
-        font-size: 14px; /* Adjust font size */
-    }
-}
-
-@media (max-width: 768px) {
-    .navbar-header {
-        display: flex;
-        align-items: center; /* Center items vertically */
-        justify-content: space-between; /* Space between logo and button */
-        margin-bottom: 10px;
-    }
-
-    .navbar-header .logo {
-        max-height: 40px; /* Ensure the logo fits */
-        margin-right: 270px; /* Add space between logo and button */
-        margin-top: 8px;
-    }
-}
-
-@media (max-width: 768px) {
-    .navbar-header .logo {
-        margin-top: 15px; /* Adjust the value as needed for more space */
-    }
-}
-
-/* From Uiverse.io by vinodjangid07 */ 
-.input-wrapper {
-  width: fit-content;
-  height: 45px;
-  border-radius: 20px;
-  padding: 5px;
-  box-sizing: content-box;
-  display: flex;
-  align-items: center;
-  background-color: #292524;
-  margin-left: 180px; /* Adjust this value to increase or decrease the space */
-}
-
-.icon {
-  width: 30px;
-  fill: rgb(255, 255, 255);
-  margin-right: 25px; /* Increase this value for more space */
-  display: flex; /* Use flexbox for alignment */
-  align-items: center; /* Center the icon vertically */
-}
-.input {
-  max-width: 170px;
-  height: 100%;
-  border: none;
-  outline: none;
-  padding-left: 15px;
-  background-color: #292524;
-  color: white;
-  font-size: 1em;
-}
-.input:-webkit-autofill {
-  -webkit-box-shadow: 0 0 0px 1000px #292524 inset;
-  -webkit-text-fill-color: #ffffff;
-}
-.Subscribe-btn {
-  height: 100%;
-  width: 95px;
-  border: none;
-  border-radius: 15px;
-  color: rgb(0, 0, 0);
-  cursor: pointer;
-  background-color: #ffffff;
-  font-weight: 500;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  transition: all 0.3s;
-}
-.arrow {
-  /* display: none; */
-  position: absolute;
-  margin-right: 150px;
-  transition: all 0.3s;
-}
-.input-wrapper:active .icon {
-  transform: scale(1.3);
-}
-.Subscribe-btn:hover {
-  color: white;
-}
-.Subscribe-btn:hover .arrow {
-  margin-right: 0;
-  animation: jello-vertical 0.9s both;
-  transform-origin: right;
-}
-
-@keyframes jello-vertical {
-  0% {
-    transform: scale3d(1, 1, 1);
-  }
-  30% {
-    transform: scale3d(0.75, 1.25, 1);
-  }
-  40% {
-    transform: scale3d(1.25, 0.75, 1);
-  }
-  50% {
-    transform: scale3d(0.85, 1.15, 1);
-  }
-  65% {
-    transform: scale3d(1.05, 0.95, 1);
-  }
-  75% {
-    transform: scale3d(0.95, 1.05, 1);
-  }
-  100% {
-    transform: scale3d(1, 1, 1);
-  }
-}
-.Subscribe-btn:active {
-  transform: scale(0.9);
-}
-
-/* 
-/* From Uiverse.io by mobinkakei */ 
-.btn-text-one {
-  color: #fbff00;
-  font-weight: bolder;
-  margin-left: 200px;
-  font-size: 30px;
-}
-/* ... existing code ... */
-
-/* Media query for mobile devices */
-@media (max-width: 600px) {
-  .input-wrapper {
-    display: none; /* Hide input wrapper on mobile */
-  }
-
-  .Subscribe-btn {
-    display: none; /* Hide subscribe button on mobile */
-  }
-
-  .btn-text-one {
-    display: none; /* Hide button text on mobile */
-  }
-  .subscribe-section{
-    display: none;
-  }
-}
-
-/* ... existing code ... */
-
-/* WhatsApp Float Button */
-.whatsapp-float {
-    position: fixed;
-    bottom: 30px;
-    right: 30px;
-    background-color: #25d366;
-    color: #FFF;
-    width: 60px;
-    height: 60px;
-    margin-bottom: 33px;
-    border-radius: 50%;
-    text-align: center;
-    font-size: 30px;
-    box-shadow: 2px 2px 3px #999;
-    z-index: 100;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
-    transition: all 0.3s ease;
-}
-
-.whatsapp-float:hover {
-    background-color: #128C7E;
-    color: #FFF;
-    transform: scale(1.1);
-}
-
-.whatsapp-float i {
-    margin-top: 0;
-}
-
-@media screen and (max-width: 767px) {
-    .whatsapp-float {
-        width: 50px;
-        height: 50px;
-        font-size: 25px;
-        bottom: 20px;
-        right: 20px;
-    }
-}
-
-.fun-factor-area {
-    background: transparent !important; /* Force background to be transparent */
-}
-
-@keyframes fadeInScale {
-    0% {
-        opacity: 0;
-        transform: scale(0.5);
-    }
-    100% {
-        opacity: 1;
-        transform: scale(1);
-    }
-}
-
-.animated-icon {
-    animation: fadeInScale 0.5s ease forwards;
-}
-
-/* Add specific delays for each icon */
-.animated-icon:nth-child(1) {
-    animation-delay: 0s; /* No delay for the first icon */
-}
-
-.animated-icon:nth-child(2) {
-    animation-delay: 0.2s; /* 200ms delay for the second icon */
-}
-
-.animated-icon:nth-child(3) {
-    animation-delay: 0.4s; /* 400ms delay for the third icon */
-}
-
-/* Add this to your CSS file */
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.animate {
-    animation: fadeInUp 0.5s ease forwards;
-}
-
-/* Add this to your CSS file */
-@keyframes flickerFadeIn {
-    0% {
-        opacity: 0;
-        transform: scale(0.8);
-    }
-    50% {
-        opacity: 1;
-        transform: scale(1.1);
-    }
-    100% {
-        opacity: 1;
-        transform: scale(1);
-    }
-}
-
-.flicker-fade-in {
-    animation: flickerFadeIn 0.5s ease forwards;
-}
-
-.process h2 {
-    margin-bottom: 10px; /* Adjust this value to reduce space */
-}
-
-.fun-factor-area {
-    padding-top: 10px; /* Adjust this value to reduce space */
-}
-
-.time-input {
-    width: 200px; /* Adjust the width as needed */
-    padding: 5px; /* Optional: adjust padding */
-}
-
-@media (max-width: 768px) {
-        .fun-fact-items .item {
-            margin-left: 30px; /* Adjust margin for mobile */
-            text-align: center; /* Center text on mobile */
+        .attr-nav {
+            display: flex;
+            align-items: center;
         }
-        .fun-fact-items .row {
-            flex-direction: column; /* Stack items vertically */
-        }
-        .fun-factor-area {
-            display: none; /* Hide fun factor area on mobile */
-        }
-    }
 
-    @media (max-width: 768px) {
-        .department-items .item {
-            width: 100%;
-            display: block;
+        /* Stylish bullet points */
+        .stylish-list {
+            list-style: none;
+            padding-left: 0;
         }
-    }
 
-    @media (max-width: 768px) { /* Adjust the max-width as needed */
-        .hide-on-mobile {
-            display: none;
+        .stylish-list li {
+            position: relative;
+            padding-left: 30px;
+            margin-bottom: 15px;
+            font-size: 16px;
+            color: #333;
+            transition: all 0.3s ease;
         }
-    }
 
-    @media (min-width: 769px) { /* Adjust the min-width as needed */
-        .hide-on-pc {
-            display: none;
-        }
-    }
-
-    @media (max-width: 768px) {
-        .cta.mobile-button {
-            margin-right: 75px; /* Adjust the value as needed */
-        }
-    }
-
-    @media (max-width: 768px) {
-        .top-bar-area {
-            position: fixed;
-            bottom: 0;
+        .stylish-list li:before {
+            content: "✓";
+            position: absolute;
             left: 0;
-            right: 0;
-            background-color: white; /* Change as needed */
-            z-index: 1000; /* Ensure it stays above other content */
+            color: #f01313;
+            font-weight: bold;
+            font-size: 18px;
         }
-    }
 
-    .sticky-footer {
-        position: fixed;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        background-color: #fff; /* Change to your desired background color */
-        padding: 10px 0; /* Adjust padding as needed */
-        box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* Optional shadow for effect */
-        z-index: 1000; /* Ensure it stays above other content */
-    }
-
-    .sticky-footer .container {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    .sticky-footer .social ul {
-        display: flex;
-        list-style: none;
-        padding: 0;
-    }
-
-    .sticky-footer .social li {
-        margin-left: 10px; /* Adjust spacing between icons */
-    }
-
-    .footer-text {
-        font-size: 14px; /* Adjust the size as needed */
-        margin: 0; /* Remove any default margin */
-        white-space: nowrap; /* Prevent line breaks */
-    }
-
-    .marquee {
-        overflow: hidden; /* Hide the overflow */
-        white-space: nowrap; /* Prevent line breaks */
-        box-sizing: border-box; /* Include padding in width */
-    }
-
-    .footer-text {
-        display: inline-block; /* Make the text inline-block for animation */
-        animation: marquee 10s linear infinite; /* Adjust duration as needed */
-    }
-
-    @keyframes marquee {
-        0% {
-            transform: translateX(100%); /* Start from the right */
+        .stylish-list li:hover {
+            transform: translateX(5px);
+            color: #f01313;
         }
-        100% {
-            transform: translateX(-100%); /* Move to the left */
+
+        .td-button-el-widget {
+            margin-left: auto; /* Push the button to the right */
+            
         }
-    }
 
-    .sticky-footer {
-        display: none; /* Hide by default */
-    }
 
-    @media (max-width: 768px) { /* Adjust the max-width as needed for your mobile breakpoint */
-        .sticky-footer {
-            display: block; /* Show on mobile devices */
+        /* Footer Styles */
+        footer {
+            padding: 20px 0; /* Reduced padding */
+            background-color: #ffffff; /* Dark background */
         }
-    }
 
-    .mobile-only {
-        display: none; /* Hide by default */
-    }
-
-    @media (max-width: 768px) { /* Adjust the max-width as needed for your mobile breakpoint */
-        .mobile-only {
-            display: block; /* Show on mobile devices */
+        .subscribe-section {
+            background-color: #ff0000d7; /* Slightly lighter background for contrast */
+            padding: 10px; /* Reduced padding */
+            border-radius: 5px; /* Rounded corners */
+            margin-bottom: 20px; /* Space below the subscribe section */
+            margin-top: -20px;
         }
-    }
-    
-    .sticky-footer {
-        display: none; /* Hide by default */
-    }
 
-    @media (max-width: 768px) { /* Adjust the max-width as needed for your mobile breakpoint */
-        .sticky-footer {
-            display: block; /* Show on mobile devices */
+        .subscribe-container {
+            display: flex; /* Use Flexbox for horizontal alignment */
+            align-items: center; /* Center items vertically */
+            justify-content: flex-start; /* Align items to the start */
+            max-width: 1200px; /* Set a max width for responsiveness */
+            margin: 0 auto; /* Center the container */
         }
-    }
 
-    .mobile-only {
-        display: none; /* Hide by default */
-    }
 
-    @media (max-width: 768px) { /* Adjust the max-width as needed for your mobile breakpoint */
-        .mobile-only {
-            display: block; /* Show on mobile devices */
+
+        .footer-logo {
+            height: 50px; /* Adjust logo height */
+            margin-top: 35px;
+            margin-right: 200px; /* Reduced space between logo and subscribe text */
         }
-    }
-        
-    .sticky-footer {
-        position: fixed;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        background-color: #fff; /* Change to your desired background color */
-        padding: 10px 0; /* Adjust padding as needed */
-        box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* Optional shadow for effect */
-        z-index: 1000; /* Ensure it stays above other content */
-    }
 
-    .sticky-footer .container {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
 
-    .sticky-footer .social ul {
-        display: flex;
-        list-style: none;
-        padding: 0;
-    }
-
-    .sticky-footer .social li {
-        margin-left: 10px; /* Adjust spacing between icons */ 
-}  
-.footer-text {
-        font-size: 14px; /* Adjust the size as needed */
-        margin: 0; /* Remove any default margin */
-        white-space: nowrap; /* Prevent line breaks */
-    }
-
-    .marquee {
-        overflow: hidden; /* Hide the overflow */
-        white-space: nowrap; /* Prevent line breaks */
-        box-sizing: border-box; /* Include padding in width */
-    }
-
-    .footer-text {
-        display: inline-block; /* Make the text inline-block for animation */
-        animation: marquee 10s linear infinite; /* Adjust duration as needed */
-    }
-
-    @keyframes marquee {
-        0% {
-            transform: translateX(100%); /* Start from the right */
+        /* Other footer styles remain the same */
+        footer .f-item {
+            margin-bottom: 30px;
         }
-        100% {
-            transform: translateX(-100%); /* Move to the left */
+
+        footer .f-item h4 {
+            color: #ffffff; /* White text for headings */
+            margin-bottom: 15px;
         }
-    }
 
-    .sticky-footer {
-        display: none; /* Hide by default */
-    }
-
-    @media (max-width: 768px) { /* Adjust the max-width as needed for your mobile breakpoint */
-        .sticky-footer {
-            display: block; /* Show on mobile devices */
+        footer .f-item p,
+        footer .f-item ul li {
+            color: #ffffff; /* Light gray text for paragraphs and list items */
         }
-    }
 
-    .mobile-only {
-        display: none; /* Hide by default */
-    }
-
-    @media (max-width: 768px) { /* Adjust the max-width as needed for your mobile breakpoint */
-        .mobile-only {
-            display: block; /* Show on mobile devices */
+        footer .social ul {
+            list-style: none;
+            padding: 0;
         }
-    }
-    
-    .sticky-footer {
-        display: none; /* Hide by default */
-    }
 
-    @media (max-width: 768px) { /* Adjust the max-width as needed for your mobile breakpoint */
-        .sticky-footer {
-            display: block; /* Show on mobile devices */
+        footer .social ul li {
+            display: inline;
+            margin-left: 15px; /* Space between social icons */
         }
-    }
 
-    .mobile-only {
-        display: none; /* Hide by default */
-    }
-
-    @media (max-width: 768px) { /* Adjust the max-width as needed for your mobile breakpoint */
-        .mobile-only {
-            display: block; /* Show on mobile devices */
+        footer .social ul li a {
+            color: #ffffff; /* White color for social icons */
+            font-size: 18px; /* Size of social icons */
         }
-    }
-        
-    .sticky-footer {
-        position: fixed;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        background-color: #fff; /* Change to your desired background color */
-        padding: 10px 0; /* Adjust padding as needed */
-        box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* Optional shadow for effect */
-        z-index: 1000; /* Ensure it stays above other content */
-    }
 
-    .sticky-footer .container {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .subscribe-container {
+                flex-direction: column; /* Stack items on smaller screens */
+                align-items: flex-start; /* Align items to the start */
+            }
 
-    .sticky-footer .social ul {
-        display: flex;
-        list-style: none;
-        padding: 0;
-    }
+            .subscribe-section input[type="email"] {
+                width: 100%; /* Full width on smaller screens */
+                margin-bottom: 10px; /* Space below input */
+            }
 
-    .sticky-footer .social li {
-        margin-left: 10px; /* Adjust spacing between icons */ 
-}  
+            .client-count {
+                margin-left: 0; /* Remove left margin on smaller screens */
+            }
+        }
 
-button {
-    position: relative;
-    border: none;
-    background: transparent;
-    padding: 0;
-    margin-top: 23px;
-    cursor: pointer;
-    outline-offset: 4px;
-    transition: filter 250ms;
-    user-select: none;
-    touch-action: manipulation;
-}
+        .f-items .row {
+            display: flex; /* Use flexbox for layout */
+            flex-wrap: wrap; /* Allow wrapping */
+        }
 
-.edge {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border-radius: 12px;
-    background: linear-gradient(
-        to left,
-        hsl(340deg 100% 16%) 0%,
-        hsl(340deg 100% 32%) 8%,
-        hsl(340deg 100% 32%) 92%,
-        hsl(340deg 100% 16%) 100%
-    );
-}
+        .f-item {
+            margin-bottom: 30px; /* Space between items */
+        }
 
-.front {
-    display: block;
-    position: relative;
-    padding: 8px 15px; /* Reduced padding */
-    border-radius: 12px;
-    font-size: 0.9rem; /* Reduced font size */
-    color: white;
-    background: hsl(345deg 100% 47%);
-    will-change: transform;
-    transform: translateY(-4px);
-    transition: transform 600ms cubic-bezier(.3, .7, .4, 1);
-}
+        .contact-info {
+            text-align: left; /* Align text to the left */
+        }
 
-button:hover {
-    filter: brightness(110%);
-}
+        /* From Uiverse.io by mobinkakei */ 
+        .cta {
+          display: flex;
+          padding: 10px 30px;  /* Increased horizontal padding for more oval shape */
+          text-decoration: none;
+          font-size: 25px;
+          color: white;
+          background: #f01313;
+          transition: 1s;
+          box-shadow: 6px 6px 0 black;
+          transform: skewX(-15deg);
+          border: 1px solid transparent;
+          cursor: pointer;
+          margin-top: 16px;
+          margin-left: 5px;
+          border-radius: 50px;  /* Added border-radius for oval shape */
+        }
 
-button:hover .front {
-    transform: translateY(-6px);
-    transition: transform 250ms cubic-bezier(.3, .7, .4, 1.5);
-}
+        @media (max-width: 768px) {
+            .themedraft-button {
+                display: none; /* Hides the button */
+            .cta {
+                display: none;
+            }
+            .button {
+                display: none;
+            }
+            }
+        }
+        .cta:focus {
+          outline: none;
+        }
 
-button:active .front {
-    transform: translateY(-2px);
-    transition: transform 34ms;
-}
+        .cta:hover {
+          transition: 0.5s;
+          /* Removed box-shadow to prevent lines on hover */
+          transform: none; /* Removed transform on hover */
+        }
 
-button:hover .shadow {
-    transform: translateY(4px);
-    transition: transform 250ms cubic-bezier(.3, .7, .4, 1.5);
-}
+        .cta .second {
+          transition: 0.5s;
+          margin-right: 0px;
+        }
 
-button:active .shadow {
-    transform: translateY(1px);
-    transition: transform 34ms;
-}
+        .cta:hover .second {
+          transition: 0.5s;
+          margin-right: 45px;
+        }
 
-button:focus:not(:focus-visible) {
-    outline: none;
-}
+        .span {
+          transform: skewX(15deg);
+        }
 
-@media (max-width: 768px) { /* Adjust the max-width as needed for your mobile view */
-    .themedraft-button-wrapper button {
-        margin-right: 100px; /* Adjust the margin value as needed */
-        margin-bottom: 30px;
-    }
-}
+        .second {
+          width: 20px;
+          margin-left: 30px;
+          position: relative;
+          top: 12%;
+        }
 
-@media (max-width: 768px) { /* Adjust the max-width as needed for your mobile view */
-    .top-bar-area {
-        margin-bottom: 36px; /* Adjust the value as needed for more space */
-    }
-}
+        .one {
+          transition: 0.4s;
+          transform: translateX(-60%);
+        }
 
-.consultation-area {
-    margin-bottom: 0; /* Remove bottom margin */
-    padding-bottom: 0; /* Remove bottom padding if any */
-}
+        .two {
+          transition: 0.5s;
+          transform: translateX(-30%);
+        }
 
-@media (max-width: 768px) {
-  .contact-form-box {
-    text-align: center !important;
-  }
-  .contact-form-box form {
-    text-align: center !important;
-  }
-  .contact-form-box .form-group,
-  .contact-form-box input,
-  .contact-form-box select,
-  .contact-form-box button,
-  .contact-form-box input[type="date"],
-  .contact-form-box input[type="time"] {
-    margin-left: auto !important;
-    margin-right: auto !important;
-    display: block;
-  }
-}
+        .cta:hover .three {
+          animation: color_anim 1s infinite 0.2s;
+        }
 
-@media (max-width: 768px) {
-  .hide-on-mobile {
-    display: none !important;
-  }
-}
+        .cta:hover .one {
+          transform: translateX(0%);
+          animation: color_anim 1s infinite 0.6s;
+        }
 
-@media (max-width: 768px) {
-  .appoinment-box {
-    margin-top: 100px !important;
-  }
-}
+        .cta:hover .two {
+          transform: translateX(0%);
+          animation: color_anim 1s infinite 0.4s;
+        }
 
-</style>
+        @keyframes color_anim {
+          0% {
+            fill: white;
+          }
+
+          50% {
+            fill: #fbc638;
+          }
+
+          100% {
+            fill: white;
+          }
+        }
+
+        h4[data-animation="animated slideInDown"],
+        h2[data-animation="animated slideInRight"] {
+            color: white; /* Change the text color to white */
+        }
+
+        @media (max-width: 768px) {
+            .mobile-button {
+                padding: 4px 12px; /* Adjust padding for less height */
+                font-size: 14px; /* Adjust font size */
+            }
+        }
+
+        @media (max-width: 768px) {
+            .navbar-header {
+                display: flex;
+                align-items: center; /* Center items vertically */
+                justify-content: space-between; /* Space between logo and button */
+                margin-bottom: 10px;
+            }
+
+            .navbar-header .logo {
+                max-height: 40px; /* Ensure the logo fits */
+                margin-right: 270px; /* Add space between logo and button */
+                margin-top: 8px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .navbar-header .logo {
+                margin-top: 15px; /* Adjust the value as needed for more space */
+            }
+        }
+
+        /* From Uiverse.io by vinodjangid07 */ 
+        .input-wrapper {
+          width: fit-content;
+          height: 45px;
+          border-radius: 20px;
+          padding: 5px;
+          box-sizing: content-box;
+          display: flex;
+          align-items: center;
+          background-color: #292524;
+          margin-left: 180px; /* Adjust this value to increase or decrease the space */
+        }
+
+        .icon {
+          width: 30px;
+          fill: rgb(255, 255, 255);
+          margin-right: 25px; /* Increase this value for more space */
+          display: flex; /* Use flexbox for alignment */
+          align-items: center; /* Center the icon vertically */
+        }
+        .input {
+          max-width: 170px;
+          height: 100%;
+          border: none;
+          outline: none;
+          padding-left: 15px;
+          background-color: #292524;
+          color: white;
+          font-size: 1em;
+        }
+        .input:-webkit-autofill {
+          -webkit-box-shadow: 0 0 0px 1000px #292524 inset;
+          -webkit-text-fill-color: #ffffff;
+        }
+        .Subscribe-btn {
+          height: 100%;
+          width: 95px;
+          border: none;
+          border-radius: 15px;
+          color: rgb(0, 0, 0);
+          cursor: pointer;
+          background-color: #ffffff;
+          font-weight: 500;
+          overflow: hidden;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          position: relative;
+          transition: all 0.3s;
+        }
+        .arrow {
+          /* display: none; */
+          position: absolute;
+          margin-right: 150px;
+          transition: all 0.3s;
+        }
+        .input-wrapper:active .icon {
+          transform: scale(1.3);
+        }
+        .Subscribe-btn:hover {
+          color: white;
+        }
+        .Subscribe-btn:hover .arrow {
+          margin-right: 0;
+          animation: jello-vertical 0.9s both;
+          transform-origin: right;
+        }
+
+        @keyframes jello-vertical {
+          0% {
+            transform: scale3d(1, 1, 1);
+          }
+          30% {
+            transform: scale3d(0.75, 1.25, 1);
+          }
+          40% {
+            transform: scale3d(1.25, 0.75, 1);
+          }
+          50% {
+            transform: scale3d(0.85, 1.15, 1);
+          }
+          65% {
+            transform: scale3d(1.05, 0.95, 1);
+          }
+          75% {
+            transform: scale3d(0.95, 1.05, 1);
+          }
+          100% {
+            transform: scale3d(1, 1, 1);
+          }
+        }
+        .Subscribe-btn:active {
+          transform: scale(0.9);
+        }
+
+        /* 
+        /* From Uiverse.io by mobinkakei */ 
+        .btn-text-one {
+          color: #fbff00;
+          font-weight: bolder;
+          margin-left: 200px;
+          font-size: 30px;
+        }
+        /* ... existing code ... */
+
+        /* Media query for mobile devices */
+        @media (max-width: 600px) {
+          .input-wrapper {
+            display: none; /* Hide input wrapper on mobile */
+          }
+
+          .Subscribe-btn {
+            display: none; /* Hide subscribe button on mobile */
+          }
+
+          .btn-text-one {
+            display: none; /* Hide button text on mobile */
+          }
+          .subscribe-section{
+            display: none;
+          }
+        }
+
+        /* ... existing code ... */
+
+        /* WhatsApp Float Button */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background-color: #25d366;
+            color: #FFF;
+            width: 60px;
+            height: 60px;
+            margin-bottom: 33px;
+            border-radius: 50%;
+            text-align: center;
+            font-size: 30px;
+            box-shadow: 2px 2px 3px #999;
+            z-index: 100;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .whatsapp-float:hover {
+            background-color: #128C7E;
+            color: #FFF;
+            transform: scale(1.1);
+        }
+
+        .whatsapp-float i {
+            margin-top: 0;
+        }
+
+        @media screen and (max-width: 767px) {
+            .whatsapp-float {
+                width: 50px;
+                height: 50px;
+                font-size: 25px;
+                bottom: 20px;
+                right: 20px;
+            }
+        }
+
+        .fun-factor-area {
+            background: transparent !important; /* Force background to be transparent */
+        }
+
+        @keyframes fadeInScale {
+            0% {
+                opacity: 0;
+                transform: scale(0.5);
+            }
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        .animated-icon {
+            animation: fadeInScale 0.5s ease forwards;
+        }
+
+        /* Add specific delays for each icon */
+        .animated-icon:nth-child(1) {
+            animation-delay: 0s; /* No delay for the first icon */
+        }
+
+        .animated-icon:nth-child(2) {
+            animation-delay: 0.2s; /* 200ms delay for the second icon */
+        }
+
+        .animated-icon:nth-child(3) {
+            animation-delay: 0.4s; /* 400ms delay for the third icon */
+        }
+
+        /* Add this to your CSS file */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate {
+            animation: fadeInUp 0.5s ease forwards;
+        }
+
+        /* Add this to your CSS file */
+        @keyframes flickerFadeIn {
+            0% {
+                opacity: 0;
+                transform: scale(0.8);
+            }
+            50% {
+                opacity: 1;
+                transform: scale(1.1);
+            }
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        .flicker-fade-in {
+            animation: flickerFadeIn 0.5s ease forwards;
+        }
+
+        .process h2 {
+            margin-bottom: 10px; /* Adjust this value to reduce space */
+        }
+
+        .fun-factor-area {
+            padding-top: 10px; /* Adjust this value to reduce space */
+        }
+
+        .time-input {
+            width: 200px; /* Adjust the width as needed */
+            padding: 5px; /* Optional: adjust padding */
+        }
+
+        @media (max-width: 768px) {
+                .fun-fact-items .item {
+                    margin-left: 30px; /* Adjust margin for mobile */
+                    text-align: center; /* Center text on mobile */
+                }
+                .fun-fact-items .row {
+                    flex-direction: column; /* Stack items vertically */
+                }
+                .fun-factor-area {
+                    display: none; /* Hide fun factor area on mobile */
+                }
+            }
+
+            @media (max-width: 768px) {
+                .department-items .item {
+                    width: 100%;
+                    display: block;
+                }
+            }
+
+            @media (max-width: 768px) { /* Adjust the max-width as needed */
+                .hide-on-mobile {
+                    display: none;
+                }
+            }
+
+            @media (min-width: 769px) { /* Adjust the min-width as needed */
+                .hide-on-pc {
+                    display: none;
+                }
+            }
+
+            @media (max-width: 768px) {
+                .cta.mobile-button {
+                    margin-right: 75px; /* Adjust the value as needed */
+                }
+            }
+
+            @media (max-width: 768px) {
+                .top-bar-area {
+                    position: fixed;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                    background-color: white; /* Change as needed */
+                    z-index: 1000; /* Ensure it stays above other content */
+                }
+            }
+
+            .sticky-footer {
+                position: fixed;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                background-color: #fff; /* Change to your desired background color */
+                padding: 10px 0; /* Adjust padding as needed */
+                box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* Optional shadow for effect */
+                z-index: 1000; /* Ensure it stays above other content */
+            }
+
+            .sticky-footer .container {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            .sticky-footer .social ul {
+                display: flex;
+                list-style: none;
+                padding: 0;
+            }
+
+            .sticky-footer .social li {
+                margin-left: 10px; /* Adjust spacing between icons */
+            }
+
+            .footer-text {
+                font-size: 14px; /* Adjust the size as needed */
+                margin: 0; /* Remove any default margin */
+                white-space: nowrap; /* Prevent line breaks */
+            }
+
+            .marquee {
+                overflow: hidden; /* Hide the overflow */
+                white-space: nowrap; /* Prevent line breaks */
+                box-sizing: border-box; /* Include padding in width */
+            }
+
+            .footer-text {
+                display: inline-block; /* Make the text inline-block for animation */
+                animation: marquee 10s linear infinite; /* Adjust duration as needed */
+            }
+
+            @keyframes marquee {
+                0% {
+                    transform: translateX(100%); /* Start from the right */
+                }
+                100% {
+                    transform: translateX(-100%); /* Move to the left */
+                }
+            }
+
+            .sticky-footer {
+                display: none; /* Hide by default */
+            }
+
+            @media (max-width: 768px) { /* Adjust the max-width as needed for your mobile breakpoint */
+                .sticky-footer {
+                    display: block; /* Show on mobile devices */
+                }
+            }
+
+            .mobile-only {
+                display: none; /* Hide by default */
+            }
+
+            @media (max-width: 768px) { /* Adjust the max-width as needed for your mobile breakpoint */
+                .mobile-only {
+                    display: block; /* Show on mobile devices */
+                }
+            }
+            
+            .sticky-footer {
+                display: none; /* Hide by default */
+            }
+
+            @media (max-width: 768px) { /* Adjust the max-width as needed for your mobile breakpoint */
+                .sticky-footer {
+                    display: block; /* Show on mobile devices */
+                }
+            }
+
+            .mobile-only {
+                display: none; /* Hide by default */
+            }
+
+            @media (max-width: 768px) { /* Adjust the max-width as needed for your mobile breakpoint */
+                .mobile-only {
+                    display: block; /* Show on mobile devices */
+                }
+            }
+                
+            .sticky-footer {
+                position: fixed;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                background-color: #fff; /* Change to your desired background color */
+                padding: 10px 0; /* Adjust padding as needed */
+                box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* Optional shadow for effect */
+                z-index: 1000; /* Ensure it stays above other content */
+            }
+
+            .sticky-footer .container {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            .sticky-footer .social ul {
+                display: flex;
+                list-style: none;
+                padding: 0;
+            }
+
+            .sticky-footer .social li {
+                margin-left: 10px; /* Adjust spacing between icons */ 
+        }  
+        .footer-text {
+                font-size: 14px; /* Adjust the size as needed */
+                margin: 0; /* Remove any default margin */
+                white-space: nowrap; /* Prevent line breaks */
+            }
+
+            .marquee {
+                overflow: hidden; /* Hide the overflow */
+                white-space: nowrap; /* Prevent line breaks */
+                box-sizing: border-box; /* Include padding in width */
+            }
+
+            .footer-text {
+                display: inline-block; /* Make the text inline-block for animation */
+                animation: marquee 10s linear infinite; /* Adjust duration as needed */
+            }
+
+            @keyframes marquee {
+                0% {
+                    transform: translateX(100%); /* Start from the right */
+                }
+                100% {
+                    transform: translateX(-100%); /* Move to the left */
+                }
+            }
+
+            .sticky-footer {
+                display: none; /* Hide by default */
+            }
+
+            @media (max-width: 768px) { /* Adjust the max-width as needed for your mobile breakpoint */
+                .sticky-footer {
+                    display: block; /* Show on mobile devices */
+                }
+            }
+
+            .mobile-only {
+                display: none; /* Hide by default */
+            }
+
+            @media (max-width: 768px) { /* Adjust the max-width as needed for your mobile breakpoint */
+                .mobile-only {
+                    display: block; /* Show on mobile devices */
+                }
+            }
+            
+            .sticky-footer {
+                display: none; /* Hide by default */
+            }
+
+            @media (max-width: 768px) { /* Adjust the max-width as needed for your mobile breakpoint */
+                .sticky-footer {
+                    display: block; /* Show on mobile devices */
+                }
+            }
+
+            .mobile-only {
+                display: none; /* Hide by default */
+            }
+
+            @media (max-width: 768px) { /* Adjust the max-width as needed for your mobile breakpoint */
+                .mobile-only {
+                    display: block; /* Show on mobile devices */
+                }
+            }
+                
+            .sticky-footer {
+                position: fixed;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                background-color: #fff; /* Change to your desired background color */
+                padding: 10px 0; /* Adjust padding as needed */
+                box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* Optional shadow for effect */
+                z-index: 1000; /* Ensure it stays above other content */
+            }
+
+            .sticky-footer .container {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            .sticky-footer .social ul {
+                display: flex;
+                list-style: none;
+                padding: 0;
+            }
+
+            .sticky-footer .social li {
+                margin-left: 10px; /* Adjust spacing between icons */ 
+        }  
+
+        button {
+            position: relative;
+            border: none;
+            background: transparent;
+            padding: 0;
+            margin-top: 23px;
+            cursor: pointer;
+            outline-offset: 4px;
+            transition: filter 250ms;
+            user-select: none;
+            touch-action: manipulation;
+        }
+
+        .edge {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 12px;
+            background: linear-gradient(
+                to left,
+                hsl(340deg 100% 16%) 0%,
+                hsl(340deg 100% 32%) 8%,
+                hsl(340deg 100% 32%) 92%,
+                hsl(340deg 100% 16%) 100%
+            );
+        }
+
+        .front {
+            display: block;
+            position: relative;
+            padding: 8px 15px; /* Reduced padding */
+            border-radius: 12px;
+            font-size: 0.9rem; /* Reduced font size */
+            color: white;
+            background: hsl(345deg 100% 47%);
+            will-change: transform;
+            transform: translateY(-4px);
+            transition: transform 600ms cubic-bezier(.3, .7, .4, 1);
+        }
+
+        button:hover {
+            filter: brightness(110%);
+        }
+
+        button:hover .front {
+            transform: translateY(-6px);
+            transition: transform 250ms cubic-bezier(.3, .7, .4, 1.5);
+        }
+
+        button:active .front {
+            transform: translateY(-2px);
+            transition: transform 34ms;
+        }
+
+        button:hover .shadow {
+            transform: translateY(4px);
+            transition: transform 250ms cubic-bezier(.3, .7, .4, 1.5);
+        }
+
+        button:active .shadow {
+            transform: translateY(1px);
+            transition: transform 34ms;
+        }
+
+        button:focus:not(:focus-visible) {
+            outline: none;
+        }
+
+        @media (max-width: 768px) { /* Adjust the max-width as needed for your mobile view */
+            .themedraft-button-wrapper button {
+                margin-right: 100px; /* Adjust the margin value as needed */
+                margin-bottom: 30px;
+            }
+        }
+
+        @media (max-width: 768px) { /* Adjust the max-width as needed for your mobile view */
+            .top-bar-area {
+                margin-bottom: 36px; /* Adjust the value as needed for more space */
+            }
+        }
+
+        .consultation-area {
+            margin-bottom: 0; /* Remove bottom margin */
+            padding-bottom: 0; /* Remove bottom padding if any */
+        }
+
+        @media (max-width: 768px) {
+          .contact-form-box {
+            text-align: center !important;
+          }
+          .contact-form-box form {
+            text-align: center !important;
+          }
+          .contact-form-box .form-group,
+          .contact-form-box input,
+          .contact-form-box select,
+          .contact-form-box button,
+          .contact-form-box input[type="date"],
+          .contact-form-box input[type="time"] {
+            margin-left: auto !important;
+            margin-right: auto !important;
+            display: block;
+          }
+        }
+
+        @media (max-width: 768px) {
+          .hide-on-mobile {
+            display: none !important;
+          }
+        }
+
+        @media (max-width: 768px) {
+          .appoinment-box {
+            margin-top: 100px !important;
+          }
+        }
+
+        /* Add these new styles for section backgrounds */
+        .banner-area {
+            background-color: #f8f9fa;
+        }
+
+        .consultation-area {
+            background-color: #ffffff;
+        }
+
+        .department-area.carousel-shadow {
+            background-color: #f0f7ff;
+        }
+
+        .department-area.icon-only {
+            background-color: #fff5f5;
+        }
+
+        .about-area {
+            background-color: #f8f9fa;
+        }
+
+        .doctors-area {
+            background-color: #f0f7ff;
+        }
+
+        .top-entry-area {
+            background-color: #fff5f5;
+        }
+
+        .gallery-area {
+            background-color: #f8f9fa;
+        }
+
+        .choose-us-area {
+            background-color: #f0f7ff;
+        }
+
+        .testimonials-area {
+            background-color: #fff5f5;
+        }
+
+        .contact-us-area {
+            background-color: #f8f9fa;
+        }
+
+        /* Add smooth transition for background colors */
+        section, div[class*="-area"] {
+            transition: background-color 0.3s ease;
+        }
+
+    </style>
 
 
 </head>
@@ -1130,7 +1209,7 @@ button:focus:not(:focus-visible) {
                     <h2 style="font-family: 'Inter', sans-serif; font-weight: 600; color: #333; margin-bottom: 10px;"> <!-- Reduced margin -->
                         Building Smiles with <br> Experience & Excellence </h2>
                     <p style="font-family: 'Inter', sans-serif; font-weight: 400; color: #666; margin-bottom: 0;"> <!-- Adjusted margin -->
-                        <ul style="list-style-type: disc; padding-left: 20px;">
+                        <ul class="stylish-list">
                             <li>Internationally trained dentists</li>
                             <li>Lifetime post-operative warranty</li>
                             <li>Sterilization guidelines approved by CDC, USA</li>
@@ -2233,7 +2312,7 @@ button:focus:not(:focus-visible) {
         <div class="container">
             <div class="row align-center">
                 <div class="col-lg-6">
-                    <p>Copyright @ ProcureDental</p>
+                    <p>Copyright @ <span style="transition: all 0.3s ease; cursor: pointer;" onmouseover="this.style.color='#fbff00'" onmouseout="this.style.color='#ffffff'">ProcureDental</span> | Made with ❤️ by <a href="https://regortz.com" target="_blank" style="color: #fbff00; transition: all 0.3s ease; text-decoration: none;" onmouseover="this.style.color='#ffffff'; this.style.textDecoration='underline'" onmouseout="this.style.color='#fbff00'; this.style.textDecoration='none'">Regortz</a> | <a href="privacy.html" class="privacy-btn" style="color: #ffffff; text-decoration: none; padding: 5px 10px; transition: all 0.3s ease;" onmouseover="this.style.color='#fbff00'" onmouseout="this.style.color='#ffffff'">Privacy Policy</a></p>
                 </div>
                 <div class="col-lg-6 text-right social">
                     <ul>

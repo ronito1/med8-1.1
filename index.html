@@ -1123,6 +1123,62 @@
                 margin-top: 20px;
             }
         }
+
+        /* Enhanced styles for date and time inputs */
+        input[type="date"],
+        input[type="time"] {
+            color: #ffffff !important;
+            background-color: transparent !important;
+        }
+
+        input[type="date"]::placeholder,
+        input[type="time"]::placeholder {
+            color: #ffffff !important;
+            opacity: 1;
+        }
+
+        input[type="date"]::-webkit-datetime-edit,
+        input[type="time"]::-webkit-datetime-edit {
+            color: #ffffff !important;
+        }
+
+        input[type="date"]::-webkit-calendar-picker-indicator,
+        input[type="time"]::-webkit-calendar-picker-indicator {
+            filter: invert(1);
+            opacity: 1;
+        }
+
+        /* Mobile-specific styles */
+        @media (max-width: 768px) {
+            input[type="date"],
+            input[type="time"] {
+                color: #ffffff !important;
+                background-color: transparent !important;
+                -webkit-appearance: none;
+                appearance: none;
+            }
+
+            input[type="date"]::-webkit-calendar-picker-indicator,
+            input[type="time"]::-webkit-calendar-picker-indicator {
+                filter: invert(1);
+                opacity: 1;
+                width: 20px;
+                height: 20px;
+                margin-right: 5px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .themedraft-button {
+                display: none; /* Hides the button */
+            .cta {
+                display: none;
+            }
+            .button {
+                display: none;
+            }
+            }
+        }
     </style>
 
 

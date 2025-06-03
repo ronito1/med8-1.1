@@ -38,15 +38,151 @@
     <!-- ========== Google Fonts ========== -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;600;700;800&display=swap" rel="stylesheet">
 
-</head>
-<style>
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" />
+
+    <link rel='stylesheet' id='swiper-css' href='https://www.procuredental.co.in/wp-content/plugins/elementor/assets/lib/swiper/v8/css/swiper.min.css?ver=8.4.5' type='text/css' media='all' />
+    <link rel='stylesheet' id='e-swiper-css' href='https://www.procuredental.co.in/wp-content/plugins/elementor/assets/css/conditionals/e-swiper.min.css?ver=3.25.11' type='text/css' media='all' />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <style>
+        .entry-content img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .entry-content h2 {
+            color: #333; /* Adjust this color as needed */
+            font-size: 24px; /* Adjust the size as needed */
+        }
+
+        .entry-content h3 {
+            color: #555; /* Adjust this color as needed */
+            font-size: 20px; /* Adjust the size as needed */
+        }
+
+        .entry-content p {
+            line-height: 1.6;
+            color: #666; /* Adjust this color as needed */
+            font-size: 16px; /* Adjust the size as needed */
+        }
+
+        .p{
+            font-size: medium;
+        }
+
+        .swiper-container {
+            width: 100%; /* Make it responsive */
+            max-width: 600px; /* Set a max width */
+            margin: 0 auto; /* Center the container */
+            height: 100%; /* Allow height to adjust based on content */
+        }
+
+        .swiper-slide {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+            font-size: 16px; /* Adjust as needed */
+            color: #666; /* Adjust as needed */
+            height: auto; /* Allow height to adjust based on content */
+        }
+
+        .swiper-button-next, .swiper-button-prev {
+            color: #FFAB15; /* Adjust as needed */
+        }
+
+        .swiper-pagination-bullet {
+            background: #FFAB15; /* Adjust as needed */
+        }
+
+        .swiper-pagination {
+            bottom: 10px; /* Adjust position as needed */
+        }
+      
+        /* Custom style for h2 elements on this page */
+        .department-single h2 {
+            color: red; /* Change the color to red */
+            font-size: 40px;
+        }
+
+         /* Custom style for h2 elements on this page */
+         .department-single h3 {
+            color: rgb(0, 0, 0); 
+            font-size: 25px;
+        }
+
+        .video-container {
+            display: flex;
+            justify-content: left; /* Center the videos */
+            margin: 20px 0; /* Add some margin for spacing */
+            gap: 10px;
+        }
+    
+        .video01 {
+        flex: 0 1 40%; /* Allow the video to take up to 40% of the row */
+        max-width: 600px; /* Set a max width for each video */
+        }
+
+        .video01 iframe {
+        width: 360px; /* Makes the iframe responsive */
+        height: 210px; /* Set a fixed height for consistency */
+        }
+
+        .td-testimonial-one-author-name-designation {
+            display: flex; /* Use flexbox to align items in a row */
+            align-items: center; /* Center items vertically */
+        }
+
+        .td-testimonial-quote {
+            margin-left: 10px; /* Space between the author name and the quote icon */
+        }
+
+        .author-profile-pic {
+            width: 40px; /* Set a width for the profile picture */
+            height: 40px; /* Set a height for the profile picture */
+            border-radius: 50%; /* Make it circular */
+            margin-right: 10px; /* Space between the image and the author name */
+        }
+
+        /* Media query for mobile view */
+        @media (max-width: 768px) {
+            .video-container {
+                flex-direction: column; /* Stack videos vertically */
+                align-items: center; /* Center videos */
+            }
+
+            .video01 {
+                flex: 0 1 100%; /* Take full width on mobile */
+                max-width: 100%; /* Remove max width restriction */
+                margin-bottom: 20px; /* Add space between stacked videos */
+            }
+
+            .video01 iframe {
+                height: 200px; /* Adjust height for mobile if needed */
+            }
+        }
+
+        
     
     @media (max-width: 768px) {
       .mobile-button {
           padding: 4px 12px; /* Adjust padding for less height */
           font-size: 14px; /* Adjust font size */
       }
+    }
+
+    
+    @media (max-width: 768px) {
+        .cta.mobile-button {
+            margin-right: 75px; /* Adjust the value as needed */
+        }
     }
     
     @media (max-width: 768px) {
@@ -61,8 +197,6 @@
           margin-right: 200px; /* Add space between logo and button */
       }
     }
-
-    /* WhatsApp Float Button */
     .whatsapp-float {
     position: fixed;
     bottom: 30px;
@@ -94,13 +228,6 @@
         margin-top: 0;
     }
 
-    @media (max-width: 768px) {
-        .cta.mobile-button {
-            margin-right: 75px; /* Adjust the value as needed */
-        }
-    }
-
-
     @media screen and (max-width: 767px) {
         .whatsapp-float {
             width: 50px;
@@ -110,7 +237,14 @@
             right: 20px;
         }
     }
+    
+    @media (max-width: 768px) {
+        .cta.mobile-button {
+            margin-right: 75px; /* Adjust the value as needed */
+        }
+    }
 
+    
     .sticky-footer {
         display: none; /* Hide by default */
     }
@@ -338,13 +472,19 @@ button:focus:not(:focus-visible) {
 </style>
 
 
-<body>
+
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+</head>
+
+<body class="department-single">
 
     <!-- Preloader Start -->
     <div class="se-pre-con"></div>
     <!-- Preloader Ends -->
 
-    <!-- Start Header Top 
+   <!-- Start Header Top 
     ============================================= -->
     <div class="top-bar-area inc-pad inc-border" style="background-color:#24333e;">
         <div class="container">
@@ -387,7 +527,6 @@ button:focus:not(:focus-visible) {
     <!-- End Header Top -->
 
 
-   
     <!-- Header 
     ============================================= -->
     <header id="home">
@@ -406,6 +545,7 @@ button:focus:not(:focus-visible) {
                                 <span class="edge"></span>
                                 <span class="front text"> Contact Now!</span>
                             </button>
+                        </a>
                     </div>
                 </div>
                 <!-- End Atribute Navigation -->
@@ -505,11 +645,10 @@ button:focus:not(:focus-visible) {
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 offset-lg-2">
-                    <h1>Our Branches</h1>
+                    <h1>Other Dental Treatments</h1>
                     <ul class="breadcrumb">
-                        <li><a href="#"><i class="fas fa-home"></i> Home</a></li>
-                        <li><a href="#">Branches</a></li>
-                        <li class="active">Bangalore</li>
+                        <li><a href="index.html"><i class="fas fa-home"></i> Procure Dental Care</a></li>
+                        <li class="active"> Other Dental Treatments</li>
                     </ul>
                 </div>
             </div>
@@ -517,132 +656,223 @@ button:focus:not(:focus-visible) {
     </div>
     <!-- End Breadcrumb -->
 
-    <!-- Start Blog
+    <!-- Start Department Single 
     ============================================= -->
-    <div class="blog-area full-blog blog-standard full-blog default-padding">
+    <div class="department-single-area overflow-hidden default-padding">
         <div class="container">
-            <div class="blog-items">
-                <div class="row">
-                    <div class="blog-content col-lg-10 offset-lg-1 col-md-12">
-                        <div class="blog-item-box">
-                            <!-- Heading and Introduction -->
-                            <div class="single-item">
-                                <div class="item wow fadeInUp">
-                                    <div class="info">
-                                        <h2 class="text-center mb-4">Accessible. Trusted. Closer to You.</h2>
-                                        <p class="text-center mb-5">
-                                            Delta Dental Care proudly serves patients across Bangalore with three state-of-the-art branches designed to deliver seamless, high-quality dental care in a safe and comforting environment. Each branch is equipped with advanced technology and led by experienced professionals to ensure your dental journey is smooth and stress-free wherever you are.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Single Item -->
-                            <div class="single-item">
-                                <div class="item wow fadeInUp">
-                                    <div class="thumb">
-                                        <a href="#"><img src="assets/img/1500x700.png" alt="Thumb"></a>
-                                        <div class="post-date">
-                                            12 Jul
-                                        </div>
-                                    </div>
-                                    <div class="info">
-                                        <div class="tags">
-                                            <ul>
-                                                <li>
-                                                    <a href="#">Test</a>
-                                                </li>
-                                                <li>
-                                                    <a href="#">Doctor</a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <h4>
-                                            <a href="#">Rajajinagar Branch
-                                            </a>
-                                        </h4>
-                                        <p>
-                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Error excepturi, fugiat cumque omnis laudantium sed quo exercitationem eos voluptatem? Sit repudiandae facilis culpa. Quidem nesciunt architecto, illum et? Id, harum!
-                                        </p>
-                                        <div class="meta">
-                                            <ul>
-                                                <li>
-                                                    <a href="#">
-                                                        <img src="assets/img/100x100.png" alt="Author">
-                                                        <span>Author</span>
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a href="#"><i class="fas fa-comments"></i> 12 Comments</a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- End Single Item -->
-                            <!-- Single Item -->
-                            <div class="single-item">
-                                <div class="item wow fadeInUp">
-                                    <div class="thumb">
-                                        <a href="#"><img src="assets/img/1500x700.png" alt="Thumb"></a>
-                                        <div class="post-date">
-                                            12 Jul
-                                        </div>
-                                    </div>
-                                    <div class="info">
-                                        <div class="tags">
-                                            <ul>
-                                                <li><a href="#">Patient</a></li>
-                                            </ul>
-                                        </div>
-                                        <h4>
-                                            <a href="#">Ulsoor Branch
-                                            </a>
-                                        </h4>
-                                        <p>
-                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Error excepturi, fugiat cumque omnis laudantium sed quo exercitationem eos voluptatem? Sit repudiandae facilis culpa. Quidem nesciunt architecto, illum et? Id, harum!
-                                        </p>
-                                        <div class="meta">
-                                            <ul>
-                                                <li>
-                                                    <a href="#">
-                                                        <img src="assets/img/100x100.png" alt="Author">
-                                                        <span>Author</span>
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a href="#"><i class="fas fa-comments"></i> 12 Comments</a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- End Single Item -->
-                        </div>
+            <div class="row">
+                <div class="col-lg-8 info">
+                    <div class="entry-content">
+                        <section>
+                            <h3>Comprehensive Dental Solutions Under One Roof – At Delta Dental Care, Bangalore</h3>
+                            <p>Your oral health needs are unique—and at Delta Dental Care, we believe in providing a complete spectrum of dental services to address every concern, big or small. Beyond specialized treatments like implants and root canals, we also offer a range of other essential and advanced procedures to help you maintain a healthy, confident smile for life.</p>
+                            <p>Our multi-specialty dental clinics in Rajajinagar, RT Nagar, and Ulsoor are fully equipped to offer advanced diagnostic tools, personalized care, and painless procedures, making us a trusted name among the best dental clinics in Bangalore.</p>
+                            <img src="https://www.procuredental.co.in/wp-content/uploads/2024/08/dental-implants-1024x576.jpeg" alt="Dental Treatments" class="img-fluid" />
+
+                            <br>
+                            <br>
+
+                            <h3>Additional Dental Services We Offer:</h3>
+                            <ul>
+                                <li><strong>Teeth Whitening</strong> – Brighten your smile safely with in-clinic or at-home whitening treatments under expert supervision.</li>
+                                <li><strong>Mouth Guards & Night Guards</strong> – Protect your teeth during sports or from nighttime grinding (bruxism) with custom-made guards.</li>
+                                <li><strong>Dental Veneers</strong> – Transform your smile with ultra-thin porcelain shells designed to correct chipped, stained, or misshapen teeth.</li>
+                                <li><strong>Tooth Sensitivity Treatments</strong> – Get relief from sharp pain caused by exposed dentin, receding gums, or enamel erosion.</li>
+                                <li><strong>Oral Cancer Screening</strong> – Early detection can be life-saving. Our dentists perform routine screening during checkups.</li>
+                                <li><strong>TMJ/TMD Therapy</strong> – Experience jaw pain or clicking sounds? We diagnose and treat temporomandibular joint disorders effectively.</li>
+                                <li><strong>Smile Designing</strong> – A customized approach to help you achieve the perfect smile using digital planning and cosmetic techniques.</li>
+                                <li><strong>Full Mouth Rehabilitation</strong> – Ideal for patients needing a comprehensive solution involving multiple procedures.</li>
+                            </ul>
+
+                            <br>
+                            <br>
+
+                            <h3>Why Delta Dental Care for Complete Dental Care?</h3>
+                            <ul>
+                                <li><strong>One-Stop Dental Destination</strong><br>
+                                From preventive care to cosmetic enhancements and complex treatments, we offer all services under one roof.</li>
+                                <li><strong>Multidisciplinary Team</strong><br>
+                                Our experienced dentists from various specializations work together to ensure comprehensive, cohesive care.</li>
+                                <li><strong>Personalized Consultations</strong><br>
+                                We listen, evaluate, and create treatment plans tailored specifically for your dental goals and concerns.</li>
+                                <li><strong>World-Class Facilities</strong><br>
+                                Modern equipment, strict hygiene protocols, and a warm ambience for a stress-free dental experience.</li>
+                            </ul>
+                        </section>
+
+                        <br>
+                        <br>
                         
-                        <!-- Pagination -->
-                        <div class="row">
-                            <div class="col-md-12 pagi-area text-center">
-                                <nav aria-label="navigation">
-                                    <ul class="pagination">
-                                        <li class="page-item"><a class="page-link" href="#"><i class="fas fa-long-arrow-alt-left"></i></a></li>
-                                        <li class="page-item active"><a class="page-link" href="#">1</a></li>
-                                        <li class="page-item"><a class="page-link" href="#">2</a></li>
-                                        <li class="page-item"><a class="page-link" href="#">3</a></li>
-                                        <li class="page-item"><a class="page-link" href="#"><i class="fas fa-long-arrow-alt-right"></i></a></li>
-                                    </ul>
-                                </nav>
+                        <section>
+                            <h2>Our Testimonials</h2>
+                            <div class="td-testimonial-one-slider-wrapper">
+                                <div id="td-testimonial-5585" class="row td-testimonial-one-slider">
+                                    <div class="col-12">
+                                        <div class="td-testimonial-one-item">
+                                            <div class="td-testimonial-one-author-image td-cover-bg" style="background-image: url();"></div>
+                                            <div class="td-testimonial-one-top-image">
+                                                <img decoding="async" src="" alt="" title="Root Canal Treatment">
+                                            </div>
+                                            <div class="td-testimonial-one-desc">
+                                                <p>I was terrified of getting a root canal, but the doctors at Delta Dental made the experience painless and smooth. I didn't feel a thing!</p>
+                                            </div>
+                                            <div class="td-testimonial-one-author-name-designation">
+                                                <img src="assets/img/icon/1.jpg" alt="Profile Picture" class="author-profile-pic">
+                                                <h4 class="td-testimonial-one-author-name">Deepa M. - Rajajinagar Resident</h4>
+                                                <div class="td-testimonial-quote td-primary-color">
+                                                    <i class="fas fa-quote-right"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-12">
+                                        <div class="td-testimonial-one-item">
+                                            <div class="td-testimonial-one-author-image td-cover-bg" style="background-image: url();"></div>
+                                            <div class="td-testimonial-one-top-image">
+                                                <img decoding="async" src="" alt="" title="Root Canal Treatment">
+                                            </div>
+                                            <div class="td-testimonial-one-desc">
+                                                <p>I had severe tooth pain for weeks. Delta Dental diagnosed the issue quickly and performed the root canal the same day. The relief was instant.</p>
+                                            </div>
+                                            <div class="td-testimonial-one-author-name-designation">
+                                                <img src="assets/img/icon/1.jpg" alt="Profile Picture" class="author-profile-pic">
+                                                <h4 class="td-testimonial-one-author-name">Ankit R. - RT Nagar Resident</h4>
+                                                <div class="td-testimonial-quote td-primary-color">
+                                                    <i class="fas fa-quote-right"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-12">
+                                        <div class="td-testimonial-one-item">
+                                            <div class="td-testimonial-one-author-image td-cover-bg" style="background-image: url();"></div>
+                                            <div class="td-testimonial-one-top-image">
+                                                <img decoding="async" src="" alt="" title="Root Canal Treatment">
+                                            </div>
+                                            <div class="td-testimonial-one-desc">
+                                                <p>Professional, clean, and very efficient. My root canal was completed in just two sessions, and the crown fits perfectly!</p>
+                                            </div>
+                                            <div class="td-testimonial-one-author-name-designation">
+                                                <img src="assets/img/icon/2.jpg" alt="Profile Picture" class="author-profile-pic">
+                                                <h4 class="td-testimonial-one-author-name">Lakshmi P. - Ulsoor Resident</h4>
+                                                <div class="td-testimonial-quote td-primary-color">
+                                                    <i class="fas fa-quote-right"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
+                        </section>
+
+                       
                     </div>
+                </div>
+
+                <div class="col-lg-4 sidebar">
+                    <!-- Single Widget -->
+                    <div class="widget appoinment">
+                        <div class="title">
+                            <h4><strong>Make an Appointment</strong></h4>
+                        </div>
+                        <form action="#" onsubmit="return sendEmail();">
+                            <div class="appoinment-box">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-12">
+                                        <div class="form-group">
+                                            <input class="form-control" id="email" name="email" placeholder="Email*" type="email" required>
+                                            <span class="alert-error"></span>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12">
+                                        <div class="form-group">
+                                            <input class="form-control" id="phone" name="phone" placeholder="Phone" type="text" required>
+                                            <span class="alert-error"></span>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <select id="f_gender" required>
+                                                <option value="">Select Gender</option>
+                                                <option value="Male">Male</option>
+                                                <option value="Female">Female</option>
+                                                <option value="Child">Child</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <select id="f_department" required>
+                                                <option value="">Select Department</option>
+                                                <option value="Medicine">Medicine</option>
+                                                <option value="Dental Care">Dental Care</option>
+                                                <option value="Traumatology">Traumatology</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <input class="form-control" id="f_date" name="date" placeholder="Date" type="date" required>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <input type="time" id="f_time" name="time" required class="form-control time-input" />
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <button type="submit" name="submit" id="submit">
+                                            Submit Query <i class="fa fa-paper-plane"></i>
+                                        </button>
+                                    </div>
+                                    <!-- Alert Message -->
+                                    <div class="col-lg-12 alert-notification">
+                                        <div id="message" class="alert-msg"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <!-- End Single Widget -->
+
+                  
+                    <!-- End Single Widget -->
+
+                    <!-- Single Widget -->
+                    <!-- <div class="widget opening-hours">
+                        <div class="title">
+                            <h4>Opening Hours</h4>
+                        </div>
+                        <ul>
+                            <li> <span> Mon - Tues :  </span>
+                              <div class="float-right"> 6.00 am - 10.00 pm </div>
+                            </li>
+                            <li> <span> Wednes - Thurs :</span>
+                              <div class="float-right"> 8.00 am - 6.00 pm </div>
+                            </li>
+                            <li> <span> Sun : </span>
+                              <div class="float-right closed"> Closed </div>
+                            </li>
+                        </ul>
+                    </div> -->
+                    <!-- End Single Widget -->
+                </div>
+                <!-- End Widget Items -->
+
                 </div>
             </div>
         </div>
     </div>
-    <!-- End Blog -->
+    <!-- End Department Single -->
 
-   
     <!-- Start Footer 
 ============================================= -->
 <footer class="bg-dark text-light">
@@ -743,6 +973,10 @@ button:focus:not(:focus-visible) {
 <!-- End Footer -->
     <!-- End Footer -->
 
+    <a href="https://wa.me/919731568006" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
 
     <!-- jQuery Frameworks
     ============================================= -->
@@ -762,10 +996,99 @@ button:focus:not(:focus-visible) {
     <script src="assets/js/bootsnav.js"></script>
     <script src="assets/js/main.js"></script>
 
-    <!-- WhatsApp Button -->
-    <a href="https://wa.me/919731568006" class="whatsapp-float" target="_blank">
-        <i class="fab fa-whatsapp"></i>
-    </a>
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            slidesPerView: 1,
+            spaceBetween: 10,
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            loop: true,
+        });
+    </script>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- Include jQuery Easing if needed -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+
+    <!-- Slick Slider CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" />
+
+    <!-- Slick Slider JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Slick Slider Initialization -->
+    <script>
+        $(document).ready(function () {
+            $("#td-testimonial-5585").slick({
+                slidesToShow: 1, // Show one slide at a time
+                autoplay: true,
+                autoplaySpeed: 4000, // Interval
+                speed: 1500, // Slide speed
+                dots: false,
+                arrows: true,
+                prevArrow: '<i class="slick-arrow slick-prev flaticon-long-left-arrow"></i>',
+                nextArrow: '<i class="slick-arrow slick-next flaticon-long-right-arrow"></i>',
+                infinite: true,
+                pauseOnHover: false,
+                centerMode: false,
+                responsive: [
+                    {
+                        breakpoint: 1025,
+                        settings: {
+                            slidesToShow: 1, // 992-1024
+                            arrows: false,
+                        }
+                    },
+                    {
+                        breakpoint: 992,
+                        settings: {
+                            slidesToShow: 1, // 768-991
+                            arrows: false,
+                        }
+                    },
+                    {
+                        breakpoint: 768,
+                        settings: {
+                            slidesToShow: 1, // 0-767
+                            arrows: false,
+                        }
+                    }
+                ]
+            });
+        });
+    </script>
+
+    <script>
+        function sendEmail() {
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const phone = document.getElementById('phone').value;
+            const gender = document.getElementById('f_gender').value;
+            const department = document.getElementById('f_department').value;
+            const date = document.getElementById('f_date').value;
+            const time = document.getElementById('f_time').value;
+
+            const subject = 'Appointment Request';
+            const body = `Name: ${name}\nEmail: ${email}\nPhone: ${phone}\nGender: ${gender}\nDepartment: ${department}\nDate: ${date}\nTime: ${time}`;
+
+            const mailtoLink = `mailto:deltadentalblr@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+            window.location.href = mailtoLink;
+
+            return false;
+        }
+    </script>
 
   <!-- Start Sticky Footer 
     ============================================= -->

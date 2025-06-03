@@ -203,10 +203,79 @@ footer {
         padding: 0;
     }
 
-    .sticky-footer .social li {
+ .sticky-footer .social li {
         margin-left: 10px; /* Adjust spacing between icons */ 
 }  
-  .footer-text {
+
+button {
+    position: relative;
+    border: none;
+    background: transparent;
+    padding: 0;
+    margin-top: 23px;
+    cursor: pointer;
+    outline-offset: 4px;
+    transition: filter 250ms;
+    user-select: none;
+    touch-action: manipulation;
+}
+
+.edge {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    background: linear-gradient(
+        to left,
+        hsl(340deg 100% 16%) 0%,
+        hsl(340deg 100% 32%) 8%,
+        hsl(340deg 100% 32%) 92%,
+        hsl(340deg 100% 16%) 100%
+    );
+}
+
+.front {
+    display: block;
+    position: relative;
+    padding: 8px 15px; /* Reduced padding */
+    border-radius: 12px;
+    font-size: 0.9rem; /* Reduced font size */
+    color: white;
+    background: hsl(345deg 100% 47%);
+    will-change: transform;
+    transform: translateY(-4px);
+    transition: transform 600ms cubic-bezier(.3, .7, .4, 1);
+}
+
+button:hover {
+    filter: brightness(110%);
+}
+
+button:hover .front {
+    transform: translateY(-6px);
+    transition: transform 250ms cubic-bezier(.3, .7, .4, 1.5);
+}
+
+button:active .front {
+    transform: translateY(-2px);
+    transition: transform 34ms;
+}
+
+button:hover .shadow {
+    transform: translateY(4px);
+    transition: transform 250ms cubic-bezier(.3, .7, .4, 1.5);
+}
+
+button:active .shadow {
+    transform: translateY(1px);
+    transition: transform 34ms;
+}
+
+button:focus:not(:focus-visible) {
+    outline: none;
+} .footer-text {
         font-size: 14px; /* Adjust the size as needed */
         margin: 0; /* Remove any default margin */
         white-space: nowrap; /* Prevent line breaks */
@@ -298,7 +367,25 @@ footer {
     .sticky-footer .social li {
         margin-left: 10px; /* Adjust spacing between icons */ 
 }  
+@media (max-width: 768px) { /* Adjust the max-width as needed for your mobile view */
+    .themedraft-button-wrapper button {
+        margin-right: 100px; /* Adjust the margin value as needed */
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 768px) { /* Adjust the max-width as needed for your mobile view */
+    .top-bar-area {
+        margin-bottom: 36px; /* Adjust the value as needed for more space */
+    }
+}
+@media (max-width: 768px) {
+    .navbar-header .logo {
+        margin-top: 15px; /* Adjust the value as needed for more space */
+    }
+} 
 </style>
+
 
 </head>
 
@@ -321,7 +408,7 @@ footer {
                     <div class="info">
                         <ul>
                             <li>
-                            <p style="color: white;"> Email: <a href="#" style="color: rgb(255, 247, 0);">info@procuredental.co.in</a>
+                            <p style="color: white;"> Email: <a href="#" style="color: rgb(255, 247, 0);">deltadentalblr@gmail.com</a>
                             </li>
                         </ul>
                     </div>
@@ -669,7 +756,7 @@ footer {
                                 </div>
                                 <div class="info">
                                     <h5>Email:</h5>
-                                    <span>info@procuredental.co.in</span>
+                                    <span>deltadentalblr@gmail.com</span>
                                 </div>
                             </li>
                             <li>
@@ -737,7 +824,7 @@ footer {
                     <div class="marquee">
                         <p class="footer-text">
                             Working Hours: <a href="#">10am - 8pm</a> | 
-                            Email: <a href="#">info@procuredental.co.in</a>
+                            Email: <a href="#">deltadentalblr@gmail.com</a>
                         </p>
                     </div>
                 </div>

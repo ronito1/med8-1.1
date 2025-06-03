@@ -38,166 +38,24 @@
     <!-- ========== Google Fonts ========== -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;600;700;800&display=swap" rel="stylesheet">
 
-    <!-- Swiper CSS -->
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" />
-
-    <link rel='stylesheet' id='swiper-css' href='https://www.procuredental.co.in/wp-content/plugins/elementor/assets/lib/swiper/v8/css/swiper.min.css?ver=8.4.5' type='text/css' media='all' />
-    <link rel='stylesheet' id='e-swiper-css' href='https://www.procuredental.co.in/wp-content/plugins/elementor/assets/css/conditionals/e-swiper.min.css?ver=3.25.11' type='text/css' media='all' />
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-
     <style>
-        .entry-content img {
-            max-width: 100%;
-            height: auto;
+        #f_submit {
+            background-color: red;
+            color: white;
+            padding: 12px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            width: 100%;
+            margin-top: 10px;
         }
 
-        .entry-content h2 {
-            color: #333; /* Adjust this color as needed */
-            font-size: 24px; /* Adjust the size as needed */
-        }
-
-        .entry-content h3 {
-            color: #555; /* Adjust this color as needed */
-            font-size: 20px; /* Adjust the size as needed */
-        }
-
-        .entry-content p {
-            line-height: 1.6;
-            color: #666; /* Adjust this color as needed */
-            font-size: 16px; /* Adjust the size as needed */
-        }
-
-        .p{
-            font-size: medium;
-        }
-
-        .swiper-container {
-            width: 100%; /* Make it responsive */
-            max-width: 600px; /* Set a max width */
-            margin: 0 auto; /* Center the container */
-            height: 100%; /* Allow height to adjust based on content */
-        }
-
-        .swiper-slide {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            padding: 20px;
-            font-size: 16px; /* Adjust as needed */
-            color: #666; /* Adjust as needed */
-            height: auto; /* Allow height to adjust based on content */
-        }
-
-        .swiper-button-next, .swiper-button-prev {
-            color: #FFAB15; /* Adjust as needed */
-        }
-
-        .swiper-pagination-bullet {
-            background: #FFAB15; /* Adjust as needed */
-        }
-
-        .swiper-pagination {
-            bottom: 10px; /* Adjust position as needed */
-        }
-      
-        /* Custom style for h2 elements on this page */
-        .department-single h2 {
-            color: red; /* Change the color to red */
-            font-size: 40px;
-        }
-
-         /* Custom style for h2 elements on this page */
-         .department-single h3 {
-            color: rgb(0, 0, 0); 
-            font-size: 25px;
-        }
-
-        .video-container {
-            display: flex;
-            justify-content: left; /* Center the videos */
-            margin: 20px 0; /* Add some margin for spacing */
-            gap: 10px;
+        .sidebar {
+            overflow: visible;
+            padding-bottom: 20px;
         }
     
-        .video01 {
-        flex: 0 1 40%; /* Allow the video to take up to 40% of the row */
-        max-width: 600px; /* Set a max width for each video */
-        }
-
-        .video01 iframe {
-        width: 360px; /* Makes the iframe responsive */
-        height: 210px; /* Set a fixed height for consistency */
-        }
-
-        .td-testimonial-one-author-name-designation {
-            display: flex; /* Use flexbox to align items in a row */
-            align-items: center; /* Center items vertically */
-        }
-
-        .td-testimonial-quote {
-            margin-left: 10px; /* Space between the author name and the quote icon */
-        }
-
-        .author-profile-pic {
-            width: 40px; /* Set a width for the profile picture */
-            height: 40px; /* Set a height for the profile picture */
-            border-radius: 50%; /* Make it circular */
-            margin-right: 10px; /* Space between the image and the author name */
-        }
-
-        /* Media query for mobile view */
-        @media (max-width: 768px) {
-            .video-container {
-                flex-direction: column; /* Stack videos vertically */
-                align-items: center; /* Center videos */
-            }
-
-            .video01 {
-                flex: 0 1 100%; /* Take full width on mobile */
-                max-width: 100%; /* Remove max width restriction */
-                margin-bottom: 20px; /* Add space between stacked videos */
-            }
-
-            .video01 iframe {
-                height: 200px; /* Adjust height for mobile if needed */
-            }
-        }
-
-        
-    
-    @media (max-width: 768px) {
-      .mobile-button {
-          padding: 4px 12px; /* Adjust padding for less height */
-          font-size: 14px; /* Adjust font size */
-      }
-    }
-
-    
-    @media (max-width: 768px) {
-        .cta.mobile-button {
-            margin-right: 75px; /* Adjust the value as needed */
-        }
-    }
-    
-    @media (max-width: 768px) {
-      .navbar-header {
-          display: flex;
-          align-items: center; /* Center items vertically */
-          justify-content: space-between; /* Space between logo and button */
-      }
-    
-      .navbar-header .logo {
-          max-height: 40px; /* Ensure the logo fits */
-          margin-right: 200px; /* Add space between logo and button */
-      }
-    }
-    .whatsapp-float {
+        .whatsapp-float {
     position: fixed;
     bottom: 30px;
     right: 30px;
@@ -216,35 +74,60 @@
     justify-content: center;
     text-decoration: none;
     transition: all 0.3s ease;
-    }
-
-    .whatsapp-float:hover {
-        background-color: #128C7E;
-        color: #FFF;
-        transform: scale(1.1);
-    }
-
-    .whatsapp-float i {
-        margin-top: 0;
-    }
-
-    @media screen and (max-width: 767px) {
-        .whatsapp-float {
-            width: 50px;
-            height: 50px;
-            font-size: 25px;
-            bottom: 20px;
-            right: 20px;
         }
-    }
-    
+
+        .whatsapp-float:hover {
+            background-color: #128C7E;
+            color: #FFF;
+            transform: scale(1.1);
+        }
+
+        .whatsapp-float i {
+            margin-top: 0;
+        }
+
+        @media screen and (max-width: 767px) {
+            .whatsapp-float {
+                width: 50px;
+                height: 50px;
+                font-size: 25px;
+                bottom: 20px;
+                right: 20px;
+            }
+        }
+
+        .meta a i.flaticon-drugs {
+            font-size: 30px; /* Adjust the size as needed */
+             /* Optional: Add some space between the icon and text */
+        }
+        
     @media (max-width: 768px) {
         .cta.mobile-button {
             margin-right: 75px; /* Adjust the value as needed */
         }
     }
-
     
+    
+    @media (max-width: 768px) {
+      .mobile-button {
+          padding: 4px 12px; /* Adjust padding for less height */
+          font-size: 14px; /* Adjust font size */
+      }
+    }
+    
+    @media (max-width: 768px) {
+      .navbar-header {
+          display: flex;
+          align-items: center; /* Center items vertically */
+          justify-content: space-between; /* Space between logo and button */
+      }
+    
+      .navbar-header .logo {
+          max-height: 40px; /* Ensure the logo fits */
+          margin-right: 200px; /* Add space between logo and button */
+      }
+    }
+
     .sticky-footer {
         display: none; /* Hide by default */
     }
@@ -473,18 +356,16 @@ button:focus:not(:focus-visible) {
 
 
 
-    <!-- Swiper JS -->
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
 </head>
 
-<body class="department-single">
+<body>
 
     <!-- Preloader Start -->
     <div class="se-pre-con"></div>
     <!-- Preloader Ends -->
 
-   <!-- Start Header Top 
+    <!-- Start Header Top 
     ============================================= -->
     <div class="top-bar-area inc-pad inc-border" style="background-color:#24333e;">
         <div class="container">
@@ -527,6 +408,7 @@ button:focus:not(:focus-visible) {
     <!-- End Header Top -->
 
 
+  
     <!-- Header 
     ============================================= -->
     <header id="home">
@@ -639,11 +521,11 @@ button:focus:not(:focus-visible) {
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 offset-lg-2">
-                    <h1>Aesthetic Dentistry</h1>
+                    <h1>Blog Single</h1>
                     <ul class="breadcrumb">
-                        <li><a href="index.html"><i class="fas fa-home"></i> Procure Dental Care</a></li>
-                        <li><a href="#"> Bengaluru </a></li>
-                        <li class="active"> Dental Implants</li>
+                        <li><a href="#"><i class="fas fa-home"></i> Home</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li class="active">Single</li>
                     </ul>
                 </div>
             </div>
@@ -651,228 +533,227 @@ button:focus:not(:focus-visible) {
     </div>
     <!-- End Breadcrumb -->
 
-    <!-- Start Department Single 
+    <!-- Start Blog
     ============================================= -->
-    <div class="department-single-area overflow-hidden default-padding">
+    <div class="blog-area single full-blog right-sidebar full-blog default-padding">
         <div class="container">
-            <div class="row">
-                <div class="col-lg-8 info">
-                    <div class="entry-content">
-                        <section>
-                            <h3>Enhancing Your Smile with Precision & Artistry at Delta Dental Care</h3>
-                            <p>Your smile is your most powerful accessory and at Delta Dental Care, we believe it should reflect the best version of you. As the best dental clinic in Bangalore for aesthetic dentistry, we combine advanced cosmetic techniques with personalized care to enhance the appearance of your teeth and give you a confident, radiant smile.</p>
-                            <p>Whether you're concerned about discolored teeth, chipped edges, uneven spacing, or overall smile symmetry, our skilled cosmetic dentists are here to transform your smile with natural-looking, long-lasting results.</p>
-                            <img src="https://www.procuredental.co.in/wp-content/uploads/2024/08/dental-implants-1024x576.jpeg" alt="Aesthetic Dentistry" class="img-fluid" />
+            <div class="blog-items">
+                <div class="row">
+                    <div class="blog-content single-item wow fadeInUp col-lg-8 col-md-12">
+                        <div class="item">
 
-<br>
-<br>
-
-                        <h3>What is Aesthetic Dentistry?</h3>
-                            <p>Aesthetic dentistry focuses on improving the visual appeal of your teeth, gums, and overall smile. Treatments can range from minor corrections like teeth whitening to full smile makeovers involving veneers, bonding, and contouring. Our goal is to create harmony between form and function so that your smile looks as good as it feels.</p>
-
-                        <h3>Why Choose Delta Dental Care for Aesthetic Dentistry?</h3>
-                            <p><strong>Smile Makeover Experts:</strong> Our cosmetic dentists specialize in advanced procedures like veneers, smile designing, teeth whitening, and composite bonding to craft stunning smiles.</p>
-                            <p><strong>State-of-the-Art Technology:</strong> We use digital smile design tools, intraoral scanners, and precision materials to deliver personalized and flawless results.</p>
-                            <p><strong>Minimally Invasive Approach:</strong> We prioritize preserving your natural teeth while enhancing their appearance with minimal intervention.</p>
-                            <p><strong>Custom Treatment Plans:</strong> Every smile is unique. We work closely with you to understand your expectations and tailor a treatment that brings out your best features.</p>
-                        </section>
-
-                        <br>
-                        <br>
-                        <section>
-                            <h2>Before and After Treatment</h2>
-                            <img src="https://www.procuredental.co.in/wp-content/uploads/2024/08/Creative-and-Minimal-Portfolio-Presentation.zip-17.jpg" alt="Before and After" />
-                        </section>
-                        <br>
-                        <br>
-                        
-                         <section>
-                            <h2>Our Videos</h2>
-                            <div class="video-container">
-                                <div class="video01">
-                                    <iframe src="https://www.youtube.com/embed/video_id_1" frameborder="0" allowfullscreen></iframe>
+                            <div class="blog-item-box">
+                                <!-- Start Post Thumb -->
+                                <div class="thumb">
+                                    <a href="#"><img src="assets/img/1500x700.png" alt="Thumb"></a>
+                                    <div class="post-date">
+                                        12 Jul
+                                    </div>
                                 </div>
-                                <div class="video01">
-                                    <iframe src="https://www.youtube.com/embed/video_id_2" frameborder="0" allowfullscreen></iframe>
-                                </div>
-                                <div class="video01">
-                                    <iframe src="https://www.youtube.com/embed/video_id_3" frameborder="0" allowfullscreen></iframe>
+                                <!-- Start Post Thumb -->
+
+                                <div class="info">
+                                    <div class="tags">
+                                        <ul>
+                                            <li>
+                                                <a href="#">Dental Care</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">Implants</a>
+                                            </li>
+                                        </ul>
+                                        <ul class="meta">
+                                            <li>
+                                                <a href="#"><i class="fas fa-comments"></i> 12 Comments</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <h4>Dental Implants vs. Dentures – Making the Right Choice</h4>
+                                    <p>
+                                        Tooth loss is more than just a cosmetic issue—it can affect your overall quality of life. From chewing and speaking difficulties to a loss of self-confidence, missing teeth can significantly impact daily routines. Fortunately, modern dentistry offers two highly effective solutions: dental implants and dentures. Both options aim to restore function and aesthetics, but each comes with its own set of benefits, limitations, and suitability based on your unique oral health.
+                                    </p>
+                                    <p>
+                                        At Delta Dental Care, regarded as one of the best dental clinics in Bangalore, we specialize in helping patients make informed decisions that best align with their needs and lifestyle.
+                                    </p>
+                                    <h4>What Are Dental Implants?</h4>
+                                    <p>
+                                        Dental implants are considered the gold standard in tooth replacement. These are small, biocompatible titanium posts that are surgically inserted into the jawbone. Over time, the implant fuses with the bone in a process called osseointegration, providing a solid and stable base for a crown, bridge, or denture.
+                                    </p>
+                                    <h4>Key Benefits of Dental Implants:</h4>
+                                    <ul>
+                                        <li>Long-Lasting Solution: With proper care, implants can last a lifetime.</li>
+                                        <li>Bone Preservation: Prevents jawbone deterioration which typically occurs after tooth loss.</li>
+                                        <li>Improved Functionality: Enables strong biting force and natural chewing ability.</li>
+                                        <li>Aesthetic Appeal: Designed to look, feel, and function like your natural teeth.</li>
+                                        <li>No Impact on Adjacent Teeth: Unlike dental bridges, implants don't require grinding down nearby teeth.</li>
+                                    </ul>
+                                    <h4>Who is a Good Candidate?</h4>
+                                    <p>
+                                        Dental implants are ideal for individuals with healthy gums, adequate bone density, and good overall health. Smokers or patients with chronic diseases like uncontrolled diabetes may need further evaluation before proceeding.
+                                    </p>
+                                    <h4>What Are Dentures?</h4>
+                                    <p>
+                                        Dentures are removable prosthetic devices designed to replace missing teeth and surrounding tissues. They come in two types: complete dentures, which replace all teeth in the upper or lower jaw, and partial dentures, which fill gaps where some natural teeth remain.
+                                    </p>
+                                    <h4>Key Benefits of Dentures:</h4>
+                                    <ul>
+                                        <li>Non-Surgical Option: Suitable for patients who wish to avoid surgery or have insufficient bone for implants.</li>
+                                        <li>Cost-Effective: More budget-friendly compared to implants.</li>
+                                        <li>Quick Turnaround: Dentures can be made and fitted in a relatively short period.</li>
+                                        <li>Customizable Fit: Designed to suit your jaw and facial structure.</li>
+                                    </ul>
+                                    <h4>Why Choose Delta Dental Care for Tooth Replacement?</h4>
+                                    <p>
+                                        As the best dental clinic in Bangalore, Delta Dental Care stands out for delivering excellence in both dental implant and denture solutions. Here's why hundreds of patients trust us:
+                                    </p>
+                                    <ul>
+                                        <li>Expert Implantologists & Prosthodontists - Our specialists are trained in both implant surgery and denture fabrication.</li>
+                                        <li>Advanced Technology - We use 3D CBCT scans and guided implant placement systems for precision and safety.</li>
+                                        <li>Patient-Focused Care - From consultation to follow-up, we ensure a comfortable and informed experience.</li>
+                                        <li>Sterile, Modern Facilities - Our clinic is equipped with world-class infrastructure and follows international sterilization protocols.</li>
+                                    </ul>
+                                    <h4>Real Patient Testimonials</h4>
+                                    <blockquote>
+                                        <p>
+                                            "I had missing molars for years and struggled with chewing. Delta Dental Care gave me dental implants that feel just like natural teeth. I can finally enjoy my food again!"
+                                            <br>
+                                            <small>— Asha S - HSR Layout Resident</small>
+                                        </p>
+                                    </blockquote>
+                                    <blockquote>
+                                        <p>
+                                            "I wasn't ready for surgery and chose partial dentures. The team at Delta Dental did an amazing job. They fit perfectly and look very natural."
+                                            <br>
+                                            <small>— Kiran M - Jayanagar Resident</small>
+                                        </p>
+                                    </blockquote>
+                                    <blockquote>
+                                        <p>
+                                            "After comparing many clinics, I found Delta Dental to be the most transparent and professional. Their implant procedure was painless and the result is fantastic."
+                                            <br>
+                                            <small>— Zahra P - Indiranagar Resident</small>
+                                        </p>
+                                    </blockquote>
+                                    <h4>Ready to Restore Your Smile?</h4>
+                                    <p>
+                                        Whether you're considering dentures or exploring the benefits of dental implants, the team at Delta Dental Care, Bangalore, is here to guide you with expert care and compassionate service.
+                                    </p>
+                                    <p>
+                                        <strong style="color: #000000; font-size: 1.1em;">Book a consultation</strong> today at <strong style="color: #000000; font-size: 1.1em;">+91 8277542111</strong> and take the first step toward a confident, healthy smile.
+                                    </p>
+                                    <!-- Start Post Pagination -->
+                                    <div class="post-pagi-area">
+                                        <a href="blog-single-with-sidebar.html"><i class="fas fa-angle-double-left"></i> Previous Post</a>
+                                        <a href="blog-single-with-sidebar3.html">Next Post <i class="fas fa-angle-double-right"></i></a>
+                                    </div>
+                                    <!-- End Post Pagination -->
                                 </div>
                             </div>
-                        </section>
-
-
-                        <br>
-                        <br>
-                        
-                            <h2>Our Testimonials</h2>
-                            <div class="td-testimonial-one-slider-wrapper">
-                                <div id="td-testimonial-5585" class="row td-testimonial-one-slider">
-                                    <div class="col-12">
-                                        <div class="td-testimonial-one-item">
-                                            <div class="td-testimonial-one-author-image td-cover-bg" style="background-image: url();"></div>
-                                            <div class="td-testimonial-one-top-image">
-                                                <img decoding="async" src="" alt="" title="Aesthetic Dentistry">
-                                            </div>
-                                            <div class="td-testimonial-one-desc">
-                                                <p>I always wanted a bright, confident smile but was afraid of looking fake. Delta Dental Care gave me the most natural-looking veneers people can't even tell! I love it.</p>
-                                            </div>
-                                            <div class="td-testimonial-one-author-name-designation">
-                                                <img src="assets/img/icon/1.jpg" alt="Profile Picture" class="author-profile-pic">
-                                                <h4 class="td-testimonial-one-author-name">Neha S. - Yeshwanthpur Resident</h4>
-                                                <div class="td-testimonial-quote td-primary-color">
-                                                    <i class="fas fa-quote-right"></i>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-12">
-                                        <div class="td-testimonial-one-item">
-                                            <div class="td-testimonial-one-author-image td-cover-bg" style="background-image: url();"></div>
-                                            <div class="td-testimonial-one-top-image">
-                                                <img decoding="async" src="" alt="" title="Aesthetic Dentistry">
-                                            </div>
-                                            <div class="td-testimonial-one-desc">
-                                                <p>Their smile makeover changed everything for me. I used to avoid smiling in photos. Now, I can't stop smiling! Highly professional team.</p>
-                                            </div>
-                                            <div class="td-testimonial-one-author-name-designation">
-                                                <img src="assets/img/icon/1.jpg" alt="Profile Picture" class="author-profile-pic">
-                                                <h4 class="td-testimonial-one-author-name">Rahul D. - RT Nagar Resident</h4>
-                                                <div class="td-testimonial-quote td-primary-color">
-                                                    <i class="fas fa-quote-right"></i>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-12">
-                                        <div class="td-testimonial-one-item">
-                                            <div class="td-testimonial-one-author-image td-cover-bg" style="background-image: url();"></div>
-                                            <div class="td-testimonial-one-top-image">
-                                                <img decoding="async" src="" alt="" title="Aesthetic Dentistry">
-                                            </div>
-                                            <div class="td-testimonial-one-desc">
-                                                <p>I got my teeth whitened at Delta Dental Care before my wedding. The process was quick, pain-free, and the results were amazing!</p>
-                                            </div>
-                                            <div class="td-testimonial-one-author-name-designation">
-                                                <img src="assets/img/icon/2.jpg" alt="Profile Picture" class="author-profile-pic">
-                                                <h4 class="td-testimonial-one-author-name">Prerana J. - Dollars colony Resident</h4>
-                                                <div class="td-testimonial-quote td-primary-color">
-                                                    <i class="fas fa-quote-right"></i>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </section>
-
-                       
-                    </div>
-                </div>
-
-                <div class="col-lg-4 sidebar">
-                    <!-- Single Widget -->
-                    <div class="widget appoinment">
-                        <div class="title">
-                            <h4><strong>Make an Appointment</strong></h4>
                         </div>
-                        <form action="#" onsubmit="return sendEmail();">
-                            <div class="appoinment-box">
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <div class="form-group">
-                                            <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
-                                        </div>
-                                    </div>
 
-                                    <div class="col-lg-12">
-                                        <div class="form-group">
-                                            <input class="form-control" id="email" name="email" placeholder="Email*" type="email" required>
-                                            <span class="alert-error"></span>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-12">
-                                        <div class="form-group">
-                                            <input class="form-control" id="phone" name="phone" placeholder="Phone" type="text" required>
-                                            <span class="alert-error"></span>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-12">
-                                        <div class="form-group">
-                                            <select id="f_gender" required>
-                                                <option value="">Select Gender</option>
-                                                <option value="Male">Male</option>
-                                                <option value="Female">Female</option>
-                                                <option value="Child">Child</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-12">
-                                        <div class="form-group">
-                                            <select id="f_department" required>
-                                                <option value="">Select Department</option>
-                                                <option value="Medicine">Medicine</option>
-                                                <option value="Dental Care">Dental Care</option>
-                                                <option value="Traumatology">Traumatology</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="form-group">
-                                            <input class="form-control" id="f_date" name="date" placeholder="Date" type="date" required>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="form-group">
-                                            <input type="time" id="f_time" name="time" required class="form-control time-input" />
-                                        </div>
-                                    </div>
-                                    <div class="col-md-12">
-                                        <button type="submit" name="submit" id="submit">
-                                            Submit Query <i class="fa fa-paper-plane"></i>
-                                        </button>
-                                    </div>
-                                    <!-- Alert Message -->
-                                    <div class="col-lg-12 alert-notification">
-                                        <div id="message" class="alert-msg"></div>
-                                    </div>
-                                </div>
+                        <!-- Start Post Tag s-->
+                        <div class="post-tags share">
+                            <div class="tags">
+                                <a href="#">Analysis</a>
+                                <a href="#">Process</a>
                             </div>
-                        </form>
-                    </div>
-                    <!-- End Single Widget -->
-
-                  
-                    <!-- End Single Widget -->
-
-                    <!-- Single Widget -->
-                    <!-- <div class="widget opening-hours">
-                        <div class="title">
-                            <h4>Opening Hours</h4>
+                            <div class="social">
+                                <ul>
+                                    <li class="facebook">
+                                        <a href="#">
+                                            <i class="fab fa-facebook-f"></i>
+                                        </a>
+                                    </li>
+                                    <li class="twitter">
+                                        <a href="#">
+                                            <i class="fab fa-twitter"></i>
+                                        </a>
+                                    </li>
+                                    <li class="pinterest">
+                                        <a href="#">
+                                            <i class="fab fa-pinterest-p"></i>
+                                        </a>
+                                    </li>
+                                    <li class="linkedin">
+                                        <a href="#">
+                                            <i class="fab fa-linkedin-in"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
-                        <ul>
-                            <li> <span> Mon - Tues :  </span>
-                              <div class="float-right"> 6.00 am - 10.00 pm </div>
-                            </li>
-                            <li> <span> Wednes - Thurs :</span>
-                              <div class="float-right"> 8.00 am - 6.00 pm </div>
-                            </li>
-                            <li> <span> Sun : </span>
-                              <div class="float-right closed"> Closed </div>
-                            </li>
-                        </ul>
-                    </div> -->
-                    <!-- End Single Widget -->
-                </div>
-                <!-- End Widget Items -->
-
+                         </div>
+                    <!-- Start Sidebar -->
+                    <div class="sidebar wow fadeInLeft col-lg-4 col-md-12">
+                        <aside>
+                            <div class="appoinment-box text-center wow fadeInRight">
+                                <div class="heading">
+                                    <h4>Make an Appointment</h4>
+                                </div>
+                                <form action="#" onsubmit="return sendEmail();">
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <input class="form-control" id="f_name" name="name" placeholder="Name" type="text" required>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-12">
+                                            <div class="form-group">
+                                                <input class="form-control" id="email" name="email" placeholder="Email*" type="email" required>
+                                                <span class="alert-error"></span>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <input class="form-control" id="f_phone" name="phone" placeholder="Phone" type="text" required>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <select id="f_gender" required>
+                                                    <option value="">Select Gender</option>
+                                                    <option value="Male">Male</option>
+                                                    <option value="Female">Female</option>
+                                                    <option value="Child">Child</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <select id="f_department" required>
+                                                    <option value="">Select Department</option>
+                                                    <option value="Medicine">Medicine</option>
+                                                    <option value="Dental Care">Dental Care</option>
+                                                    <option value="Traumatology">Traumatology</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <input class="form-control" id="f_date" name="date" placeholder="Date" type="date" required>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <input type="time" id="f_time" name="time" required class="form-control time-input" />
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <button type="submit" name="submit" id="f_submit">
+                                                Book Appointment
+                                            </button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </aside>
+                    </div>
+                    <!-- End Sidebar -->
                 </div>
             </div>
         </div>
     </div>
-    <!-- End Department Single -->
+    <!-- End Blog -->
 
     <!-- Start Footer 
 ============================================= -->
@@ -973,11 +854,6 @@ button:focus:not(:focus-visible) {
 <!-- End Footer -->
     <!-- End Footer -->
 
-    <a href="https://wa.me/919731568006" class="whatsapp-float" target="_blank">
-        <i class="fab fa-whatsapp"></i>
-    </a>
-
-
     <!-- jQuery Frameworks
     ============================================= -->
     <script src="assets/js/jquery-1.12.4.min.js"></script>
@@ -995,86 +871,11 @@ button:focus:not(:focus-visible) {
     <script src="assets/js/jquery.nice-select.min.js"></script>
     <script src="assets/js/bootsnav.js"></script>
     <script src="assets/js/main.js"></script>
-
-    <script>
-        var swiper = new Swiper('.swiper-container', {
-            slidesPerView: 1,
-            spaceBetween: 10,
-            navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
-            },
-            pagination: {
-                el: '.swiper-pagination',
-                clickable: true,
-            },
-            loop: true,
-        });
-    </script>
-
-    <!-- jQuery -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
-    <!-- Include jQuery Easing if needed -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
-
-    <!-- Slick Slider CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" />
-
-    <!-- Slick Slider JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
-
-    <!-- Swiper JS -->
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-
-    <!-- Slick Slider Initialization -->
-    <script>
-        $(document).ready(function () {
-            $("#td-testimonial-5585").slick({
-                slidesToShow: 1, // Show one slide at a time
-                autoplay: true,
-                autoplaySpeed: 4000, // Interval
-                speed: 1500, // Slide speed
-                dots: false,
-                arrows: true,
-                prevArrow: '<i class="slick-arrow slick-prev flaticon-long-left-arrow"></i>',
-                nextArrow: '<i class="slick-arrow slick-next flaticon-long-right-arrow"></i>',
-                infinite: true,
-                pauseOnHover: false,
-                centerMode: false,
-                responsive: [
-                    {
-                        breakpoint: 1025,
-                        settings: {
-                            slidesToShow: 1, // 992-1024
-                            arrows: false,
-                        }
-                    },
-                    {
-                        breakpoint: 992,
-                        settings: {
-                            slidesToShow: 1, // 768-991
-                            arrows: false,
-                        }
-                    },
-                    {
-                        breakpoint: 768,
-                        settings: {
-                            slidesToShow: 1, // 0-767
-                            arrows: false,
-                        }
-                    }
-                ]
-            });
-        });
-    </script>
-
     <script>
         function sendEmail() {
-            const name = document.getElementById('name').value;
+            const name = document.getElementById('f_name').value;
             const email = document.getElementById('email').value;
-            const phone = document.getElementById('phone').value;
+            const phone = document.getElementById('f_phone').value;
             const gender = document.getElementById('f_gender').value;
             const department = document.getElementById('f_department').value;
             const date = document.getElementById('f_date').value;

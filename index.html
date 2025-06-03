@@ -52,23 +52,6 @@
 }
 
 
-.themedraft-button {
-      padding: 28px 28px;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 600;
-    line-height: 1;
-    font-size: 16px;
-    border: 2px solid;
-    border-radius: 50px;
-    color: #000000;
-    display: inline-flex;
-      align-items: center;
-    text-transform: capitalize;
-}
-
-.themedraft-button:hover {
-    color: #fa0000; /* Darker shade on hover */
-}
 /* Footer Styles */
 footer {
     padding: 20px 0; /* Reduced padding */
@@ -882,7 +865,45 @@ button:focus:not(:focus-visible) {
         margin-bottom: 36px; /* Adjust the value as needed for more space */
     }
 }
+
+.consultation-area {
+    margin-bottom: 0; /* Remove bottom margin */
+    padding-bottom: 0; /* Remove bottom padding if any */
+}
+
+@media (max-width: 768px) {
+  .contact-form-box {
+    text-align: center !important;
+  }
+  .contact-form-box form {
+    text-align: center !important;
+  }
+  .contact-form-box .form-group,
+  .contact-form-box input,
+  .contact-form-box select,
+  .contact-form-box button,
+  .contact-form-box input[type="date"],
+  .contact-form-box input[type="time"] {
+    margin-left: auto !important;
+    margin-right: auto !important;
+    display: block;
+  }
+}
+
+@media (max-width: 768px) {
+  .hide-on-mobile {
+    display: none !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .appoinment-box {
+    margin-top: 100px !important;
+  }
+}
+
 </style>
+
 
 </head>
 
@@ -905,7 +926,7 @@ button:focus:not(:focus-visible) {
                     <div class="info">
                         <ul>
                             <li>
-                            <p style="color: white;"> Email: <a href="#" style="color: rgb(255, 247, 0);">info@procuredental.co.in</a>
+                            <p style="color: white;"> Email: <a href="#" style="color: rgb(255, 247, 0);">deltadentalblr@gmail.com</a>
                             </li>
                         </ul>
                     </div>
@@ -947,11 +968,12 @@ button:focus:not(:focus-visible) {
                 <!-- Start Atribute Navigation -->
                 <div class="attr-nav extra-color">
                     <div class="themedraft-button-wrapper td-button-el-widget" style="display: flex; align-items: center;">
-                        <button>
-                            <span class="shadow"></span>
-                            <span class="edge"></span>
-                            <span class="front text"> Contact Now!</span>
-                        </button>
+                        <a href="contact.html">
+                            <button>
+                                <span class="shadow"></span>
+                                <span class="edge"></span>
+                                <span class="front text"> Contact Now!</span>
+                            </button>
                     </div>
                 </div>
                 <!-- End Atribute Navigation -->
@@ -1054,7 +1076,7 @@ button:focus:not(:focus-visible) {
                                     <div class="col-lg-9">
                                         <div class="content">
                                             <h4 data-animation="animated slideInDown">Good doctor, Healthy life</h4>
-                                            <h2 data-animation="animated slideInRight">Meet the <strong>Best Doctors</strong></h2>
+                                            <h2 data-animation="animated slideInRight">Re-discover Your Smile<strong>with Dental Implants</strong></h2>
                                             <a data-animation="animated fadeInUp" class="btn btn-md btn-gradient" href="#"><i class="fas fa-angle-right"></i> Discover More</a>
                                         </div>
                                     </div>
@@ -1072,7 +1094,7 @@ button:focus:not(:focus-visible) {
                                     <div class="col-lg-9">
                                         <div class="content">
                                             <h4 data-animation="animated slideInDown">Best institution, Good services</h4>
-                                            <h2 data-animation="animated slideInRight">Meet the <strong>Best Hospital</strong></h2>
+                                            <h2 data-animation="animated slideInRight">Straighter Teeth<strong>Confident You.</strong></h2>
                                             <a data-animation="animated fadeInUp" class="btn btn-md btn-gradient" href="#"><i class="fas fa-angle-right"></i> Discover More</a>
                                         </div>
                                     </div>
@@ -1106,11 +1128,15 @@ button:focus:not(:focus-visible) {
             <div class="row align-center">
                 <div class="col-lg-7 process">
                     <h2 style="font-family: 'Inter', sans-serif; font-weight: 600; color: #333; margin-bottom: 10px;"> <!-- Reduced margin -->
-                        How to get a <br> consultation from us?
-                    </h2>
+                        Building Smiles with <br> Experience & Excellence </h2>
                     <p style="font-family: 'Inter', sans-serif; font-weight: 400; color: #666; margin-bottom: 0;"> <!-- Adjusted margin -->
-                        Badies she basket season age her uneasy saw. Discourse unwilling am no described dejection incommode no listening of. Before nature his parish boy.
-                        Badies she basket season age her uneasy saw. Discourse unwilling am no described dejection incommode no listening of. Before nature his parish boy.</p>
+                        <ul style="list-style-type: disc; padding-left: 20px;">
+                            <li>Internationally trained dentists</li>
+                            <li>Lifetime post-operative warranty</li>
+                            <li>Sterilization guidelines approved by CDC, USA</li>
+                            <li>Affordable now with EMI facilities</li>
+                        </ul>
+                    </p>
                     <!-- Start Fun Factor Area -->
                     <div class="fun-factor-area half-bg-light-bottom default-padding-bottom" style="background: transparent; max-width: 800px; margin: 0 auto; margin-left: -50px;"> <!-- Adjusted padding -->
                         <div class="container">
@@ -1118,19 +1144,21 @@ button:focus:not(:focus-visible) {
                                 <div class="row">
                                     <div class="col-lg-4 col-md-4 item" style="margin-bottom: 100px;"> <!-- Increased margin-bottom -->
                                         <div class="fun-fact">
-                                            <i class="flaticon-calendar-1" style="font-size: 3.5em; margin-bottom: 10px; font-weight: bold;"></i>
+                                            <i class="flaticon-doctor" style="font-size: 3.5em; margin-bottom: 10px; font-weight: bold;"></i>
                                             <div>
-                                                <div class="timer" data-to="110" data-speed="2000" style="font-size: 2em; margin-left: 2px; margin-top:2px;"></div>
-                                                <span class="medium" style="font-size: 1.1em;">Satisfied Patients</span>
+                                                <div class="timer" data-to="12" data-speed="2000" style="font-size: 2em; margin-left: 2px; margin-top:2px;"></div>
+                                                <span class="medium" style="font-size: 1.1em;">Skilled Doctors</span>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="col-lg-4 col-md-4 item" style="margin-bottom: 100px;"> <!-- Increased margin-bottom -->
                                         <div class="fun-fact">
-                                            <i class="flaticon-doctor" style="font-size: 3.5em; margin-bottom: 10px; font-weight: bold;"></i>
+
+                                            <i class="flaticon-calendar-1" style="font-size: 3.5em; margin-bottom: 10px; font-weight: bold;"></i>
+
                                             <div>
-                                                <div class="timer" data-to="89" data-speed="2000" style="font-size: 2em; margin-left: 2px; margin-top:2px;"></div>
-                                                <span class="medium" style="font-size: 1.1em;">Regular Doctors</span>
+                                                <div class="timer" data-to="10000" data-speed="2000" style="font-size: 2em; margin-left: 2px; margin-top:2px;"></div>
+                                                <span class="medium" style="font-size: 1.1em;">Successful Implants</span>
                                             </div>
                                         </div>
                                     </div>
@@ -1138,8 +1166,8 @@ button:focus:not(:focus-visible) {
                                         <div class="fun-fact">
                                             <i class="flaticon-heartbeat-1" style="font-size: 3.5em; margin-bottom: 10px; font-weight: bold;"></i>
                                             <div>
-                                                <div class="timer" data-to="100" data-speed="2000" style="font-size: 2em; margin-right: 1.5px; margin-top:2px;"></div>
-                                                <span class="medium" style="font-size: 1.1em;">Departments</span>
+                                                <div class="timer" data-to="5000" data-speed="2000" style="font-size: 2em; margin-right: 1.5px; margin-top:2px;"></div>
+                                                <span class="medium" style="font-size: 1.1em;">Happy Patients</span>
                                             </div>
                                         </div>
                                     </div>
@@ -2013,26 +2041,26 @@ button:focus:not(:focus-visible) {
                         </div>
                     </div>
 
-                    <div class="col-lg-5 wow fadeInLeft contact-form-box">
+                    <div class="col-lg-5 form">
+                        <div class="appoinment-box text-center wow fadeInRight">
+                            <div class="heading">
                         <h2>Need help? <strong>Let's ask your questions</strong></h2>
                         <form action="#" onsubmit="return sendEmail();">
                             <div class="row">
-                                <div class="col-lg-12">
+                                <div class="col-md-12">
                                     <div class="form-group">
-                                        <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
-                                        <span class="alert-error"></span>
+                                        <input class="form-control" id="f_name" name="name" placeholder="Name" type="text" required>
                                     </div>
                                 </div>
-                                <div class="col-lg-6">
+                                <div class="col-md-12">
                                     <div class="form-group">
                                         <input class="form-control" id="email" name="email" placeholder="Email*" type="email" required>
                                         <span class="alert-error"></span>
                                     </div>
                                 </div>
-                                <div class="col-lg-6">
+                                <div class="col-md-12">
                                     <div class="form-group">
-                                        <input class="form-control" id="phone" name="phone" placeholder="Phone" type="text" required>
-                                        <span class="alert-error"></span>
+                                        <input class="form-control" id="f_phone" name="phone" placeholder="Phone" type="text" required>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
@@ -2065,20 +2093,17 @@ button:focus:not(:focus-visible) {
                                         <input type="time" id="f_time" name="time" required class="form-control time-input" />
                                     </div>
                                 </div>
-
-                                <div class="col-lg-12">
-                                    <button type="submit" name="submit" id="submit">
-                                        Send Message
+                                <div class="col-md-12">
+                                    <button type="submit" name="submit" id="f_submit">
+                                        Book Appointment
                                     </button>
-                                </div>
-                                <!-- Alert Message -->
-                                <div class="col-lg-12 alert-notification">
-                                    <div id="message" class="alert-msg"></div>
                                 </div>
                             </div>
                         </form>
                     </div>
-
+                </div></div>
+                    
+                </div>
                 </div>
             </div>
         </div>
@@ -2185,7 +2210,7 @@ button:focus:not(:focus-visible) {
                                 </div>
                                 <div class="info">
                                     <h5>Email:</h5>
-                                    <a href="mailto:info@procuredental.co.in" class="contact-link">info@procuredental.co.in</a>
+                                    <a href="mailto:deltadentalblr@gmail.com" class="contact-link">deltadentalblr@gmail.com</a>
                                 </div>
                             </li>
                             <li>
@@ -2263,22 +2288,42 @@ button:focus:not(:focus-visible) {
 
     <script>
       function sendEmail() {
-        const name = document.getElementById('name').value; // Updated ID
-        const email = document.getElementById('email').value; // Updated ID
-        const phone = document.getElementById('phone').value; // Updated ID
+        // Get form values
+        const name = document.getElementById('f_name').value;
+        const email = document.getElementById('email').value;
+        const phone = document.getElementById('f_phone').value;
         const gender = document.getElementById('f_gender').value;
         const department = document.getElementById('f_department').value;
         const date = document.getElementById('f_date').value;
         const time = document.getElementById('f_time').value;
 
-        const subject = 'Contact Form Submission';
-        const body = `Name: ${name}\nEmail: ${email}\nPhone: ${phone}\nGender: ${gender}\nDepartment: ${department}\nDate: ${date}\nTime: ${time}`;
+        // Create email body with formatted content
+        const subject = 'New Appointment Request';
+        const body = `
+New Appointment Request Details:
 
-        // Update the email address here
-        const mailtoLink = `mailto:info@procuredental.co.in?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+Name: ${name}
+Email: ${email}
+Phone: ${phone}
+Gender: ${gender}
+Department: ${department}
+Appointment Date: ${date}
+Appointment Time: ${time}
+
+This is an automated message from the website contact form.
+        `;
+
+        // Create mailto link with encoded subject and body
+        const mailtoLink = `mailto:deltadentalblr@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+        
+        // Open default email client
         window.location.href = mailtoLink;
 
-        return false; // Prevent form submission
+        // Show success message
+        alert('Thank you for your appointment request. Your email client will open with the details. Please send the email to complete the process.');
+
+        // Prevent default form submission
+        return false;
     }
     </script>
 
@@ -2291,7 +2336,7 @@ button:focus:not(:focus-visible) {
                     <div class="marquee">
                         <p class="footer-text">
                             Working Hours: <a href="#">10am - 8pm</a> | 
-                            Email: <a href="#">info@procuredental.co.in</a>
+                            Email: <a href="#">deltadentalblr@gmail.com</a>
                         </p>
                     </div>
                 </div>

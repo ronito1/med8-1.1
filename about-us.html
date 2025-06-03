@@ -179,10 +179,79 @@
         padding: 0;
     }
 
-    .sticky-footer .social li {
+ .sticky-footer .social li {
         margin-left: 10px; /* Adjust spacing between icons */ 
 }  
-          .footer-text {
+
+button {
+    position: relative;
+    border: none;
+    background: transparent;
+    padding: 0;
+    margin-top: 23px;
+    cursor: pointer;
+    outline-offset: 4px;
+    transition: filter 250ms;
+    user-select: none;
+    touch-action: manipulation;
+}
+
+.edge {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    background: linear-gradient(
+        to left,
+        hsl(340deg 100% 16%) 0%,
+        hsl(340deg 100% 32%) 8%,
+        hsl(340deg 100% 32%) 92%,
+        hsl(340deg 100% 16%) 100%
+    );
+}
+
+.front {
+    display: block;
+    position: relative;
+    padding: 8px 15px; /* Reduced padding */
+    border-radius: 12px;
+    font-size: 0.9rem; /* Reduced font size */
+    color: white;
+    background: hsl(345deg 100% 47%);
+    will-change: transform;
+    transform: translateY(-4px);
+    transition: transform 600ms cubic-bezier(.3, .7, .4, 1);
+}
+
+button:hover {
+    filter: brightness(110%);
+}
+
+button:hover .front {
+    transform: translateY(-6px);
+    transition: transform 250ms cubic-bezier(.3, .7, .4, 1.5);
+}
+
+button:active .front {
+    transform: translateY(-2px);
+    transition: transform 34ms;
+}
+
+button:hover .shadow {
+    transform: translateY(4px);
+    transition: transform 250ms cubic-bezier(.3, .7, .4, 1.5);
+}
+
+button:active .shadow {
+    transform: translateY(1px);
+    transition: transform 34ms;
+}
+
+button:focus:not(:focus-visible) {
+    outline: none;
+}         .footer-text {
         font-size: 14px; /* Adjust the size as needed */
         margin: 0; /* Remove any default margin */
         white-space: nowrap; /* Prevent line breaks */
@@ -274,7 +343,32 @@
     .sticky-footer .social li {
         margin-left: 10px; /* Adjust spacing between icons */ 
 }  
+@media (max-width: 768px) { /* Adjust the max-width as needed for your mobile view */
+    .themedraft-button-wrapper button {
+        margin-right: 100px; /* Adjust the margin value as needed */
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 768px) { /* Adjust the max-width as needed for your mobile view */
+    .top-bar-area {
+        margin-bottom: 36px; /* Adjust the value as needed for more space */
+    }
+}
+@media (max-width: 768px) {
+    .navbar-header .logo {
+        margin-top: 15px; /* Adjust the value as needed for more space */
+    }
+}
+.item {
+    margin-bottom: 20px; /* Space between each item */
+    padding: 10px; /* Optional: Add some padding inside the box */
+    border-radius: 5px; /* Optional: Add rounded corners */
+}
+
+
 </style>
+
 </head>
 
 <body>
@@ -296,7 +390,7 @@
                     <div class="info">
                         <ul>
                             <li>
-                            <p style="color: white;"> Email: <a href="#" style="color: rgb(255, 247, 0);">info@procuredental.co.in</a>
+                            <p style="color: white;"> Email: <a href="#" style="color: rgb(255, 247, 0);">deltadentalblr@gmail.com</a>
                             </li>
                         </ul>
                     </div>
@@ -335,36 +429,15 @@
 
             <div class="container">
 
-                <!-- Start Atribute Navigation -->
-                <div class="attr-nav extra-color">
+<!-- Start Atribute Navigation -->
+<div class="attr-nav extra-color">
                     <div class="themedraft-button-wrapper td-button-el-widget" style="display: flex; align-items: center;">
-                        <button class="cta mobile-button" onclick="window.location.href='contact.html';">
-                            <span class="span"> Contact Now!</span>
-                            <span class="second">
-                                <svg
-                                    width="50px"
-                                    height="20px"
-                                    viewBox="0 0 66 43"
-                                    version="1.1"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    xmlns:xlink="http://www.w3.org/1999/xlink"
-                                >
-                                    <g
-                                        id="arrow"
-                                        stroke="none"
-                                        stroke-width="1"
-                                        fill="none"
-                                        fill-rule="evenodd"
-                                    >
-                                        <path
-                                            class="one"
-                                            d="M40.1543933,3.89485454 L43.9763149,0.139296592 C44.1708311,-0.0518420739 44.4826329,-0.0518571125 44.6771675,0.139262789 L65.6916134,20.7848311 C66.0855801,21.1718824 66.0911863,21.8050225 65.704135,22.1989893 C65.7000188,22.2031791 65.6958657,22.2073326 65.6916762,22.2114492 L44.677098,42.8607841 C44.4825957,43.0519059 44.1708242,43.0519358 43.9762853,42.8608513 L40.1545186,39.1069479 C39.9575152,38.9134427 39.9546793,38.5968729 40.1481845,38.3998695 C40.1502893,38.3977268 40.1524132,38.395603 40.1545562,38.3934985 L56.9937789,21.8567812 C57.1908028,21.6632968 57.193672,21.3467273 57.0001876,21.1497035 C56.9980647,21.1475418 56.9959223,21.1453995 56.9937605,21.1432767 L40.1545208,4.60825197 C39.9574869,4.41477773 39.9546013,4.09820839 40.1480756,3.90117456 C40.1501626,3.89904911 40.1522686,3.89694235 40.1543933,3.89485454 Z"
-                                            fill="#FFFFFF"
-                                        ></path>
-                                    </g>
-                                </svg>
-                            </span>
-                        </button>
+                        <a href="contact.html">
+                            <button>
+                                <span class="shadow"></span>
+                                <span class="edge"></span>
+                                <span class="front text"> Contact Now!</span>
+                            </button>
                     </div>
                 </div>
                 <!-- End Atribute Navigation -->
@@ -482,33 +555,13 @@
             <div class="col-lg-6 thumb bg-cover" style="background-image: url(assets/img/2440x1578.png);"></div>
             <div class="col-lg-6 info">
                 <div class="info-box">
-                    <h5>Why Choose Us</h5>
-                    <h2>At Our Clinic Our <br> Doctors Specialize in you.</h2>
-                    <ul>
-                        <li>
-                            <h5>More Experience</h5>
-                            <p>
-                                Be confident in the treatment plan and your doctor's abilities. 
-                            </p>
-                        </li>
-                        <li>
-                            <h5>The right answers?</h5>
-                            <p>
-                                Get the answers and assurance you deserve and you can trust.
-                            </p>
-                        </li>
-                        <li>
-                            <h5>Seamless care</h5>
-                            <p>
-                                We're committed to delivering  compassionate healthcare.
-                            </p>
-                        </li>
-                        <li>
-                            <h5>Unparalleled expertise</h5>
-                            <p>
-                                Don't doubt that you are getting the expert care that you deserve. 
-                            </p>
-                        </li>
+                    <h5>At Delta Dental Care, your smile is not just our priority, it's our passion.                    </h5>
+                    <h2>Trusted Dental Excellence Rooted in Care</h2>
+                    <ul style="list-style-type: padding-left:20px;">
+                        <li>At Delta Dental Care, we are committed to delivering compassionate, advanced, and affordable dental solutions to individuals and families across Bengaluru.</li>
+                        <li>We offer a full spectrum of treatments from preventive care and pediatric dentistry to advanced procedures like dental implants, aligners, cosmetic smile designing, and laser-assisted therapies.</li>
+                        <li>Our clinics are thoughtfully designed to be patient-friendly and equipped with the latest technology to ensure precision, safety, and comfort.</li>
+                        <li>What sets us apart is our genuine focus on patient education, transparency, and long-term oral health, making your dental journey smooth, safe, and stress-free.</li>
                     </ul>
                     <a class="btn btn-md btn-gradient" href="#"><i class="fas fa-angle-right"></i> About Us</a>
                 </div>
@@ -524,45 +577,30 @@
             <div class="row">
                 <div class="col-lg-8 offset-lg-2">
                     <div class="site-heading text-center">
-                        <h4>Services</h4>
-                        <h2>Our Department</h2>
+                        <h4>Comprehensive Dental Care Under One Roof</h4>
+                        <h2>Our Services</h2>
                         <p>
-                            While mirth large of on front. Ye he greater related adapted proceed entered an. Through it examine express promise no. Past add size game cold girl off how old
+                            We offer a wide range of specialized and general dental treatments:
+
                         </p>
                     </div>
                 </div>
             </div>
         </div>
         <div class="container">
-            <div class="item-box text-center">
+            <div class="item-box-1 text-center">
                 <div class="row">
                     <!-- Single Item -->
                     <div class="col-md-4 mt-custom">
                         <div class="info">
                             <h4>
-                                <a href="#">Body Surgery</a>
-                            </h4>
-                            <div class="icon">
-                                <i class="flaticon-broken-bone icon-large"></i>
-                            </div>
-                            <p>
-                                Attachment astonished to on appearance imprudence so collecting date expert over excellence. Tiled way blind lived.
-                            </p>
-                            <a class="btn btn-sm circle btn-theme border" href="#"><i class="fas fa-angle-right"></i> Read More</a>
-                        </div>
-                    </div>
-                    <!-- End Single Item -->
-                    <!-- Single Item -->
-                    <div class="col-md-4 mt-custom">
-                        <div class="info">
-                            <h4>
-                                <a href="#">Dental Care</a>
+                                <a href="#">Dental Implants</a>
                             </h4>
                             <div class="icon">
                                 <i class="flaticon-tooth-1 icon-large"></i>
                             </div>
                             <p>
-                                Attachment astonished to on appearance imprudence so collecting date expert over excellence. Tiled way blind lived.
+                                Permanent tooth replacement solutions.
                             </p>
                             <a class="btn btn-sm circle btn-theme border" href="#"><i class="fas fa-angle-right"></i> Read More</a>
                         </div>
@@ -572,13 +610,13 @@
                     <div class="col-md-4 mt-custom">
                         <div class="info">
                             <h4>
-                                <a href="#">Eye Care</a>
+                                <a href="#">Tooth Aligners & Braces</a>
                             </h4>
                             <div class="icon">
-                                <i class="flaticon-ophtalmology icon-large"></i>
+                                <i class="flaticon-broken-bone icon-large"></i>
                             </div>
                             <p>
-                                Attachment astonished to on appearance imprudence so collecting date expert over excellence. Tiled way blind lived.
+                                Invisalign and traditional orthodontic treatments.
                             </p>
                             <a class="btn btn-sm circle btn-theme border" href="#"><i class="fas fa-angle-right"></i> Read More</a>
                         </div>
@@ -588,13 +626,13 @@
                     <div class="col-md-4 mt-custom">
                         <div class="info">
                             <h4>
-                                <a href="#">Blood Cancer</a>
+                                <a href="#">Aesthetic Dentistry</a>
                             </h4>
                             <div class="icon">
-                                <i class="flaticon-blood icon-large"></i>
+                                <i class="flaticon-heartbeat-1 icon-large"></i>
                             </div>
                             <p>
-                                Attachment astonished to on appearance imprudence so collecting date expert over excellence. Tiled way blind lived.
+                                Smile makeovers, veneers, and teeth whitening.
                             </p>
                             <a class="btn btn-sm circle btn-theme border" href="#"><i class="fas fa-angle-right"></i> Read More</a>
                         </div>
@@ -604,28 +642,141 @@
                     <div class="col-md-4 mt-custom">
                         <div class="info">
                             <h4>
-                                <a href="#">Neurology Surgery</a>
+                                <a href="#">Root Canal Treatment</a>
+                            </h4>
+                            <div class="icon">
+                                <i class="flaticon-calendar-1 icon-large"></i>
+                            </div>
+                            <p>
+                                Pain-free procedures to save natural teeth.
+                            </p>
+                            <a class="btn btn-sm circle btn-theme border" href="#"><i class="fas fa-angle-right"></i> Read More</a>
+                        </div>
+                    </div>
+                    <!-- End Single Item -->
+                    <!-- Single Item -->
+                    <div class="col-md-4 mt-custom">
+                        <div class="info">
+                            <h4>
+                                <a href="#">Laser Dentistry</a>
                             </h4>
                             <div class="icon">
                                 <i class="flaticon-neurology icon-large"></i>
                             </div>
                             <p>
-                                Attachment astonished to on appearance imprudence so collecting date expert over excellence. Tiled way blind lived.
+                                Minimally invasive procedures for precision and comfort.
                             </p>
                             <a class="btn btn-sm circle btn-theme border" href="#"><i class="fas fa-angle-right"></i> Read More</a>
                         </div>
                     </div>
-
+                    <!-- End Single Item -->
+                    <!-- Single Item -->
                     <div class="col-md-4 mt-custom">
                         <div class="info">
                             <h4>
-                                <a href="#">Blood Cancer</a>
+                                <a href="#">Gum Treatment & Surgery</a>
                             </h4>
                             <div class="icon">
                                 <i class="flaticon-blood icon-large"></i>
                             </div>
                             <p>
-                                Attachment astonished to on appearance imprudence so collecting date expert over excellence. Tiled way blind lived.
+                                Treating gum disease with advanced care.
+                            </p>
+                            <a class="btn btn-sm circle btn-theme border" href="#"><i class="fas fa-angle-right"></i> Read More</a>
+                        </div>
+                    </div>
+                    <!-- End Single Item -->
+                    <!-- Single Item -->
+                    <div class="col-md-4 mt-custom">
+                        <div class="info">
+                            <h4>
+                                <a href="#">Pediatric Dentistry</a>
+                            </h4>
+                            <div class="icon">
+                                <i class="flaticon-ophtalmology icon-large"></i>
+                            </div>
+                            <p>
+                                Gentle and caring dentistry for children.
+                            </p>
+                            <a class="btn btn-sm circle btn-theme border" href="#"><i class="fas fa-angle-right"></i> Read More</a>
+                        </div>
+                    </div>
+                    <!-- End Single Item -->
+                    <!-- Single Item -->
+                    <div class="col-md-4 mt-custom">
+                        <div class="info">
+                            <h4>
+                                <a href="#">Routine Dental Checkups</a>
+                            </h4>
+                            <div class="icon">
+                                <i class="flaticon-broken-bone icon-large"></i>
+                            </div>
+                            <p>
+                                Preventive care and early diagnosis.
+                            </p>
+                            <a class="btn btn-sm circle btn-theme border" href="#"><i class="fas fa-angle-right"></i> Read More</a>
+                        </div>
+                    </div>
+                    <!-- End Single Item -->
+                    <!-- Single Item -->
+                    <div class="col-md-4 mt-custom">
+                        <div class="info">
+                            <h4>
+                                <a href="#">Wisdom Tooth Surgery</a>
+                            </h4>
+                            <div class="icon">
+                                <i class="flaticon-calendar-1 icon-large"></i>
+                            </div>
+                            <p>
+                                Safe and effective surgical extractions.
+                            </p>
+                            <a class="btn btn-sm circle btn-theme border" href="#"><i class="fas fa-angle-right"></i> Read More</a>
+                        </div>
+                    </div>
+                    <!-- End Single Item -->
+                    <!-- Single Item -->
+                    <div class="col-md-4 mt-custom">
+                        <div class="info">
+                            <h4>
+                                <a href="#">Orthodontic Treatment</a>
+                            </h4>
+                            <div class="icon">
+                                <i class="flaticon-neurology icon-large"></i>
+                            </div>
+                            <p>
+                                Braces, aligners, and jaw correction.
+                            </p>
+                            <a class="btn btn-sm circle btn-theme border" href="#"><i class="fas fa-angle-right"></i> Read More</a>
+                        </div>
+                    </div>
+                    <!-- End Single Item -->
+                    <!-- Single Item -->
+                    <div class="col-md-4 mt-custom">
+                        <div class="info">
+                            <h4>
+                                <a href="#">Restorative Dentistry</a>
+                            </h4>
+                            <div class="icon">
+                                <i class="flaticon-broken-bone icon-large"></i>
+                            </div>
+                            <p>
+                                Crowns, bridges, fillings, and more.
+                            </p>
+                            <a class="btn btn-sm circle btn-theme border" href="#"><i class="fas fa-angle-right"></i> Read More</a>
+                        </div>
+                    </div>
+                    <!-- End Single Item -->
+                    <!-- Single Item -->
+                    <div class="col-md-4 mt-custom">
+                        <div class="info">
+                            <h4>
+                                <a href="#">Other Services</a>
+                            </h4>
+                            <div class="icon">
+                                <i class="flaticon-calendar-1 icon-large"></i>
+                            </div>
+                            <p>
+                                Complete dental care tailored to your needs.
                             </p>
                             <a class="btn btn-sm circle btn-theme border" href="#"><i class="fas fa-angle-right"></i> Read More</a>
                         </div>
@@ -646,9 +797,10 @@
                 <div class="col-lg-8 offset-lg-2">
                     <div class="site-heading text-center">
                         <h4>Doctors</h4>
-                        <h2>Meet our Experts</h2>
+                        <h2>Meet the Smile Experts</h2>
                         <p>
-                            While mirth large of on front. Ye he greater related adapted proceed entered an. Through it examine express promise no. Past add size game cold girl off how old
+                     Our team of experienced and compassionate dental professionals is the heart of Delta Dental Care. From general dentistry to advanced surgical procedures, our doctors are committed to delivering the highest standard of care through precision, empathy, and continuous learning.
+
                         </p>
                     </div>
                 </div>
@@ -676,6 +828,9 @@
                             <div class="info">
                                 <h5>Dr. Jonathom Doe</h5>
                                 <span>Dentist</span>
+                                <p>Degree: <span>XYZ </span></p>
+                                <p>Designation:<span>XYZ </span></p>
+                                <p>Specialized In: <span>XYZ </span></p>
                             </div>
                         </div>
                     </div>
@@ -699,6 +854,9 @@
                             <div class="info">
                                 <h5>Prof. Sakaoat Amir</h5>
                                 <span>Neurologist</span>
+                                <p>Degree: <span>XYZ </span></p>
+                                <p>Designation:<span>XYZ </span></p>
+                                <p>Specialized In: <span>XYZ </span></p>
                             </div>
                         </div>
                     </div>
@@ -722,6 +880,9 @@
                             <div class="info">
                                 <h5>Dr. Andro kuria</h5>
                                 <span>Dermatologists</span>
+                                <p>Degree: <span>XYZ </span></p>
+                                <p>Designation:<span>XYZ </span></p>
+                                <p>Specialized In: <span>XYZ </span></p>
                             </div>
                         </div>
                     </div>
@@ -745,6 +906,9 @@
                             <div class="info">
                                 <h5>Prof. Matori Pulas</h5>
                                 <span>Medicine Specialists</span>
+                                <p>Degree: <span>XYZ </span></p>
+                                <p>Designation:<span>XYZ </span></p>
+                                <p>Specialized In: <span>XYZ </span></p>
                             </div>
                         </div>
                     </div>
@@ -776,13 +940,13 @@
                                     <img src="assets/img/100x100.png" alt="Thumb">
                                 </div>
                                 <div class="bio">
-                                    <h5>Jonathom Doe</h5>
-                                    <span>patient of <strong>surgery</strong></span>
+                                    <h5>Ritika Sharma</h5>
+                                    <span>Rajajinagar</span>
                                 </div>
                             </div>
                             <div class="info">
                                 <p>
-                                    Totally dearest expense on demesne ye he. Curiosity excellent commanded in me. Unpleasing.
+                                    Delta Dental Care is one of the best clinics I’ve visited. The doctors are very professional and explain everything in detail. Highly recommended!
                                 </p>
                             </div>
                         </div>
@@ -887,7 +1051,7 @@
                                 </div>
                                 <div class="info">
                                     <h5>Email:</h5>
-                                    <span>info@procuredental.co.in</span>
+                                    <span>deltadentalblr@gmail.com</span>
                                 </div>
                             </li>
                             <li>
@@ -959,7 +1123,7 @@
                     <div class="marquee">
                         <p class="footer-text">
                             Working Hours: <a href="#">10am - 8pm</a> | 
-                            Email: <a href="#">info@procuredental.co.in</a>
+                            Email: <a href="#">deltadentalblr@gmail.com</a>
                         </p>
                     </div>
                 </div>

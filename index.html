@@ -981,6 +981,71 @@
             transition: background-color 0.3s ease;
         }
 
+        /* Mobile Doctor Cards Styling */
+        .doctor-card {
+            background: #fff;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 0 15px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+
+        .doctor-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+        }
+
+        .doctor-card .thumb {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .doctor-card .thumb img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+        }
+
+        .doctor-card .info {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .doctor-card .info h4 {
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .doctor-card .info span {
+            color: #666;
+            display: block;
+            margin-bottom: 15px;
+        }
+
+        .doctor-card .info p {
+            color: #777;
+            margin-bottom: 20px;
+            font-size: 14px;
+        }
+
+        /* Show/Hide based on screen size */
+        @media (max-width: 768px) {
+            .mobile-doctor-cards {
+                display: block;
+            }
+            .desktop-view {
+                display: none;
+            }
+        }
+
+        @media (min-width: 769px) {
+            .mobile-doctor-cards {
+                display: none;
+            }
+            .desktop-view {
+                display: block;
+            }
+        }
     </style>
 
 
@@ -1434,10 +1499,10 @@
             <div class="row">
                 <div class="col-lg-8 offset-lg-2">
                     <div class="site-heading text-center">
-                        <h4>Services</h4>
-                        <h2>Our Department</h2>
+                        <h4>Why Choose Delta Dental Care?</h4>
+                        <h2>Advanced Care That's Affordable</h2>
                         <p>
-                            While mirth large of on front. Ye he greater related adapted proceed entered an. Through it examine express promise no. Past add size game cold girl off how old
+                            We combine cutting-edge dental technology with patient-first care at prices that make world-class dentistry accessible to everyone. We believe in honest consultations, personalized treatment plans, and long-term dental wellness for every patient.
                         </p>
                     </div>
                 </div>
@@ -1544,9 +1609,10 @@
                 <!-- Move the info section to the left -->
                 <div class="col-lg-6 info">
                     <h5>Has been working since 2000</h5>
-                    <h2>A Great Place to Work. A Great Place to <strong>Receive Care</strong>. Leading Medicine.</h2>
+                    <h2><strong>Trust</strong>, <strong>Transparency</strong> & <strong>Treatment</strong> That Works</h2>
                     <p>
-                        Pursuit chamber as elderly amongst on. Distant however warrant farther to of. My justice wishing prudent waiting in be. Who decisively attachment has dispatched. Fruit defer in party me built under first. Forbade him but savings sending ham general.
+                        We believe in honest consultations, personalized treatment plans, and long-term dental wellness for every patient.
+
                     </p>
                     <ul>
                         <li>
@@ -1608,9 +1674,9 @@
                 <div class="col-lg-8 offset-lg-2">
                     <div class="site-heading text-center">
                         <h4>Doctors</h4>
-                        <h2>Meet our Experts</h2>
+                        <h2>Meet the Smile Experts</h2>
                         <p>
-                            While mirth large of on front. Ye he greater related adapted proceed entered an. Through it examine express promise no. Past add size game cold girl off how old
+                            Our team of experienced and compassionate dental professionals is the heart of Delta Dental Care. From general dentistry to advanced surgical procedures, our doctors are committed to delivering the highest standard of care through precision, empathy, and continuous learning.
                         </p>
                     </div>
                 </div>
@@ -1619,8 +1685,56 @@
         <div class="container">
             <div class="doctor-items">
                 <div class="row">
+                    <!-- Mobile View Doctor Cards -->
+                    <div class="col-12 mobile-doctor-cards">
+                        <div class="row">
+                            <!-- Doctor Card 1 -->
+                            <div class="col-12 col-sm-6 col-md-4 mb-4">
+                                <div class="doctor-card">
+                                    <div class="thumb">
+                                        <img src="assets/img/800x800.png" alt="Doctor">
+                                    </div>
+                                    <div class="info">
+                                        <h4>Dr. Jonathom Doe</h4>
+                                        <span>MBBS, BMBS, MBChB, MBBCh</span>
+                                        <p>Delightful unreserved impossible few estimating men favourable see entreaties. She propriety immediate was improving.</p>
+                                        <a class="btn btn-sm btn-gradient circle" href="#"><i class="fas fa-angle-right"></i> Read More</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Doctor Card 2 -->
+                            <div class="col-12 col-sm-6 col-md-4 mb-4">
+                                <div class="doctor-card">
+                                    <div class="thumb">
+                                        <img src="assets/img/800x800.png" alt="Doctor">
+                                    </div>
+                                    <div class="info">
+                                        <h4>Prof. Sakaoat Amir</h4>
+                                        <span>MBBS, BMBS, MBChB, MBBCh</span>
+                                        <p>Delightful unreserved impossible few estimating men favourable see entreaties. She propriety immediate was improving.</p>
+                                        <a class="btn btn-sm btn-gradient circle" href="#"><i class="fas fa-angle-right"></i> Read More</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Doctor Card 3 -->
+                            <div class="col-12 col-sm-6 col-md-4 mb-4">
+                                <div class="doctor-card">
+                                    <div class="thumb">
+                                        <img src="assets/img/800x800.png" alt="Doctor">
+                                    </div>
+                                    <div class="info">
+                                        <h4>Dr. Andro kuria</h4>
+                                        <span>MBBS, BMBS, MBChB, MBBCh</span>
+                                        <p>Delightful unreserved impossible few estimating men favourable see entreaties. She propriety immediate was improving.</p>
+                                        <a class="btn btn-sm btn-gradient circle" href="#"><i class="fas fa-angle-right"></i> Read More</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
-                    <div class="col-lg-4">
+                    <!-- Desktop View Tab Navigation -->
+                    <div class="col-lg-4 desktop-view">
                         <ul id="tabs" class="nav nav-tabs">
                             <li class="nav-item">
                                 <a href="" data-target="#tab1" data-toggle="tab" class="active nav-link">
@@ -1637,7 +1751,7 @@
                                                 <h4>Dr. Aron</h4>
                                                 <span>MBBS, BMBS, MBChB, MBBCh</span>
                                                 <p>
-                                                    Delightful unreserved impossible few estimating men favourable see entreaties. She propriety immediate was improving. He or entrance humoured likewise moderate. 
+                                                    Delightful unreserved impossible few estimating men favourable see entreaties. She propriety immediate was improving. 
                                                 </p>
                                                 <a class="btn btn-sm btn-gradient cirlce" href="#"><i class="fas fa-angle-right"></i> Read More</a>
                                             </div>
@@ -1659,7 +1773,7 @@
                                             <h4>Dr. Barry</h4>
                                             <span>MBBS, BMBS, MBChB, MBBCh</span>
                                             <p>
-                                                Delightful unreserved impossible few estimating men favourable see entreaties. She propriety immediate was improving. He or entrance humoured likewise moderate. 
+                                                Delightful unreserved impossible few estimating men favourable see entreaties. She propriety immediate was improving. 
                                             </p>
                                             <a class="btn btn-sm btn-gradient cirlce" href="#"><i class="fas fa-angle-right"></i> Read More</a>
                                         </div>
@@ -1679,7 +1793,7 @@
                                             <h4>Dr. Com</h4>
                                             <span>MBBS, BMBS, MBChB, MBBCh</span>
                                             <p>
-                                                Delightful unreserved impossible few estimating men favourable see entreaties. She propriety immediate was improving. He or entrance humoured likewise moderate. 
+                                                Delightful unreserved impossible few estimating men favourable see entreaties. She propriety immediate was improving. 
                                             </p>
                                             <a class="btn btn-sm btn-gradient cirlce" href="#"><i class="fas fa-angle-right"></i> Read More</a>
                                         </div>
@@ -1699,7 +1813,7 @@
                                             <h4>Dr. Dom</h4>
                                             <span>MBBS, BMBS, MBChB, MBBCh</span>
                                             <p>
-                                                Delightful unreserved impossible few estimating men favourable see entreaties. She propriety immediate was improving. He or entrance humoured likewise moderate. 
+                                                Delightful unreserved impossible few estimating men favourable see entreaties. She propriety immediate was improving. 
                                             </p>
                                             <a class="btn btn-sm btn-gradient cirlce" href="#"><i class="fas fa-angle-right"></i> Read More</a>
                                         </div>
@@ -1708,7 +1822,7 @@
                         </ul>
                     </div>
 
-                    <div class="col-lg-8 hide-on-mobile">
+                    <div class="col-lg-8 desktop-view">
                         <div id="tabsContent" class="tab-content wow fadeInUp" data-wow-delay="0.5s">
                             
                             <div id="tab1" class="tab-pane fade active show">
@@ -1722,7 +1836,7 @@
                                                 <h4>Dr. Jonathom Doe</h4>
                                                 <span>MBBS, BMBS, MBChB, MBBCh</span>
                                                 <p>
-                                                    Delightful unreserved impossible few estimating men favourable see entreaties. She propriety immediate was improving. He or entrance humoured likewise moderate. 
+                                                    Delightful unreserved impossible few estimating men favourable see entreaties. She propriety immediate was improving. 
                                                 </p>
                                                 <a class="btn btn-sm btn-gradient cirlce" href="#"><i class="fas fa-angle-right"></i> Read More</a>
                                             </div>
@@ -1822,62 +1936,6 @@
 
 
 
-    <!-- Start Top Entry
-    ============================================= -->
-    <div class="top-entry-area relative default-padding text-center hide-on-mobile">
-        <div class="container">
-            <div class="item-box">
-                <div class="row align-center">
-                    <!-- Single Item -->
-                    <div class="col-lg-4 single-item">
-                        <div class="item">
-                            <i class="fas fa-ambulance"></i>
-                            <h4>Emergency Case</h4>
-                            <p>
-                                Few preferred continual sir led incommode neglected. Discovered too old insensible collecting unpleasant. 
-                            </p>
-                            <ul>
-                                <li>
-                                    <span>Phone</span>
-                                    <p>(+987)98765432</p>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <!-- End Single Item -->
-                    <!-- Single Item -->
-                    <div class="col-lg-4 single-item">
-                        <div class="thumb">
-                            <img src="assets/img/thumb/1.png" alt="Thumb">
-                        </div>
-                    </div>
-                    <!-- End Single Item -->
-                    <!-- Single Item -->
-                    <div class="col-lg-4 single-item">
-                        <div class="item">
-                            <i class="fas fa-ribbon"></i>
-                            <h4>Cancer Care</h4>
-                            <p>
-                                Few preferred continual sir led incommode neglected. Discovered too old insensible collecting unpleasant. 
-                            </p>
-                            <ul>
-                                <li>
-                                    <span>Phone</span>
-                                    <p>(+987)98765432</p>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <!-- End Single Item -->
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- End Top Entry -->
-
-
-
-
 
     <!-- Start Gallery
     ============================================= -->
@@ -1887,9 +1945,10 @@
                 <div class="col-lg-8 offset-lg-2">
                     <div class="site-heading text-center">
                         <h4>Gallery</h4>
-                        <h2>Our Environment</h2>
+                        <h2>See the Delta Difference</h2>
                         <p>
-                            While mirth large of on front. Ye he greater related adapted proceed entered an. Through it examine express promise no. Past add size game cold girl off how old
+                            Explore moments from our clinics, treatment success stories, happy patients, modern equipment, and a team that truly cares. Our gallery reflects our passion for precision and people.
+
                         </p>
                     </div>
                 </div>
@@ -2010,13 +2069,12 @@
             <div class="col-lg-6 info">
                 <div class="info-box">
                     <h5>At Our Clinic</h5>
-                    <h2>Our Doctors <br> Specialize in you.</h2>
+                    <h2>Your Smile, Our Passion  </h2>
                     <p>
-                        Respect forming clothes do in he. Course so piqued no an by appear. Themselves reasonable pianoforte so motionless he as difficulty be. Abode way begin ham there power whole.
+                        From dental implants to smile makeovers, our skilled team of dentists combines years of experience with modern techniques to ensure personalized, pain-free treatment for every age group. Whether it's your child's first dental visit or a complete oral rehabilitation, Delta Dental Care is committed to helping you smile with confidence.
+
                     </p>
-                    <p>
-                        Do unpleasing indulgence impossible to conviction. Suppose neither evident welcome
-                    </p>
+                   
                     <a class="btn btn-md btn-gradient" href="#"><i class="fas fa-angle-right"></i> Doctor Lists</a>
                 </div>
             </div>
@@ -2033,8 +2091,8 @@
                 <div class="col-lg-4 text-light">
                     <div class="heading">
                         <h5>Testimonials</h5>
-                        <h2>Whay people says <br> about our services</h2>
-                        <a class="btn btn-sm btn-light effect" href="#"><i class="fas fa-angle-right"></i>Viewl All</a>
+                        <h2>What people say <br> about our services</h2>
+                        <a class="btn btn-sm btn-light effect" href="#"><i class="fas fa-angle-right"></i>View All</a>
                     </div>
                 </div>
                 <div class="col-lg-8">
@@ -2046,13 +2104,13 @@
                                     <img src="assets/img/100x100.png" alt="Thumb">
                                 </div>
                                 <div class="bio">
-                                    <h5>Jonathom Doe</h5>
-                                    <span>patient of <strong>surgery</strong></span>
+                                    <h5>Ritika Sharma</h5>
+                                    <span>Patient from <strong>Rajajinagar</strong></span>
                                 </div>
                             </div>
                             <div class="info">
                                 <p>
-                                    Totally dearest expense on demesne ye he. Curiosity excellent commanded in me. Unpleasing.
+                                    Delta Dental Care is one of the best clinics I've visited. The doctors are very professional and explain everything in detail. Highly recommended!
                                 </p>
                             </div>
                         </div>
@@ -2063,13 +2121,13 @@
                                     <img src="assets/img/100x100.png" alt="Thumb">
                                 </div>
                                 <div class="bio">
-                                    <h5>Jonathom Doe</h5>
-                                    <span>patient of <strong>surgery</strong></span>
+                                    <h5>Vivek Rao</h5>
+                                    <span>Patient from <strong>RT Nagar</strong></span>
                                 </div>
                             </div>
                             <div class="info">
                                 <p>
-                                    Totally dearest expense on demesne ye he. Curiosity excellent commanded in me. Unpleasing.
+                                    I got my root canal done here. The whole process was smooth and painless. The clinic is clean, and the staff is courteous.
                                 </p>
                             </div>
                         </div>
@@ -2080,13 +2138,30 @@
                                     <img src="assets/img/100x100.png" alt="Thumb">
                                 </div>
                                 <div class="bio">
-                                    <h5>Jonathom Doe</h5>
-                                    <span>patient of <strong>surgery</strong></span>
+                                    <h5>Farhan Siddiqui</h5>
+                                    <span>Patient from <strong>Ulsoor</strong></span>
                                 </div>
                             </div>
                             <div class="info">
                                 <p>
-                                    Totally dearest expense on demesne ye he. Curiosity excellent commanded in me. Unpleasing.
+                                    Amazing experience! The aligner treatment was very well-managed and the progress was closely monitored. Thanks to the team!
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="item">
+                            <div class="provider">
+                                <div class="thumb">
+                                    <img src="assets/img/100x100.png" alt="Thumb">
+                                </div>
+                                <div class="bio">
+                                    <h5>Ananya Iyer</h5>
+                                    <span>Patient from <strong>Bangalore</strong></span>
+                                </div>
+                            </div>
+                            <div class="info">
+                                <p>
+                                    My daughter had her dental treatment done here. Pediatric care is excellent – gentle, caring, and very professional.
                                 </p>
                             </div>
                         </div>
@@ -2240,7 +2315,7 @@
                 <div class="col-lg-4 col-md-6 item">
                     <div class="f-item about">
                         <p>
-                            At Delta Dental Care, we believe every smile tells a story and we’re here to make yours shine brighter. With a strong foundation built on trust, compassion, and clinical excellence, we’ve grown into one of Bengaluru’s most reliable dental care providers. Our multi-specialty clinics are designed to offer a warm, stress-free experience while delivering advanced dental solutions that are both effective and patient-centric.
+                            At Delta Dental Care, we believe every smile tells a story and we're here to make yours shine brighter. With a strong foundation built on trust, compassion, and clinical excellence, we've grown into one of Bengaluru's most reliable dental care providers. Our multi-specialty clinics are designed to offer a warm, stress-free experience while delivering advanced dental solutions that are both effective and patient-centric.
 
                         </p>
                         <div class="address">

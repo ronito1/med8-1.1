@@ -563,6 +563,9 @@
 
         input[type="date"]::-webkit-calendar-picker-indicator {
             filter: invert(1);
+            width: 25px;
+            height: 25px;
+            margin-right: 10px;
         }
 
         /* Add styles for time input placeholder */
@@ -577,41 +580,73 @@
 
         input[type="time"]::-webkit-calendar-picker-indicator {
             filter: invert(1);
+            width: 25px;
+            height: 25px;
+            margin-right: 10px;
+        }
+
+        /* Mobile-specific styles */
+        @media (max-width: 768px) {
+            input[type="date"],
+            input[type="time"] {
+                color: #ffffff !important;
+                background-color: rgba(255, 255, 255, 0.1) !important;
+                border: 1px solid rgba(255, 255, 255, 0.3) !important;
+                border-radius: 5px;
+                padding: 10px;
+                font-size: 16px; /* Prevent zoom on iOS */
+            }
+
+            input[type="date"]::-webkit-calendar-picker-indicator,
+            input[type="time"]::-webkit-calendar-picker-indicator {
+                filter: invert(1) brightness(2);
+                width: 30px;
+                height: 30px;
+                margin-right: 15px;
+                opacity: 1;
+            }
+
+            input[type="date"]::-webkit-datetime-edit,
+            input[type="time"]::-webkit-datetime-edit {
+                color: #ffffff !important;
+                font-weight: 500;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .fun-fact-items .item {
+                margin-left: 30px;
+                text-align: center;
+            }
+            .fun-fact-items .row {
+                flex-direction: column;
+            }
+            .fun-factor-area {
+                display: none;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .department-items .item {
+                width: 100%;
+                display: block;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hide-on-mobile {
+                display: none;
+            }
+        }
+
+        @media (min-width: 769px) {
+            .hide-on-pc {
+                display: none;
+            }
         }
 
         @media (max-width: 768px) {
                 .fun-fact-items .item {
-                    margin-left: 30px; /* Adjust margin for mobile */
-                    text-align: center; /* Center text on mobile */
-                }
-                .fun-fact-items .row {
-                    flex-direction: column; /* Stack items vertically */
-                }
-                .fun-factor-area {
-                    display: none; /* Hide fun factor area on mobile */
-                }
-            }
-
-            @media (max-width: 768px) {
-                .department-items .item {
-                    width: 100%;
-                    display: block;
-                }
-            }
-
-            @media (max-width: 768px) { /* Adjust the max-width as needed */
-                .hide-on-mobile {
-                    display: none;
-                }
-            }
-
-            @media (min-width: 769px) { /* Adjust the min-width as needed */
-                .hide-on-pc {
-                    display: none;
-                }
-            }
-
-            @media (max-width: 768px) {
                 .cta.mobile-button {
                     margin-right: 75px; /* Adjust the value as needed */
                 }

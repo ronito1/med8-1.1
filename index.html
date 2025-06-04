@@ -1123,6 +1123,71 @@
                 margin-top: 20px;
             }
         }
+
+        .mfp-close-btn-in .mfp-close {
+            position: absolute;
+            right: 10px;
+            top: 10px;
+            width: 30px;
+            height: 30px;
+            background: rgba(255, 255, 255, 0.7);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+
+        .mfp-close-btn-in .mfp-close:hover {
+            background: rgba(255, 255, 255, 0.9);
+            transform: scale(1.1);
+        }
+
+        .mfp-close-btn-in .mfp-close:before {
+            color: #333;
+            font-size: 16px;
+        }
+
+        .mfp-iframe-holder .mfp-close {
+            position: absolute;
+            right: 10px;
+            top: 10px;
+            width: 30px;
+            height: 30px;
+            background: rgba(255, 255, 255, 0.7);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            z-index: 1000;
+            transition: all 0.3s ease;
+            padding: 0;
+            text-align: center;
+            line-height: 30px;
+        }
+
+        .mfp-iframe-holder .mfp-close:hover {
+            background: rgba(255, 255, 255, 0.9);
+            transform: scale(1.1);
+        }
+
+        .mfp-iframe-holder .mfp-close:before {
+            color: #333;
+            font-size: 16px;
+            line-height: 30px;
+        }
+
+        .mfp-iframe-holder .mfp-content {
+            max-width: 100%;
+            width: 100%;
+        }
+
+        .mfp-iframe-scaler {
+            padding-top: 56.25%;
+        }
     </style>
 
 
@@ -2582,6 +2647,27 @@ This is an automated message from the website contact form.
         </div>
     </div>
     <!-- End Sticky Footer -->
+
+    <script>
+        $(document).ready(function() {
+            $('.popup-video').magnificPopup({
+                type: 'iframe',
+                mainClass: 'mfp-fade',
+                removalDelay: 160,
+                preloader: false,
+                fixedContentPos: false,
+                iframe: {
+                    patterns: {
+                        youtube: {
+                            index: 'youtube.com/',
+                            id: 'v=',
+                            src: 'https://www.youtube.com/embed/%id%?autoplay=1'
+                        }
+                    }
+                }
+            });
+        });
+    </script>
 
 </body>
 </html>

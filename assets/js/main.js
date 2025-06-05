@@ -1,7 +1,7 @@
 /* ===================================================================
     
     Author          : Valid Theme
-    Template Name   : Healdi - Medical & Health Template
+    Template Name   : Delta Dental Care
     Version         : 1.0
     
 * ================================================================= */

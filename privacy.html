@@ -1,0 +1,792 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- ========== Meta Tags ========== -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Healdi - Medical & Health Template">
+
+    <!-- ========== Page Title ========== -->
+    <title>Healdi - Medical & Health Template</title>
+
+    <!-- ========== Favicon Icon ========== -->
+    <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
+
+    <!-- ========== Start Stylesheet ========== -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="assets/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="assets/css/themify-icons.css" rel="stylesheet" />
+    <link href="assets/css/flaticon-set.css" rel="stylesheet" />
+    <link href="assets/css/magnific-popup.css" rel="stylesheet" />
+    <link href="assets/css/owl.carousel.min.css" rel="stylesheet" />
+    <link href="assets/css/owl.theme.default.min.css" rel="stylesheet" />
+    <link href="assets/css/animate.css" rel="stylesheet" />
+    <link href="assets/css/bootsnav.css" rel="stylesheet" />
+    <link href="style.css" rel="stylesheet">
+    <link href="assets/css/responsive.css" rel="stylesheet" />
+    <!-- ========== End Stylesheet ========== -->
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="assets/js/html5/html5shiv.min.js"></script>
+      <script src="assets/js/html5/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- ========== Google Fonts ========== -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        /* Custom styles for the navigation button */
+        .attr-nav {
+            display: flex;
+            align-items: center;
+        }
+
+        .td-button-el-widget {
+            margin-left: auto; /* Push the button to the right */
+
+        }
+
+        /* From Uiverse.io by mobinkakei */
+        .cta {
+          display: flex;
+          padding: 10px 30px;  /* Increased horizontal padding for more oval shape */
+          text-decoration: none;
+          font-size: 25px;
+          color: white;
+          background: #f01313;
+          transition: 1s;
+          box-shadow: 6px 6px 0 black;
+          transform: skewX(-15deg);
+          border: 1px solid transparent;
+          cursor: pointer;
+          margin-top: 16px;
+          margin-left: 5px;
+          border-radius: 50px;  /* Added border-radius for oval shape */
+        }
+
+        @media (max-width: 768px) {
+            .themedraft-button {
+                display: none; /* Hides the button */
+            .cta {
+                display: none;
+            }
+            .button {
+                display: none;
+            }
+            }
+        }
+        .cta:focus {
+          outline: none;
+        }
+
+        .cta:hover {
+          transition: 0.5s;
+          /* Removed box-shadow to prevent lines on hover */
+          transform: none; /* Removed transform on hover */
+        }
+
+        .cta .second {
+          transition: 0.5s;
+          margin-right: 0px;
+        }
+
+        .cta:hover .second {
+          transition: 0.5s;
+          margin-right: 45px;
+        }
+
+        .span {
+          transform: skewX(15deg);
+        }
+
+        .second {
+          width: 20px;
+          margin-left: 30px;
+          position: relative;
+          top: 12%;
+        }
+
+        .one {
+          transition: 0.4s;
+          transform: translateX(-60%);
+        }
+
+        .two {
+          transition: 0.5s;
+          transform: translateX(-30%);
+        }
+
+        .cta:hover .three {
+          animation: color_anim 1s infinite 0.2s;
+        }
+
+        .three {
+          transition: 0.6s;
+          transform: translateX(-45%);
+        }
+
+        .cta:hover .one {
+          transform: translateX(0%);
+          animation: color_anim 1s infinite 0.6s;
+        }
+
+        .cta:hover .two {
+          transform: translateX(0%);
+          animation: color_anim 1s infinite 0.4s;
+        }
+
+        @keyframes color_anim {
+          0% {
+            fill: white;
+          }
+          50% {
+            fill: #ff0000;
+          }
+          100% {
+            fill: white;
+          }
+        }
+
+        @media (max-width: 768px) {
+    .themedraft-button-wrapper button {
+        margin-right: 100px; /* Adjust the margin value as needed */
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 768px) { /* Adjust the max-width as needed for your mobile view */
+    .top-bar-area {
+        margin-bottom: 36px; /* Adjust the value as needed for more space */
+    }
+}
+@media (max-width: 768px) {
+    .navbar-header .logo {
+        margin-top: 15px; /* Adjust the value as needed for more space */
+    }
+}
+
+/* WhatsApp Float Button */
+.whatsapp-float {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #25d366;
+    color: #FFF;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 2px 2px 3px #999;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.whatsapp-float:hover {
+    background-color: #128C7E;
+    color: #FFF;
+    transform: scale(1.1);
+}
+
+.whatsapp-float i {
+    margin-top: 0;
+}
+
+@media screen and (max-width: 767px) {
+    .whatsapp-float {
+        width: 50px;
+        height: 50px;
+        font-size: 25px;
+        bottom: 20px;
+        right: 20px;
+    }
+}
+
+    .sticky-footer {
+        display: none; /* Hide by default */
+    }
+
+    @media (max-width: 768px) { /* Adjust the max-width as needed for your mobile breakpoint */
+        .sticky-footer {
+            display: none; /* Show on mobile devices */
+        }
+    }
+
+    .mobile-only {
+        display: none; /* Hide by default */
+    }
+
+    @media (max-width: 768px) { /* Adjust the max-width as needed for your mobile breakpoint */
+        .mobile-only {
+            display: block; /* Show on mobile devices */
+        }
+    }
+
+    .sticky-footer {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: #fff; /* Change to your desired background color */
+        padding: 10px 0; /* Adjust padding as needed */
+        box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* Optional shadow for effect */
+        z-index: 1000; /* Ensure it stays above other content */
+    }
+
+    .sticky-footer .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .sticky-footer .social ul {
+        display: flex;
+        list-style: none;
+        padding: 0;
+    }
+
+ .sticky-footer .social li {
+        margin-left: 10px; /* Adjust spacing between icons */
+}
+
+/* Privacy Policy Styles */
+.privacy-policy-area {
+    padding: 80px 0;
+    background: #f9f9f9;
+}
+
+.privacy-policy-content {
+    background: #fff;
+    padding: 60px;
+    border-radius: 10px;
+    box-shadow: 0 0 30px rgba(0,0,0,0.1);
+    position: relative;
+    border: 1px solid #e0e0e0;
+    transition: all 0.3s ease;
+}
+
+/* Letter-like border effect */
+.privacy-policy-content:before {
+    content: '';
+    position: absolute;
+    top: -15px;
+    left: -15px;
+    right: -15px;
+    bottom: -15px;
+    border: 2px solid #007bff;
+    border-radius: 15px;
+    z-index: -1;
+    opacity: 0.3;
+    transition: all 0.3s ease;
+}
+
+.privacy-policy-content:hover:before {
+    top: -20px;
+    left: -20px;
+    right: -20px;
+    bottom: -20px;
+    opacity: 0.5;
+}
+
+.policy-header {
+    margin-bottom: 40px;
+    text-align: center;
+    position: relative;
+}
+
+.policy-header:after {
+    content: '';
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 3px;
+    background: linear-gradient(to right, transparent, #007bff, transparent);
+}
+
+.policy-header h2 {
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 32px;
+    transition: all 0.3s ease;
+}
+
+.policy-header:hover h2 {
+    color: #007bff;
+    transform: scale(1.02);
+}
+
+.effective-date {
+    color: #666;
+    font-style: italic;
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+}
+
+.policy-header:hover .effective-date {
+    color: #007bff;
+}
+
+.policy-section {
+    margin-bottom: 40px;
+    padding: 20px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.policy-section:hover {
+    background: #f8f9fa;
+    transform: translateX(10px);
+}
+
+.policy-section h3 {
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 24px;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+    transition: all 0.3s ease;
+}
+
+.policy-section:hover h3 {
+    color: #007bff;
+    border-bottom-color: #007bff;
+}
+
+.policy-section p {
+    color: #666;
+    line-height: 1.8;
+    margin-bottom: 15px;
+    transition: all 0.3s ease;
+}
+
+.policy-section:hover p {
+    color: #444;
+}
+
+.policy-section ul {
+    list-style: none;
+    padding-left: 20px;
+    margin-bottom: 20px;
+}
+
+.policy-section ul li {
+    color: #666;
+    line-height: 1.8;
+    margin-bottom: 10px;
+    position: relative;
+    padding-left: 20px;
+    transition: all 0.3s ease;
+}
+
+.policy-section ul li:hover {
+    color: #007bff;
+    transform: translateX(5px);
+}
+
+.policy-section ul li:before {
+    content: "•";
+    color: #007bff;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+    transition: all 0.3s ease;
+}
+
+.policy-section ul li:hover:before {
+    transform: scale(1.5);
+}
+
+.contact-info {
+    padding: 0;
+    border-radius: 8px;
+    margin-top: 20px;
+    transition: all 0.3s ease;
+}
+
+.contact-info:hover {
+    transform: none;
+}
+
+.contact-info p {
+    margin-bottom: 10px;
+    transition: all 0.3s ease;
+}
+
+.contact-info:hover p {
+    color: #007bff;
+}
+
+/* Add decorative elements */
+.privacy-policy-content:after {
+    content: '';
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23007bff" opacity="0.1"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 14H4V8l8 5 8-5v10zm-8-7L4 6h16l-8 5z"/></svg>') no-repeat center;
+    opacity: 0.1;
+    transition: all 0.3s ease;
+}
+
+.privacy-policy-content:hover:after {
+    transform: rotate(15deg);
+    opacity: 0.2;
+}
+
+@media (max-width: 768px) {
+    .privacy-policy-content {
+        padding: 30px 20px;
+    }
+
+    .policy-header h2 {
+        font-size: 24px;
+    }
+
+    .policy-section h3 {
+        font-size: 20px;
+    }
+
+    .policy-section:hover {
+        transform: translateX(5px);
+    }
+
+    /* Hide Navbar on mobile */
+    .navbar {
+        display: none;
+    }
+}
+
+
+
+    </style>
+</head>
+
+<body>
+
+    <!-- Preloader Start -->
+    <div class="se-pre-con"></div>
+    <!-- Preloader Ends -->
+
+    <!-- Start Header Top
+    ============================================= -->
+    <div class="top-bar-area inc-pad inc-border" style="background-color:#24333e;">
+        <div class="container">
+            <div class="row align-center">
+                <div class="col-lg-6 info">
+                    <p style="color: white;"> Working Hours: <a href="#" style="color: rgb(231, 225, 67);">10am - 8pm</a>
+                    </p>
+                </div>
+                <div class="col-lg-6 text-right item-flex">
+                    <div class="info">
+                        <ul>
+                            <li>
+                            <p style="color: white;"> Email: <a href="#" style="color: rgb(231, 225, 67);">deltadentalblr@gmail.com</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="social">
+                        <ul>
+                            <li>
+                                <a href="#">
+                                    <i class="fab fa-facebook-f" style="color:#ea6363;"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="fab fa-twitter" style="color:#ea6363;"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="fab fa-linkedin-in" style="color: #ea6363;"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Header Top -->
+
+
+    <!-- Start Breadcrumb 
+    ============================================= -->
+    <div class="breadcrumb-area bg-gradient text-center">
+        <!-- Fixed BG -->
+        <div class="fixed-bg" style="background-image: url(assets/img/shape/9.png);"></div>
+        <!-- Fixed BG -->
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 offset-lg-2">
+                    <h1>Privacy Policy</h1>
+                    <ul class="breadcrumb">
+                        <li><a href="#"><i class="fas fa-home"></i> Home</a></li>
+                        <li><a href="#">Pages</a></li>
+                        <li class="active">Privacy Policy</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Breadcrumb -->
+
+    <!-- Start Privacy Policy 
+    ============================================= -->
+    <div class="privacy-policy-area default-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 offset-lg-1">
+                    <div class="privacy-policy-content">
+                        <div class="policy-header">
+                            <h2>PRIVACY POLICY</h2>
+                            <p class="effective-date">Effective Date: 1/1/2025</p>
+                            <p>At Delta Dental Care, your privacy is important to us. We are committed to protecting the personal and medical information you share with us. This Privacy Policy explains how we collect, use, and safeguard your data when you visit our website or receive treatment at our clinic.</p>
+                        </div>
+
+                        <div class="policy-section">
+                            <h3>1. Information We Collect</h3>
+                            <p>We may collect and process the following types of information:</p>
+                            <ul>
+                                <li><strong>Personal Information:</strong> Name, phone number, email address, age, gender, etc.</li>
+                                <li><strong>Medical Information:</strong> Medical history, dental records, treatment plans, X-rays, prescriptions.</li>
+                                <li><strong>Appointment Details:</strong> Date and time of visit, preferred doctor, treatment queries.</li>
+                                <li><strong>Payment Information:</strong> Billing details, payment history, and other relevant financial data.</li>
+                                <li><strong>Website Usage Information:</strong> IP address, browser type, device info, and cookies.</li>
+                            </ul>
+                        </div>
+
+                        <div class="policy-section">
+                            <h3>2. How We Use Your Information</h3>
+                            <p>We use the collected information to:</p>
+                            <ul>
+                                <li>Schedule and manage appointments.</li>
+                                <li>Provide personalized dental care and treatment.</li>
+                                <li>Maintain medical records as per regulatory standards.</li>
+                                <li>Process payments and send billing reminders.</li>
+                                <li>Send service updates, appointment confirmations, or health-related information.</li>
+                                <li>Improve website performance and user experience.</li>
+                                <li>Ensure clinic compliance with health and safety regulations.</li>
+                            </ul>
+                        </div>
+
+                        <div class="policy-section">
+                            <h3>3. Data Security</h3>
+                            <p>We implement industry-standard security measures to protect your data from unauthorized access, disclosure, or misuse. Our team is trained in data privacy protocols, and all sensitive information is stored in secure servers and encrypted formats wherever possible.</p>
+                        </div>
+
+                        <div class="policy-section">
+                            <h3>4. Third-Party Sharing</h3>
+                            <p>We do not sell, rent, or share your personal information with third parties except in the following cases:</p>
+                            <ul>
+                                <li>With your consent.</li>
+                                <li>When required by law or medical authorities.</li>
+                                <li>With third-party service providers (e.g., payment gateways) who are contractually obligated to maintain confidentiality.</li>
+                            </ul>
+                        </div>
+
+                        <div class="policy-section">
+                            <h3>5. Use of Cookies</h3>
+                            <p>Our website may use cookies to:</p>
+                            <ul>
+                                <li>Improve site functionality.</li>
+                                <li>Understand user preferences and behavior.</li>
+                                <li>Track analytics for performance improvement.</li>
+                            </ul>
+                            <p>You may disable cookies through your browser settings, but some features of the website may not function properly.</p>
+                        </div>
+
+                        <div class="policy-section">
+                            <h3>6. Your Rights</h3>
+                            <p>As a patient, you have the right to:</p>
+                            <ul>
+                                <li>Access your personal and medical records.</li>
+                                <li>Request correction or deletion of inaccurate data.</li>
+                                <li>Withdraw consent for non-essential communications.</li>
+                                <li>File a complaint if you believe your data has been misused.</li>
+                            </ul>
+                        </div>
+
+                        <div class="policy-section">
+                            <h3>7. Children's Privacy</h3>
+                            <p>We are committed to protecting children's data. We do not knowingly collect personal information from minors without parental consent. Pediatric data is handled strictly under parental or guardian supervision.</p>
+                        </div>
+
+                        <div class="policy-section">
+                            <h3>8. Changes to This Policy</h3>
+                            <p>We reserve the right to update this Privacy Policy as needed. Any changes will be posted on this page with the revised date.</p>
+                        </div>
+
+                        <div class="policy-section">
+                            <h3>9. Contact Us</h3>
+                            <p>If you have any questions or concerns regarding this Privacy Policy or how we handle your data, please contact:</p>
+                            <div class="contact-info">
+                                <p><strong>Delta Dental Care</strong></p>
+                                <p>📍 #79, 1st Floor, 2nd Main Road, MLA Layout, RT Nagar, Bangalore – 560032</p>
+                                <p>📞 +91 98865 59544</p>
+                                <p>📧 deltadentalblr@gmail.com</p>
+                                <p>🌐 www.deltadentalcare.in</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Privacy Policy -->
+
+    <!-- Start Footer 
+============================================= -->
+<footer class="bg-dark text-light">
+    <div class="container">
+        <div class="f-items default-padding">
+            <div class="row">
+                <div class="col-lg-4 col-md-6 item">
+                    <div class="f-item about">
+                        <img src="assets/img/logo.png" alt="Delta Dental Care Logo" class="img-fluid mb-4" width="150">                        <p>
+                            At Delta Dental Care, we believe every smile tells a story and we’re here to make yours shine brighter. With a strong foundation built on trust, compassion, and clinical excellence, we’ve grown into one of Bengaluru’s most reliable dental care providers. Our multi-specialty clinics are designed to offer a warm, stress-free experience while delivering advanced dental solutions that are both effective and patient-centric.
+
+                        </p>
+                        <div class="address">
+                            <ul>
+                                <li>
+                                   
+                                   
+                                </li>
+                                <li>
+                                 
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="single-item col-lg-2 col-md-6 item">
+                    <div class="f-item link">
+                        <h4 class="widget-title">Quick Links</h4>
+                        <ul>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Our Team</a></li>
+                            <li><a href="#">Services</a></li>
+                            <li><a href="#">Testimonials</a></li>
+                            <li><a href="#">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="single-item col-lg-4 col-md-6 item">
+                    <div class="f-item recent-posts">
+                        <h4 class="widget-title">Recent Posts</h4>
+                        <ul>
+                            <li>The Impact of E-Cigarettes on Oral Health - April 24, 2025</li>
+                            <li>The Relationship Between Hormones and Oral Health - April 15, 2025</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="single-item col-lg-2 col-md-6 item">
+                    <div class="f-item contact-info">
+                        <h4 class="widget-title">Contact Us</h4>
+                        <ul>
+                            <li>
+                                <div class="icon">
+                                    <i class="flaticon-email"></i>
+                                </div>
+                                <div class="info">
+                                    <h5>Email:</h5>
+                                    <span>deltadentalblr@gmail.com</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="icon">
+                                    <i class="flaticon-call"></i>
+                                </div>
+                                <div class="info">
+                                    <h5>Phone:</h5>
+                                    <span>+91 9731568006</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Start Footer Bottom -->
+<div class="footer-bottom">
+        <div class="container">
+            <div class="row align-center">
+                <div class="col-lg-6">
+                    <p>Copyright @ <span style="transition: all 0.3s ease; cursor: pointer;" onmouseover="this.style.color='#fbff00'" onmouseout="this.style.color='#ffffff'">ProcureDental</span> | Made with ❤️ by <a href="https://regortz.com" target="_blank" style="color: #fbff00; transition: all 0.3s ease; text-decoration: none;" onmouseover="this.style.color='#ffffff'; this.style.textDecoration='underline'" onmouseout="this.style.color='#fbff00'; this.style.textDecoration='none'">Regortz</a> | <a href="privacy.html" class="privacy-btn" style="color: #ffffff; text-decoration: none; padding: 5px 10px; transition: all 0.3s ease;" onmouseover="this.style.color='#fbff00'" onmouseout="this.style.color='#ffffff'">Privacy Policy</a></p>
+                </div>
+                <div class="col-lg-6 text-right social">
+                    <ul>
+                        <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                        <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                        <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Footer Bottom -->
+</footer>
+<!-- End Footer -->
+    <!-- End Footer -->
+
+    <!-- jQuery Frameworks
+    ============================================= -->
+    <script src="assets/js/jquery-1.12.4.min.js"></script>
+    <script src="assets/js/popper.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/jquery.appear.js"></script>
+    <script src="assets/js/jquery.easing.min.js"></script>
+    <script src="assets/js/jquery.magnific-popup.min.js"></script>
+    <script src="assets/js/modernizr.custom.13711.js"></script>
+    <script src="assets/js/owl.carousel.min.js"></script>
+    <script src="assets/js/wow.min.js"></script>
+    <script src="assets/js/isotope.pkgd.min.js"></script>
+    <script src="assets/js/imagesloaded.pkgd.min.js"></script>
+    <script src="assets/js/count-to.js"></script>
+    <script src="assets/js/jquery.nice-select.min.js"></script>
+    <script src="assets/js/bootsnav.js"></script>
+    <script src="assets/js/main.js"></script>
+
+    <!-- WhatsApp Button -->
+    <a href="https://wa.me/919731568006" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+  <!-- Start Sticky Footer 
+    ============================================= -->
+    <div class="sticky-footer">
+        <div class="container">
+            <div class="row align-center">
+                <div class="col-lg-12 info mobile-only"> <!-- Added mobile-only class -->
+                    <div class="marquee">
+                        <p class="footer-text">
+                            Working Hours: <a href="#">10am - 8pm</a> | 
+                            Email: <a href="#">deltadentalblr@gmail.com</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Sticky Footer -->
+
+</body>
+</html>
+

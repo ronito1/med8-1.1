@@ -219,7 +219,7 @@ nav.navbar.bootsnav.nav-box .navbar-brand {
 .navbar-brand {
   float: left;
   height: 50px;
-  padding: 15px 15px;
+  padding: 10px 10px;
   font-size: 18px;
   line-height: 20px;
 }
@@ -3140,7 +3140,7 @@ ul.cart-list > li.total > .btn {
   }
 
   nav.navbar .navbar-brand img.logo {
-    height: 30px;
+    /* height: 30px; */
   }
 
   .attr-nav > ul > li > a {

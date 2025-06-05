@@ -129,7 +129,7 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 h4 {
-  font-size: 22px;
+  font-size: 18px;
 }
 
 img {
@@ -1836,7 +1836,7 @@ body,
 
 .banner-area h2 {
   font-weight: 300;
-  font-size: 80px;
+  font-size: 60px;
   line-height: 1;
   margin-bottom: 25px;
 }
@@ -4160,7 +4160,6 @@ body,
 .fun-factor-area .fun-fact-items {
   position: relative;
   z-index: 1;
-  padding: 120px 50px;
 }
 
 .fun-factor-area .fun-fact-items::after {

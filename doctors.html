@@ -320,7 +320,7 @@ button:focus:not(:focus-visible) {
 }  
 @media (max-width: 768px) { /* Adjust the max-width as needed for your mobile view */
     .themedraft-button-wrapper button {
-        margin-right: 100px; /* Adjust the margin value as needed */
+        margin-right: 90px; /* Adjust the margin value as needed */
         margin-bottom: 30px;
     }
 }
@@ -335,6 +335,98 @@ button:focus:not(:focus-visible) {
         margin-top: 15px; /* Adjust the value as needed for more space */
     }
 } 
+
+/* Team Card Hover Animations */
+.team-default-area .item {
+    transition: all 0.3s ease;
+    position: relative;
+    z-index: 1;
+}
+
+.team-default-area .item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.team-default-area .thumb {
+    overflow: hidden;
+    position: relative;
+}
+
+.team-default-area .thumb img {
+    transition: all 0.5s ease;
+}
+
+.team-default-area .item:hover .thumb img {
+    transform: scale(1.1);
+}
+
+.team-default-area .contact {
+    position: absolute;
+    bottom: -50px;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 15px 0;
+    transition: all 0.3s ease;
+    opacity: 0;
+}
+
+.team-default-area .item:hover .contact {
+    bottom: 0;
+    opacity: 1;
+}
+
+.team-default-area .contact ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-align: center;
+}
+
+.team-default-area .contact ul li {
+    display: inline-block;
+    margin: 0 5px;
+}
+
+.team-default-area .contact ul li a {
+    color: #fff;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.team-default-area .contact ul li a:hover {
+    color: #fbff00;
+}
+
+.team-default-area .info {
+    background: #fff;
+    padding: 20px;
+    transition: all 0.3s ease;
+}
+
+.team-default-area .item:hover .info {
+    background: #f8f9fa;
+}
+
+.team-default-area .info h5 {
+    margin-bottom: 5px;
+    transition: all 0.3s ease;
+}
+
+.team-default-area .item:hover .info h5 {
+    color: #007bff;
+}
+
+.team-default-area .info span {
+    color: #666;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.team-default-area .item:hover .info span {
+    color: #007bff;
+}
 </style>
 
 
@@ -350,14 +442,14 @@ button:focus:not(:focus-visible) {
         <div class="container">
             <div class="row align-center">
                 <div class="col-lg-6 info">
-                    <p style="color: white;"> Working Hours: <a href="#" style="color: rgb(255, 255, 0);">10am - 8pm</a>
+                    <p style="color: white;"> Working Hours: <a href="#" style="color: rgb(231, 225, 67);">10am - 8pm</a>
                     </p>
                 </div>
                 <div class="col-lg-6 text-right item-flex">
                     <div class="info">
                         <ul>
                             <li>
-                            <p style="color: white;"> Email: <a href="#" style="color: rgb(255, 247, 0);">deltadentalblr@gmail.com</a>
+                            <p style="color: white;"> Email: <a href="#" style="color: rgb(231, 225, 67);">deltadentalblr@gmail.com</a>
                             </li>
                         </ul>
                     </div>
@@ -365,17 +457,17 @@ button:focus:not(:focus-visible) {
                         <ul>
                             <li>
                                 <a href="#">
-                                    <i class="fab fa-facebook-f"></i>
+                                    <i class="fab fa-facebook-f" style="color:#ea6363;"></i>
                                 </a>
                             </li>
                             <li>
                                 <a href="#">
-                                    <i class="fab fa-twitter"></i>
+                                    <i class="fab fa-twitter" style="color:#ea6363;"></i>
                                 </a>
                             </li>
                             <li>
                                 <a href="#">
-                                    <i class="fab fa-linkedin-in"></i>
+                                    <i class="fab fa-linkedin-in" style="color: #ea6363;"></i>
                                 </a>
                             </li>
                         </ul>
@@ -406,7 +498,7 @@ button:focus:not(:focus-visible) {
                             <button>
                                 <span class="shadow"></span>
                                 <span class="edge"></span>
-                                <span class="front text"> Contact Now!</span>
+                                <span class="front text"> 📞8277542111</span>
                             </button>
                     </div>
                 </div>
@@ -414,7 +506,7 @@ button:focus:not(:focus-visible) {
 
                 <!-- Start Header Navigation -->
                 <div class="navbar-header" style="display: flex; justify-content: space-between; align-items: center;">
-                    <a class="navbar-brand" href="index.html" style="margin-left: 0;">
+                    <a class="navbar-brand" href="index.html" style="margin-left: 0; margin-top: 4px; margin-right: 0;">
                         <img src="assets/img/logo.png" class="logo" alt="Logo" style="max-height: 40px;">
                     </a>
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu" style="margin-right: 0;">
@@ -449,19 +541,18 @@ button:focus:not(:focus-visible) {
                             <a href="departments-4.html" class="dropdown-toggle" data-toggle="dropdown" >Services</a>
                             <ul class="dropdown-menu">
                        
-                                <li><a href="department-single.html">Services 1</a></li>
-                                <li><a href="department-single-2.html">Services 2</a></li>
-                                <li><a href="department-single-3.html">Services 3</a></li>
-                                <li><a href="department-single-4.html">Services 4</a></li>
-                                <li><a href="department-single-5.html">Services 5</a></li>
-                                <li><a href="department-single-6.html">Services 6</a></li>
-                                <li><a href="department-single-7.html">Services 7</a></li>
-                                <li><a href="department-single-8.html">Services 8</a></li>
-                                <li><a href="department-single-9.html">Services 9</a></li>
-                                <li><a href="department-single-10.html">Services 10</a></li>
-                                <li><a href="department-single-11.html">Services 11</a></li>
-                                <li><a href="department-single-12.html">Services 12</a></li>
-                            </ul>
+                                <li><a href="department-single.html">Dental Implants</a></li>
+                                <li><a href="department-single-2.html">Tooth Aligners</a></li>
+                                <li><a href="department-single-3.html">Aesthetic Dentistry</a></li>
+                                <li><a href="department-single-4.html">Root Canal Treatment</a></li>
+                                <li><a href="department-single-5.html">Laser Dentistry</a></li>
+                                <li><a href="department-single-6.html">Gum Treatment/Surgery</a></li>
+                                <li><a href="department-single-7.html">Pediatric Dentistry</a></li>
+                                <li><a href="department-single-8.html">Routine Check-Up</a></li>
+                                <li><a href="department-single-9.html">Wisdom Tooth Surgery</a></li>
+                                <li><a href="department-single-10.html">Orthodontic Treatment</a></li>
+                                <li><a href="department-single-11.html">Restorative Dentistry </a></li>
+                                <li><a href="department-single-12.html">Others</a></li>                            </ul>
                         </li>
                         <li>
                             <a href="doctors.html">Our Team</a>
@@ -528,186 +619,196 @@ button:focus:not(:focus-visible) {
         <div class="container">
             <div class="team-items text-center">
                 <div class="row">
+                    <div class="col-12 mb-5">
+                        <blockquote class="blockquote text-center" style="font-size: 1.0rem; color: #333; font-style: italic; border-left: 4px solid #007bff; padding: 20px; background: #f8f9fa; border-radius: 5px;">
+                            "At Delta Dental Care, our team of expert dentists, specialists, and support staff work together to deliver compassionate, precise, and personalized dental care for every smile."
+                        </blockquote>
+                    </div>
                     <!-- Single Item -->
-                    <div class="single-item col-lg-3 col-md-6">
+                    <div class="single-item col-lg-4 col-md-6">
                         <div class="item">
                             <div class="thumb">
-                                <img src="assets/img/800x800.png" alt="Thumb">
+                                <img src="assets/img/doc/arundati.jpg" alt="Dr. Arundati Krishnaraj">
                                 <div class="contact">
                                     <ul>
                                         <li>
-                                            <a href="#"><i class="fas fa-phone"></i></a>
-                                        </li>
-                                        <li>
-                                            <a href="#"><i class="fas fa-comments"></i></a>
+                                            <a href="contact.html"><i class="fas fa-phone"></i></a>
                                         </li>
                                     </ul>
                                 </div>
                             </div>
                             <div class="info">
-                                <h5>Dr. Jonathom Doe</h5>
-                                <span>Dentist</span>
+                                <h5>Dr. Arundati Krishnaraj </h5>
+                                <span>MDS Prosthodontist and Clinical Director</span>
+                                <p style="text-align: left; padding: 15px; font-size: 0.9rem; color: #666;">With over 22 years of experience and 10,000+ successful implants, Dr. Arundati is a leading dental implant practitioner in Bangalore. An expert in single, multiple, and full mouth dental implants, she excels in esthetic dentistry with veneers and full mouth rehabilitations. Known for her motherly approach, she combines hard work, ethics, and practical expertise to deliver perfect results.</p>
                             </div>
                         </div>
                     </div>
                     <!-- End Single Item -->
                     <!-- Single Item -->
-                    <div class="single-item col-lg-3 col-md-6">
+                    <div class="single-item col-lg-4 col-md-6">
                         <div class="item">
                             <div class="thumb">
-                                <img src="assets/img/800x800.png" alt="Thumb">
+                                <img src="assets/img/doc/krishna.jpg" alt="Dr. Krishnaraj Ganeshnarayan">
                                 <div class="contact">
                                     <ul>
                                         <li>
-                                            <a href="#"><i class="fas fa-phone"></i></a>
-                                        </li>
-                                        <li>
-                                            <a href="#"><i class="fas fa-comments"></i></a>
+                                            <a href="contact.html"><i class="fas fa-phone"></i></a>
                                         </li>
                                     </ul>
                                 </div>
                             </div>
                             <div class="info">
-                                <h5>Prof. Sakaoat Amir</h5>
-                                <span>Neurologist</span>
+                                <h5>Dr. Krishnaraj Ganeshnarayan</h5>
+                                <span>MDS, PhD, Periodontist</span>
+                                <p style="text-align: left; padding: 15px; font-size: 0.9rem; color: #666;">Dr. Krishnaraj, with a PhD in Oral Biology from Rutgers University, USA, is a skilled periodontist specializing in laser treatments and advanced regenerative techniques. His focus on early gum disease treatment and prevention, combined with his compassionate communication style, helps patients maintain optimal oral health and avoid tooth loss.</p>
                             </div>
                         </div>
                     </div>
                     <!-- End Single Item -->
                     <!-- Single Item -->
-                    <div class="single-item col-lg-3 col-md-6">
+                    <div class="single-item col-lg-4 col-md-6">
                         <div class="item">
                             <div class="thumb">
-                                <img src="assets/img/800x800.png" alt="Thumb">
+                                <img src="assets/img/doc/sushmitha.jpg" alt="Dr. Sushmitha">
                                 <div class="contact">
                                     <ul>
                                         <li>
-                                            <a href="#"><i class="fas fa-phone"></i></a>
-                                        </li>
-                                        <li>
-                                            <a href="#"><i class="fas fa-comments"></i></a>
+                                            <a href="contact.html"><i class="fas fa-phone"></i></a>
                                         </li>
                                     </ul>
                                 </div>
                             </div>
                             <div class="info">
-                                <h5>Dr. Andro kuria</h5>
-                                <span>Dermatologists</span>
+                                <h5>Dr. Sushmitha </h5>
+                                <span>BDS, Esthetic Dentist, RT Nagar</span>
+                                <p style="text-align: left; padding: 15px; font-size: 0.9rem; color: #666;">A licensed dentist with a passion for comprehensive care, Dr. Sushmitha combines professional expertise with a warm, approachable demeanor. Her patient-centered approach ensures everyone feels comfortable and well-informed throughout their dental journey.</p>
                             </div>
                         </div>
                     </div>
                     <!-- End Single Item -->
                     <!-- Single Item -->
-                    <div class="single-item col-lg-3 col-md-6">
+                    <div class="single-item col-lg-4 col-md-6">
                         <div class="item">
                             <div class="thumb">
-                                <img src="assets/img/800x800.png" alt="Thumb">
+                                <img src="assets/img/doc/rajshree.jpg" alt="Dr. Rajshree K">
                                 <div class="contact">
                                     <ul>
                                         <li>
-                                            <a href="#"><i class="fas fa-phone"></i></a>
-                                        </li>
-                                        <li>
-                                            <a href="#"><i class="fas fa-comments"></i></a>
+                                            <a href="contact.html"><i class="fas fa-phone"></i></a>
                                         </li>
                                     </ul>
                                 </div>
                             </div>
                             <div class="info">
-                                <h5>Prof. Matori Pulas</h5>
-                                <span>Medicine Specialists</span>
+                                <h5>Dr. Rajshree K, BDS</h5>
+                                <span>Resident and Esthetic Dentist, Rajajinagar</span>
+                                <p style="text-align: left; padding: 15px; font-size: 0.9rem; color: #666;">Dr. K. Rajshree brings over 7 years of clinical experience and is known for her precision, compassion, and gentle approach. She builds genuine connections with her patients and believes that trust and open communication are at the heart of effective care.</p>
                             </div>
                         </div>
                     </div>
                     <!-- End Single Item -->
                     <!-- Single Item -->
-                    <div class="single-item col-lg-3 col-md-6">
+                    <div class="single-item col-lg-4 col-md-6">
                         <div class="item">
                             <div class="thumb">
-                                <img src="assets/img/800x800.png" alt="Thumb">
+                                <img src="assets/img/doc/bilaval.jpg" alt="Dr. Bilaval Ahmed">
                                 <div class="contact">
                                     <ul>
                                         <li>
-                                            <a href="#"><i class="fas fa-phone"></i></a>
-                                        </li>
-                                        <li>
-                                            <a href="#"><i class="fas fa-comments"></i></a>
+                                            <a href="contact.html"><i class="fas fa-phone"></i></a>
                                         </li>
                                     </ul>
                                 </div>
                             </div>
                             <div class="info">
-                                <h5>Dr. Jonathom Doe</h5>
-                                <span>Dentist</span>
+                                <h5>Dr. Bilaval Ahmed, BDS</h5>
+                                <span>Resident and Esthetic Dentist, Rajajinagar</span>
+                                <p style="text-align: left; padding: 15px; font-size: 0.9rem; color: #666;">With over 4 years of experience, Dr. Bilaval is a dynamic and compassionate dental professional focused on smile enhancement and patient comfort. He brings energy, confidence, and approachability to every visit.</p>
                             </div>
                         </div>
                     </div>
                     <!-- End Single Item -->
                     <!-- Single Item -->
-                    <div class="single-item col-lg-3 col-md-6">
+                    <div class="single-item col-lg-4 col-md-6">
                         <div class="item">
                             <div class="thumb">
-                                <img src="assets/img/800x800.png" alt="Thumb">
+                                <img src="assets/img/doc/rajanikanth.jpg" alt="Dr. Rajanikanth">
                                 <div class="contact">
                                     <ul>
                                         <li>
-                                            <a href="#"><i class="fas fa-phone"></i></a>
-                                        </li>
-                                        <li>
-                                            <a href="#"><i class="fas fa-comments"></i></a>
+                                            <a href="contact.html"><i class="fas fa-phone"></i></a>
                                         </li>
                                     </ul>
                                 </div>
                             </div>
                             <div class="info">
-                                <h5>Prof. Sakaoat Amir</h5>
-                                <span>Neurologist</span>
+                                <h5>Dr. Rajanikanth</h5>
+                                <span>Oral & Maxillofacial Surgeon</span>
+                                <p style="text-align: left; padding: 15px; font-size: 0.9rem; color: #666;">With over 23 years of experience, Dr. Rajanikanth is known for painless extractions and surgical precision. His calm demeanor and clinical expertise make patients feel safe and comfortable.</p>
                             </div>
                         </div>
                     </div>
                     <!-- End Single Item -->
                     <!-- Single Item -->
-                    <div class="single-item col-lg-3 col-md-6">
+                    <div class="single-item col-lg-4 col-md-6">
                         <div class="item">
                             <div class="thumb">
-                                <img src="assets/img/800x800.png" alt="Thumb">
+                                <img src="assets/img/doc/Ramyathilagam.jpg" alt="Dr. Ramyathilagam">
                                 <div class="contact">
                                     <ul>
                                         <li>
-                                            <a href="#"><i class="fas fa-phone"></i></a>
-                                        </li>
-                                        <li>
-                                            <a href="#"><i class="fas fa-comments"></i></a>
+                                            <a href="contact.html"><i class="fas fa-phone"></i></a>
                                         </li>
                                     </ul>
                                 </div>
                             </div>
                             <div class="info">
-                                <h5>Dr. Andro kuria</h5>
-                                <span>Dermatologists</span>
+                                <h5>Dr. Ramyathilagam</h5>
+                                <span>Orthodontist</span>
+                                <p style="text-align: left; padding: 15px; font-size: 0.9rem; color: #666;">Dr. Ramya specializes in creating beautifully aligned smiles through braces and aligners. She combines clinical precision with a patient-first approach to achieve functional and aesthetic results.</p>
                             </div>
                         </div>
                     </div>
                     <!-- End Single Item -->
                     <!-- Single Item -->
-                    <div class="single-item col-lg-3 col-md-6">
+                    <div class="single-item col-lg-4 col-md-6">
                         <div class="item">
                             <div class="thumb">
-                                <img src="assets/img/800x800.png" alt="Thumb">
+                                <img src="assets/img/doc/thara rockstar.jpg" alt="Mrs. Thara">
                                 <div class="contact">
                                     <ul>
                                         <li>
-                                            <a href="#"><i class="fas fa-phone"></i></a>
-                                        </li>
-                                        <li>
-                                            <a href="#"><i class="fas fa-comments"></i></a>
+                                            <a href="contact.html"><i class="fas fa-phone"></i></a>
                                         </li>
                                     </ul>
                                 </div>
                             </div>
                             <div class="info">
-                                <h5>Prof. Matori Pulas</h5>
-                                <span>Medicine Specialists</span>
+                                <h5>Mrs. Thara</h5>
+                                <span>Dental Assistant</span>
+                                <p style="text-align: left; padding: 15px; font-size: 0.9rem; color: #666;">With 10+ years of experience, Thara is a skilled and calming chairside assistant, ensuring smooth procedures and patient comfort.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Single Item -->
+                    <!-- Single Item -->
+                    <div class="single-item col-lg-4 col-md-6">
+                        <div class="item">
+                            <div class="thumb">
+                                <img src="assets/img/doc/deepa rockstar.jpg" alt="Mrs. Deepa">
+                                <div class="contact">
+                                    <ul>
+                                        <li>
+                                            <a href="contact.html"><i class="fas fa-phone"></i></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="info">
+                                <h5>Mrs. Deepa</h5>
+                                <span>Dental Assistant</span>
+                                <p style="text-align: left; padding: 15px; font-size: 0.9rem; color: #666;">Deepa brings over a decade of dependable experience. Her warm personality and excellent coordination create a supportive and stress-free dental environment.</p>
                             </div>
                         </div>
                     </div>
@@ -726,8 +827,8 @@ button:focus:not(:focus-visible) {
             <div class="row">
                 <div class="col-lg-4 col-md-6 item">
                     <div class="f-item about">
-                        <p>
-                            At Delta Dental Care, we believe every smile tells a story and we’re here to make yours shine brighter. With a strong foundation built on trust, compassion, and clinical excellence, we’ve grown into one of Bengaluru’s most reliable dental care providers. Our multi-specialty clinics are designed to offer a warm, stress-free experience while delivering advanced dental solutions that are both effective and patient-centric.
+                        <img src="assets/img/logo.png" alt="Delta Dental Care Logo" class="img-fluid mb-4" width="150">                        <p>
+                            At Delta Dental Care, we believe every smile tells a story and we're here to make yours shine brighter. With a strong foundation built on trust, compassion, and clinical excellence, we've grown into one of Bengaluru's most reliable dental care providers. Our multi-specialty clinics are designed to offer a warm, stress-free experience while delivering advanced dental solutions that are both effective and patient-centric.
 
                         </p>
                         <div class="address">

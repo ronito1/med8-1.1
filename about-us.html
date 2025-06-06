@@ -39,6 +39,18 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;600;700;800&display=swap" rel="stylesheet">
     <style>
     
+    .navbar-header .logo {
+            max-height: 60px !important;   
+            }
+
+    @media (max-width: 992px) 
+    
+    {nav.navbar .navbar-brand img.logo {
+        height: 40px;
+        margin-top: 14px;
+    }
+}
+
         @media (max-width: 768px) {
           .mobile-button {
               padding: 4px 12px; /* Adjust padding for less height */
@@ -52,17 +64,20 @@
         }
     }
         
-        @media (max-width: 768px) {
-          .navbar-header {
-              display: flex;
-              align-items: center; /* Center items vertically */
-              justify-content: space-between; /* Space between logo and button */
-          }
-        
-          .navbar-header .logo {
-              max-height: 40px; /* Ensure the logo fits */
-              margin-right: 200px; /* Add space between logo and button */
-          }
+    @media (max-width: 768px) {
+            .navbar-header {
+                display: flex;
+                align-items: center; /* Center items vertically */
+                justify-content: space-between; /* Space between logo and button */
+                margin-bottom: 10px;
+            }
+
+            .navbar-header .logo {
+                /* max-height: 40px; Ensure the logo fits */
+                margin-right: 270px; /* Add space between logo and button */
+                margin-top: 10px;
+                
+            }
         }
         
         /* WhatsApp Float Button */
@@ -355,11 +370,7 @@ button:focus:not(:focus-visible) {
         margin-bottom: 36px; /* Adjust the value as needed for more space */
     }
 }
-@media (max-width: 768px) {
-    .navbar-header .logo {
-        margin-top: 15px; /* Adjust the value as needed for more space */
-    }
-}
+
 .item {
     margin-bottom: 20px; /* Space between each item */
     padding: 10px; /* Optional: Add some padding inside the box */
@@ -458,8 +469,95 @@ button:focus:not(:focus-visible) {
 .item-box-1 .info * {
     transition: all 0.3s ease;
 }
+ /* Add the new dental-unique-button styles */
+ .dental-unique-button {
+            background-color: #d32f2f;
+            color: white;
+            border: none;
+            padding: 16px 32px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            border-radius: 50px;
+            cursor: pointer;
+            margin-top: 19px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 8px rgba(211, 47, 47, 0.3);
+            position: relative;
+            overflow: hidden;
+            text-decoration: none;
+            display: inline-block;
+            text-align: center;
+        }
 
-    </style>
+        .dental-unique-button:hover {
+            background-color: #b71c1c;
+            box-shadow: 0 6px 12px rgba(183, 28, 28, 0.4);
+            transform: translateY(-2px);
+            color: white;
+            text-decoration: none;
+        }
+
+        .dental-unique-button:active {
+            transform: translateY(0);
+        }
+
+        .dental-unique-button:focus {
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(211, 47, 47, 0.3);
+        }
+
+        /* Ensure button works properly on 1024px screens */
+        @media (min-width: 1024px) and (max-width: 1200px) {
+            .dental-unique-button {
+                background-color: #d32f2f;
+                color: white;
+                border: none;
+                padding: 16px 32px;
+                font-size: 15px;
+                font-weight: 600;
+                border-radius: 50px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .slider-btn .dental-unique-button {
+                padding: 10px 20px !important;
+                border-radius: 60px !important;
+            }
+
+            /* Mobile styles for dental unique button */
+            .attr-nav .dental-unique-button {
+                padding: 8px 15px !important;
+                font-size: 14px !important;
+                display: inline-block;
+                margin: 5px auto;
+                margin-top: 20px;
+                margin-left: 82px;
+                text-align: center;
+                width: auto;
+                min-width: 160px;
+            }
+
+            .attr-nav {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+            }
+
+            .attr-nav > div {
+                width: 100%;
+                text-align: center;
+            }
+            @media screen and (min-width: 768px) {
+            .logo {
+                max-height: 60px !important;
+                max-width: 300px !important;
+                margin-bottom: 5px;
+                transition: max-height 0.3s ease, max-width 0.3s ease;
+            }
+        }
+        } </style>
 
 </head>
 
@@ -523,21 +621,18 @@ button:focus:not(:focus-visible) {
 
 <!-- Start Atribute Navigation -->
 <div class="attr-nav extra-color">
-                    <div class="themedraft-button-wrapper td-button-el-widget" style="display: flex; align-items: center;">
-                        <a href="contact.html">
-                            <button>
-                                <span class="shadow"></span>
-                                <span class="edge"></span>
-                                <span class="front text"> 📞8277542111</span>
-                            </button>
-                    </div>
-                </div>
+    <div style="text-align: center;">
+        <a href="tel:+918277542111" class="dental-unique-button" id="dentalUniqueBtn">
+            📞 +91 8277542111
+        </a>
+    </div>
+</div>
                 <!-- End Atribute Navigation -->
 
                 <!-- Start Header Navigation -->
                 <div class="navbar-header" style="display: flex; justify-content: space-between; align-items: center;">
                     <a class="navbar-brand" href="index.html" style="margin-left: 0; margin-top: 4px; margin-right: 0;">
-                        <img src="assets/img/logo.png" class="logo" alt="Logo" style="max-height: 40px;">
+                        <img src="assets/img/logo.png" class="logo" alt="Logo">
                     </a>
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu" style="margin-right: 0;">
                         <i class="fa fa-bars"></i>
@@ -547,7 +642,7 @@ button:focus:not(:focus-visible) {
 
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="navbar-menu">
-                    <ul class="nav navbar-nav navbar-right" data-in="fadeInDown" data-out="fadeOutUp">
+                    <ul class="nav navbar-nav navbar-right" data-in="fadeInDown" data-out="fadeOutUp" style="margin-top: 11px; margin-right: 50px;">
                         <li>
                             <a href="index.html">Home</a>
                         </li>
@@ -1143,9 +1238,14 @@ button:focus:not(:focus-visible) {
                                     </div>
                                     <div class="info">
                                         <h5>Phone:</h5>
-                                        <span>+91 9731568006</span>
-                                    </div>
+                                    <a href="tel:+918277606111" class="contact-link">+91 8277606111</a>
+                                    <a href="tel:+918277542111" class="contact-link">+91 8277542111</a>
+                                    <a href="tel:+918277842111" class="contact-link">+91 8277842111</a>
+                                  </div>
                                 </li>
+                            <li>
+                               
+                                
                             </ul>
                         </div>
                     </div>

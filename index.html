@@ -292,17 +292,13 @@
             }
 
             .navbar-header .logo {
-                max-height: 40px; /* Ensure the logo fits */
+                /* max-height: 40px; Ensure the logo fits */
                 margin-right: 270px; /* Add space between logo and button */
-                margin-top: 8px;
+                margin-top: 10px;
             }
         }
 
-        @media (max-width: 768px) {
-            .navbar-header .logo {
-                margin-top: 15px; /* Adjust the value as needed for more space */
-            }
-        }
+       
 
         /* From Uiverse.io by vinodjangid07 */ 
         .input-wrapper {
@@ -966,7 +962,7 @@
         }
 
         .consultation-area {
-            background-color: #ffffff;
+            background-color: #fff5f5;
         }
 
         .department-area.carousel-shadow {
@@ -1124,6 +1120,97 @@
                 margin-top: 20px;
             }
         }
+
+        @media screen and (min-width: 768px) {
+            .logo {
+                max-height: 60px !important;
+                max-width: 300px !important;
+                margin-bottom: 5px;
+                transition: max-height 0.3s ease, max-width 0.3s ease;
+            }
+        }
+
+        /* Add the new dental-unique-button styles */
+        .dental-unique-button {
+            background-color: #d32f2f;
+            color: white;
+            border: none;
+            padding: 16px 32px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            border-radius: 50px;
+            cursor: pointer;
+            margin-top: 19px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 8px rgba(211, 47, 47, 0.3);
+            position: relative;
+            overflow: hidden;
+            text-decoration: none;
+            display: inline-block;
+            text-align: center;
+        }
+
+        .dental-unique-button:hover {
+            background-color: #b71c1c;
+            box-shadow: 0 6px 12px rgba(183, 28, 28, 0.4);
+            transform: translateY(-2px);
+            color: white;
+            text-decoration: none;
+        }
+
+        .dental-unique-button:active {
+            transform: translateY(0);
+        }
+
+        .dental-unique-button:focus {
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(211, 47, 47, 0.3);
+        }
+
+        /* Ensure button works properly on 1024px screens */
+        @media (min-width: 1024px) and (max-width: 1200px) {
+            .dental-unique-button {
+                background-color: #d32f2f;
+                color: white;
+                border: none;
+                padding: 16px 32px;
+                font-size: 15px;
+                font-weight: 600;
+                border-radius: 50px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .slider-btn .dental-unique-button {
+                padding: 10px 20px !important;
+                border-radius: 60px !important;
+            }
+
+            /* Mobile styles for dental unique button */
+            .attr-nav .dental-unique-button {
+                padding: 8px 15px !important;
+                font-size: 14px !important;
+                display: inline-block;
+                margin: 5px auto;
+                margin-top: 20px;
+                margin-left: 82px;
+                text-align: center;
+                width: auto;
+                min-width: 160px;
+            }
+
+            .attr-nav {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+            }
+
+            .attr-nav > div {
+                width: 100%;
+                text-align: center;
+            }
+        }
     </style>
 
 
@@ -1189,13 +1276,10 @@
 
                 <!-- Start Atribute Navigation -->
                 <div class="attr-nav extra-color">
-                    <div class="themedraft-button-wrapper td-button-el-widget" style="display: flex; align-items: center;">
-                        <a href="contact.html">
-                            <button>
-                                <span class="shadow"></span>
-                                <span class="edge"></span>
-                                <span class="front text"> 📞8277542111</span>
-                            </button>
+                    <div style="text-align: center;">
+                        <a href="tel:+918277542111" class="dental-unique-button" id="dentalUniqueBtn">
+                            📞 +91 8277542111
+                        </a>
                     </div>
                 </div>
                 <!-- End Atribute Navigation -->
@@ -1203,7 +1287,7 @@
                 <!-- Start Header Navigation -->
                 <div class="navbar-header" style="display: flex; justify-content: space-between; align-items: center;">
                     <a class="navbar-brand" href="index.html" style="margin-left: 0; margin-top: 4px; margin-right: 0;">
-                        <img src="assets/img/logo.png" class="logo" alt="Logo" style="max-height: 40px;">
+                        <img src="assets/img/logo.png" class="logo" alt="Logo">
                     </a>
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu" style="margin-right: 0;">
                         <i class="fa fa-bars"></i>
@@ -1213,7 +1297,7 @@
 
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="navbar-menu">
-                    <ul class="nav navbar-nav navbar-right" data-in="fadeInDown" data-out="fadeOutUp">
+                    <ul class="nav navbar-nav navbar-right" data-in="fadeInDown" data-out="fadeOutUp" style="margin-top: 11px; margin-right: 55px;">
                         <li>
                             <a href="index.html">Home</a>
                         </li>
@@ -1308,8 +1392,8 @@
                                             <blockquote style="font-style: italic; border-left: 4px solid #fff; padding-left: 15px; margin: 20px 0;">
                                                 "The power of painless dentistry is yours to experience. Restore confidence and function with permanent, natural-looking teeth replacements by experienced implantologists."
                                             </blockquote>
-                                            <h4 data-animation="animated slideInRight">Get 5000 waiver off on your<strong> first dental implant with lifetime warranty*</strong></h4>
-                                            <a data-animation="animated fadeInUp" class="btn btn-md btn-gradient" href="department-single.html"><i class="fas fa-angle-right"></i> Discover More</a>
+                                            <h4 data-animation="animated slideInRight">Get <strong>₹5000/- </strong>waiver off on your<strong> first dental implant with lifetime warranty*</strong></h4>
+                                            <a data-animation="animated fadeInUp" class="btn btn-md btn-gradient" href="contact.html"><i class="fas fa-angle-right"></i> Discover More</a>
                                         </div>
                                     </div>
                                 </div>
@@ -1331,9 +1415,9 @@
                                             <blockquote style="font-style: italic; border-left: 4px solid #fff; padding-left: 15px; margin: 20px 0;">
                                                 "Get the smile you deserve with clear, comfortable, and invisible aligners certified Invisalign specialists at your service." 
                                                 </blockquote>
-                                            <h4 data-animation="animated slideInRight">Price of aligners<strong>  start from 3300/- per set*
+                                            <h4 data-animation="animated slideInRight">Price of aligners<strong>  start from <strong>₹3300/- per set*</strong>
                                             </strong></h4>
-                                            <a data-animation="animated fadeInUp" class="btn btn-md btn-gradient" href="department-single-2.html"><i class="fas fa-angle-right"></i> Discover More</a>
+                                            <a data-animation="animated fadeInUp" class="btn btn-md btn-gradient" href="contact.html"><i class="fas fa-angle-right"></i> Discover More</a>
                                         </div>
                                     </div>
                                 </div>
@@ -1354,9 +1438,9 @@
                                             </strong></h2>
                                             <blockquote style="font-style: italic; border-left: 4px solid #fff; padding-left: 15px; margin: 20px 0;">
                                                 "Full mouth smile design and rehabilitation for beautiful esthetics to permanently get your best smile"                                            </blockquote>
-                                            <h4 data-animation="animated slideInRight"> Starts with an EMI  of <strong>12000/- only
+                                            <h4 data-animation="animated slideInRight"> Starts with an EMI  of <strong>₹12000/- only
                                             </strong></h4>
-                                            <a data-animation="animated fadeInUp" class="btn btn-md btn-gradient" href="department-single-3.html"><i class="fas fa-angle-right"></i> Discover More</a>
+                                            <a data-animation="animated fadeInUp" class="btn btn-md btn-gradient" href="contact.html"><i class="fas fa-angle-right"></i> Discover More</a>
                                         </div>
                                     </div>
                                 </div>
@@ -1378,7 +1462,7 @@
 
     <!-- Start Consultation 
     ============================================= -->
-    <div class="consultation-area" style="background-color: #ffffff; padding: 0 0 60px 0; margin-top: 60px;">
+    <div class="consultation-area" style="background-color: #fff5f5; padding: 0 0 60px 0; margin-top: 60px;">
         <div class="container">
             <div class="row align-center">
                 <div class="col-lg-7 process">
@@ -1394,31 +1478,31 @@
                             </ul>
                         </p>
                         <!-- Start Fun Factor Area -->
-                        <div class="fun-factor-area half-bg-light-bottom" style="background: transparent; max-width: 800px; margin: 0 auto; margin-left: -20px;">
+                        <div class="fun-factor-area" style="background: transparent; max-width: 800px; margin: 0 auto; margin-left: -50px; padding: 50px 0;">
                             <div class="container">
-                                <div class="fun-fact-items bg-text-light text-center">
+                                <div class="fun-fact-items text-center">
                                     <div class="row">
-                                        <div class="col-lg-4 col-md-4 item" style="margin-bottom: 50px;">
+                                        <div class="col-lg-4 col-md-4 item" style="margin-bottom: 80px;">
                                             <div class="fun-fact">
-                                                <i class="flaticon-doctor" style="font-size: 3.5em; margin-bottom: 5px; font-weight: bold;"></i>
+                                                <i class="flaticon-doctor" style="font-size: 3.5em; margin-bottom: 15px; font-weight: bold;"></i>
                                                 <div>
                                                     <div class="timer" data-to="12" data-speed="2000" style="font-size: 2em; margin-left: 2px; margin-top:2px;"></div>
                                                     <span class="medium" style="font-size: 1.1em;">Skilled Doctors</span>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-lg-4 col-md-4 item" style="margin-bottom: 50px;">
+                                        <div class="col-lg-4 col-md-4 item" style="margin-bottom: 80px;">
                                             <div class="fun-fact">
-                                                <i class="flaticon-calendar-1" style="font-size: 3.5em; margin-bottom: 5px; font-weight: bold;"></i>
+                                                <i class="flaticon-calendar-1" style="font-size: 3.5em; margin-bottom: 15px; font-weight: bold;"></i>
                                                 <div>
                                                     <div class="timer" data-to="10000" data-speed="2000" style="font-size: 2em; margin-left: 2px; margin-top:2px;"></div>
                                                     <span class="medium" style="font-size: 1.1em;">Successful Implants</span>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-lg-4 col-md-4 item" style="margin-bottom: 50px;">
+                                        <div class="col-lg-4 col-md-4 item" style="margin-bottom: 80px;">
                                             <div class="fun-fact">
-                                                <i class="flaticon-heartbeat-1" style="font-size: 3.5em; margin-bottom: 5px; font-weight: bold;"></i>
+                                                <i class="flaticon-heartbeat-1" style="font-size: 3.5em; margin-bottom: 15px; font-weight: bold;"></i>
                                                 <div>
                                                     <div class="timer" data-to="5000" data-speed="2000" style="font-size: 2em; margin-right: 1.5px; margin-top:2px;"></div>
                                                     <span class="medium" style="font-size: 1.1em;">Happy Patients</span>
@@ -1544,181 +1628,181 @@
                             <i class="fa-solid fa-teeth-open"></i>
                          </div>
                         <p>
-                            Discreet, comfortable teeth straightening without braces.
-                        </p>
-                        <a class="btn btn-sm circle btn-theme border" href="department-single-2.html"><i class="fas fa-angle-right"></i> Read More</a>
-                    </div>
-                </div>
-                <!-- End Single Item -->
-                <!-- Single Item -->
-                <div class="item">
-                    <div class="info">
-                        <h4>
-                            <a href="department-single-10.html">Orthodontic Treatment</a>
-                        </h4>
-                        <div class="icon">
-                            <i class="fa-solid fa-teeth"></i>  
-                         </div>
-                        <p>
-                            Braces and aligners for correcting misaligned teeth and bite issues.
-                        </p>
-                        <a class="btn btn-sm circle btn-theme border" href="department-single-10.html"><i class="fas fa-angle-right"></i> Read More</a>
-                    </div>
-                </div>
-                <!-- End Single Item -->
-                <!-- Single Item -->
-                <div class="item">
-                    <div class="info">
-                        <h4>
-                            <a href="department-single-3.html">Aesthetic Dentistry</a>
-                        </h4>
-                        <div class="icon">
-                            <i class="fas fa-smile"></i> <!-- Updated icon -->
+                                Discreet, comfortable teeth straightening without braces.
+                            </p>
+                            <a class="btn btn-sm circle btn-theme border" href="department-single-2.html"><i class="fas fa-angle-right"></i> Read More</a>
                         </div>
-                        <p>
-                            Smile design, veneers, whitening, and other cosmetic enhancements.
-                        </p>
-                        <a class="btn btn-sm circle btn-theme border" href="department-single-3.html"><i class="fas fa-angle-right"></i> Read More</a>
                     </div>
-                </div>
-                <!-- End Single Item -->
-                <!-- Single Item -->
-                <div class="item">
-                    <div class="info">
-                        <h4>
-                            <a href="department-single-11.html">Restorative Dentistry</a>
-                        </h4>
-                        <div class="icon">
-                            <i class="fas fa-tools"></i> <!-- Updated icon -->
+                    <!-- End Single Item -->
+                    <!-- Single Item -->
+                    <div class="item">
+                        <div class="info">
+                            <h4>
+                                <a href="department-single-10.html">Orthodontic Treatment</a>
+                            </h4>
+                            <div class="icon">
+                                <i class="fa-solid fa-teeth"></i>  
+                            </div>
+                            <p>
+                                Braces and aligners for correcting misaligned teeth and bite issues.
+                            </p>
+                            <a class="btn btn-sm circle btn-theme border" href="department-single-10.html"><i class="fas fa-angle-right"></i> Read More</a>
                         </div>
-                        <p>
-                            Crowns, bridges, fillings, and tooth repair for restoring function and aesthetics.
-                        </p>
-                        <a class="btn btn-sm circle btn-theme border" href="department-single-11.html"><i class="fas fa-angle-right"></i> Read More</a>
                     </div>
-                </div>
-                <!-- End Single Item -->
-                <!-- Single Item -->
-                <div class="item">
-                    <div class="info">
-                        <h4>
-                            <a href="department-single-4.html">Root Canal Treatment</a>
-                        </h4>
-                        <div class="icon">
-                            <i class="fa-regular fa-chess-rook"></i><!-- Updated icon -->
+                    <!-- End Single Item -->
+                    <!-- Single Item -->
+                    <div class="item">
+                        <div class="info">
+                            <h4>
+                                <a href="department-single-3.html">Aesthetic Dentistry</a>
+                            </h4>
+                            <div class="icon">
+                                <i class="fas fa-smile"></i> <!-- Updated icon -->
+                            </div>
+                            <p>
+                                Smile design, veneers, whitening, and other cosmetic enhancements.
+                            </p>
+                            <a class="btn btn-sm circle btn-theme border" href="department-single-3.html"><i class="fas fa-angle-right"></i> Read More</a>
                         </div>
-                        <p>
-                            Painless RCT procedures to save infected or decayed teeth.
-                        </p>
-                        <a class="btn btn-sm circle btn-theme border" href="department-single-4.html"><i class="fas fa-angle-right"></i> Read More</a>
                     </div>
-                </div>
-                <!-- End Single Item -->
-                <!-- Single Item -->
-                <div class="item">
-                    <div class="info">
-                        <h4>
-                            <a href="department-single-5.html">Laser Dentistry</a>
-                        </h4>
-                        <div class="icon">
-                            <i class="fa-solid fa-highlighter"></i> <!-- Updated icon -->
+                    <!-- End Single Item -->
+                    <!-- Single Item -->
+                    <div class="item">
+                        <div class="info">
+                            <h4>
+                                <a href="department-single-11.html">Restorative Dentistry</a>
+                            </h4>
+                            <div class="icon">
+                                <i class="fas fa-tools"></i> <!-- Updated icon -->
+                            </div>
+                            <p>
+                                Crowns, bridges, fillings, and tooth repair for restoring function and aesthetics.
+                            </p>
+                            <a class="btn btn-sm circle btn-theme border" href="department-single-11.html"><i class="fas fa-angle-right"></i> Read More</a>
                         </div>
-                        <p>
-                            Minimally invasive laser treatments for soft and hard tissue concerns.
-                        </p>
-                        <a class="btn btn-sm circle btn-theme border" href="department-single-5.html"><i class="fas fa-angle-right"></i> Read More</a>
                     </div>
-                </div>
-                <!-- End Single Item -->
-                <!-- Single Item -->
-                <div class="item">
-                    <div class="info">
-                        <h4>
-                            <a href="department-single-6.html">Gum Treatment & Surgery</a>
-                        </h4>
-                        <div class="icon">
-                            <i class="fa-solid fa-syringe"></i>
-                                             </div>
-                        <p>
-                            Treatment of gum disease, infections, and surgical gum correction.
-                        </p>
-                        <a class="btn btn-sm circle btn-theme border" href="department-single-6.html"><i class="fas fa-angle-right"></i> Read More</a>
-                    </div>
-                </div>
-                <!-- End Single Item -->
-                <!-- Single Item -->
-                <div class="item">
-                    <div class="info">
-                        <h4>
-                            <a href="department-single-9.html">Wisdom Tooth Surgery</a>
-                        </h4>
-                        <div class="icon">
-                            <i class="fas fa-tooth"></i> <!-- Updated icon -->
+                    <!-- End Single Item -->
+                    <!-- Single Item -->
+                    <div class="item">
+                        <div class="info">
+                            <h4>
+                                <a href="department-single-4.html">Root Canal Treatment</a>
+                            </h4>
+                            <div class="icon">
+                                <i class="fa-regular fa-chess-rook"></i><!-- Updated icon -->
+                            </div>
+                            <p>
+                                Painless RCT procedures to save infected or decayed teeth.
+                            </p>
+                            <a class="btn btn-sm circle btn-theme border" href="department-single-4.html"><i class="fas fa-angle-right"></i> Read More</a>
                         </div>
-                        <p>
-                            Safe, sterile removal of impacted or problematic wisdom teeth.
-                        </p>
-                        <a class="btn btn-sm circle btn-theme border" href="department-single-9.html"><i class="fas fa-angle-right"></i> Read More</a>
                     </div>
-                </div>
-                <!-- End Single Item -->
-                <!-- Single Item -->
-                <div class="item">
-                    <div class="info">
-                        <h4>
-                            <a href="department-single-7.html">Pediatric Dentistry</a>
-                        </h4>
-                        <div class="icon">
-                            <i class="fas fa-child"></i> <!-- Updated icon -->
+                    <!-- End Single Item -->
+                    <!-- Single Item -->
+                    <div class="item">
+                        <div class="info">
+                            <h4>
+                                <a href="department-single-5.html">Laser Dentistry</a>
+                            </h4>
+                            <div class="icon">
+                                <i class="fa-solid fa-highlighter"></i> <!-- Updated icon -->
+                            </div>
+                            <p>
+                                Minimally invasive laser treatments for soft and hard tissue concerns.
+                            </p>
+                            <a class="btn btn-sm circle btn-theme border" href="department-single-5.html"><i class="fas fa-angle-right"></i> Read More</a>
                         </div>
-                        <p>
-                            Specialized dental care for children in a comfortable, friendly environment.
-                        </p>
-                        <a class="btn btn-sm circle btn-theme border" href="department-single-7.html"><i class="fas fa-angle-right"></i> Read More</a>
                     </div>
-                </div>
-                <!-- End Single Item -->
-                <!-- Single Item -->
-                <div class="item">
-                    <div class="info">
-                        <h4>
-                            <a href="department-single-8.html">Routine Dental Check-Ups</a>
-                        </h4>
-                        <div class="icon">
-                            <i class="fas fa-check-circle"></i> <!-- Updated icon -->
+                    <!-- End Single Item -->
+                    <!-- Single Item -->
+                    <div class="item">
+                        <div class="info">
+                            <h4>
+                                <a href="department-single-6.html">Gum Treatment & Surgery</a>
+                            </h4>
+                            <div class="icon">
+                                <i class="fa-solid fa-syringe"></i>
+                                                </div>
+                            <p>
+                                Treatment of gum disease, infections, and surgical gum correction.
+                            </p>
+                            <a class="btn btn-sm circle btn-theme border" href="department-single-6.html"><i class="fas fa-angle-right"></i> Read More</a>
                         </div>
-                        <p>
-                            Preventive cleanings, exams, and early diagnosis of oral health issues.
-                        </p>
-                        <a class="btn btn-sm circle btn-theme border" href="department-single-8.html"><i class="fas fa-angle-right"></i> Read More</a>
                     </div>
-                </div>
-                <!-- End Single Item -->
-                <!-- Single Item -->
-                <div class="item">
-                    <div class="info">
-                        <h4>
-                            <a href="department-single-12.html">General Dental Treatments</a>
-                        </h4>
-                        <div class="icon">
-                            <i class="fas fa-medkit"></i> <!-- Updated icon -->
+                    <!-- End Single Item -->
+                    <!-- Single Item -->
+                    <div class="item">
+                        <div class="info">
+                            <h4>
+                                <a href="department-single-9.html">Wisdom Tooth Surgery</a>
+                            </h4>
+                            <div class="icon">
+                                <i class="fas fa-tooth"></i> <!-- Updated icon -->
+                            </div>
+                            <p>
+                                Safe, sterile removal of impacted or problematic wisdom teeth.
+                            </p>
+                            <a class="btn btn-sm circle btn-theme border" href="department-single-9.html"><i class="fas fa-angle-right"></i> Read More</a>
                         </div>
-                        <p>
-                            Mouth guards, scaling, polishing, bad breath treatment, and more.
-                        </p>
-                        <a class="btn btn-sm circle btn-theme border" href="department-single-12.html"><i class="fas fa-angle-right"></i> Read More</a>
                     </div>
+                    <!-- End Single Item -->
+                    <!-- Single Item -->
+                    <div class="item">
+                        <div class="info">
+                            <h4>
+                                <a href="department-single-7.html">Pediatric Dentistry</a>
+                            </h4>
+                            <div class="icon">
+                                <i class="fas fa-child"></i> <!-- Updated icon -->
+                            </div>
+                            <p>
+                                Specialized dental care for children in a comfortable, friendly environment.
+                            </p>
+                            <a class="btn btn-sm circle btn-theme border" href="department-single-7.html"><i class="fas fa-angle-right"></i> Read More</a>
+                        </div>
+                    </div>
+                    <!-- End Single Item -->
+                    <!-- Single Item -->
+                    <div class="item">
+                        <div class="info">
+                            <h4>
+                                <a href="department-single-8.html">Routine Dental Check-Ups</a>
+                            </h4>
+                            <div class="icon">
+                                <i class="fas fa-check-circle"></i> <!-- Updated icon -->
+                            </div>
+                            <p>
+                                Preventive cleanings, exams, and early diagnosis of oral health issues.
+                            </p>
+                            <a class="btn btn-sm circle btn-theme border" href="department-single-8.html"><i class="fas fa-angle-right"></i> Read More</a>
+                        </div>
+                    </div>
+                    <!-- End Single Item -->
+                    <!-- Single Item -->
+                    <div class="item">
+                        <div class="info">
+                            <h4>
+                                <a href="department-single-12.html">General Dental Treatments</a>
+                            </h4>
+                            <div class="icon">
+                                <i class="fas fa-medkit"></i> <!-- Updated icon -->
+                            </div>
+                            <p>
+                                Mouth guards, scaling, polishing, bad breath treatment, and more.
+                            </p>
+                            <a class="btn btn-sm circle btn-theme border" href="department-single-12.html"><i class="fas fa-angle-right"></i> Read More</a>
+                        </div>
+                    </div>
+                    <!-- End Single Item -->                <!-- End Single Item -->
                 </div>
-                <!-- End Single Item -->                <!-- End Single Item -->
             </div>
         </div>
     </div>
-</div>
-<!-- End Services -->
-</div>
-</div>
-
     <!-- End Services -->
+    </div>
+    </div>
+
+        <!-- End Services -->
 
 
 
@@ -2490,10 +2574,13 @@
                                 </div>
                                 <div class="info">
                                     <h5>Phone:</h5>
-                                    <a href="tel:+919731568006" class="contact-link">+91 9731568006</a>
+                                    <a href="tel:+918277606111" class="contact-link">+91 8277606111</a>
+                                    <a href="tel:+918277542111" class="contact-link">+91 8277542111</a>
+                                    <a href="tel:+918277842111" class="contact-link">+91 8277842111</a>
                                 </div>
                             </li>
-                        </ul>
+                            
+                        </ul> 
                     </div>
                 </div>
             </div>

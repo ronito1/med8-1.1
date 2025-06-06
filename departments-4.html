@@ -367,6 +367,202 @@ button:focus:not(:focus-visible) {
     margin-bottom: 0; /* Remove bottom margin */
     padding-bottom: 0; /* Remove bottom padding if any */
 } 
+
+/* Add dental button styles */
+.dental-button-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.dental-button {
+    position: relative;
+    border: none;
+    background: transparent;
+    padding: 0;
+    margin-top: 23px;
+    cursor: pointer;
+    outline-offset: 4px;
+    transition: filter 250ms;
+    user-select: none;
+    touch-action: manipulation;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.dental-button .edge {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    background: linear-gradient(
+        to left,
+        hsl(340deg 100% 16%) 0%,
+        hsl(340deg 100% 32%) 8%,
+        hsl(340deg 100% 32%) 92%,
+        hsl(340deg 100% 16%) 100%
+    );
+}
+
+.dental-button .front {
+    display: block;
+    position: relative;
+    padding: 8px 15px;
+    border-radius: 12px;
+    font-size: 0.9rem;
+    color: white;
+    background: hsl(345deg 100% 47%);
+    will-change: transform;
+    transform: translateY(-4px);
+    transition: transform 600ms cubic-bezier(.3, .7, .4, 1);
+}
+
+.dental-button:hover {
+    filter: brightness(110%);
+}
+
+.dental-button:hover .front {
+    transform: translateY(-6px);
+    transition: transform 250ms cubic-bezier(.3, .7, .4, 1.5);
+}
+
+.dental-button:active .front {
+    transform: translateY(-2px);
+    transition: transform 34ms;
+}
+
+.dental-button:focus:not(:focus-visible) {
+    outline: none;
+}
+
+/* Add the new dental-unique-button styles */
+.dental-unique-button {
+    background-color: #d32f2f;
+    color: white;
+    border: none;
+    padding: 16px 32px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-radius: 50px;
+    cursor: pointer;
+    margin-top: 19px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(211, 47, 47, 0.3);
+    position: relative;
+    overflow: hidden;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+}
+
+.dental-unique-button:hover {
+    background-color: #b71c1c;
+    box-shadow: 0 6px 12px rgba(183, 28, 28, 0.4);
+    transform: translateY(-2px);
+    color: white;
+    text-decoration: none;
+}
+
+.dental-unique-button:active {
+    transform: translateY(0);
+}
+
+.dental-unique-button:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(211, 47, 47, 0.3);
+}
+
+/* Ensure button works properly on 1024px screens */
+@media (min-width: 1024px) and (max-width: 1200px) {
+    .dental-unique-button {
+        background-color: #d32f2f;
+        color: white;
+        border: none;
+        padding: 16px 32px;
+        font-size: 15px;
+        font-weight: 600;
+        border-radius: 50px;
+    }
+}
+
+@media (max-width: 768px) {
+    .slider-btn .dental-unique-button {
+        padding: 10px 20px !important;
+        border-radius: 60px !important;
+    }
+
+    .attr-nav .dental-unique-button {
+        padding: 8px 15px !important;
+        font-size: 14px !important;
+        display: inline-block;
+        margin: 5px auto;
+        margin-top: 20px;
+        margin-left: 82px;
+        text-align: center;
+        width: auto;
+        min-width: 160px;
+    }
+
+    .attr-nav {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    .attr-nav > div {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+.navbar-header .logo {
+    max-height: 60px !important;   
+}
+
+@media (max-width: 992px) {
+    nav.navbar .navbar-brand img.logo {
+        height: 40px;
+        margin-top: 14px;
+    }
+}
+
+@media (max-width: 768px) {
+    .mobile-button {
+        padding: 4px 12px;
+        font-size: 14px;
+    }
+}
+        
+@media (max-width: 768px) {
+    .cta.mobile-button {
+        margin-right: 75px;
+    }
+}
+        
+@media (max-width: 768px) {
+    .navbar-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 10px;
+    }
+
+    .navbar-header .logo {
+        margin-right: 270px;
+        margin-top: 10px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .logo {
+        max-height: 60px !important;
+        max-width: 300px !important;
+        margin-bottom: 5px;
+        transition: max-height 0.3s ease, max-width 0.3s ease;
+    }
+}
 </style>
 
 
@@ -433,18 +629,16 @@ button:focus:not(:focus-visible) {
 
             <div class="container">
 
-<!-- Start Atribute Navigation -->
-<div class="attr-nav extra-color">
-                    <div class="themedraft-button-wrapper td-button-el-widget" style="display: flex; align-items: center;">
-                        <a href="contact.html">
-                            <button>
-                                <span class="shadow"></span>
-                                <span class="edge"></span>
-                                <span class="front text"> 📞8277542111</span>
-                            </button>
-                    </div>
-                </div>
-                <!-- End Atribute Navigation -->
+                <!-- Start Atribute Navigation -->
+                <div class="attr-nav extra-color">
+                                    <div style="text-align: center;">
+                                        <a href="tel:+918277542111" class="dental-unique-button" id="dentalUniqueBtn">
+                                            📞 +91 8277542111
+                                        </a>
+                                    </div>
+                                </div>
+                                <!-- End Atribute Navigation -->
+<!-- End Atribute Navigation -->
 
                 <!-- Start Header Navigation -->
                 <div class="navbar-header" style="display: flex; justify-content: space-between; align-items: center;">
@@ -459,7 +653,7 @@ button:focus:not(:focus-visible) {
 
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="navbar-menu">
-                    <ul class="nav navbar-nav navbar-right" data-in="fadeInDown" data-out="fadeOutUp">
+                    <ul class="nav navbar-nav navbar-right" data-in="fadeInDown" data-out="fadeOutUp" style="margin-top: 11px; margin-right: 50px;">
                         <li>
                             <a href="index.html">Home</a>
                         </li>
@@ -1054,8 +1248,12 @@ button:focus:not(:focus-visible) {
                                 </div>
                                 <div class="info">
                                     <h5>Phone:</h5>
-                                    <span>+91 9731568006</span>
+                                    <a href="tel:+918277606111" class="contact-link">+91 8277606111</a>
+                                    <a href="tel:+918277542111" class="contact-link">+91 8277542111</a>
+                                    <a href="tel:+918277842111" class="contact-link">+91 8277842111</a>
                                 </div>
+                            </li>
+                            
                             </li>
                         </ul>
                     </div>

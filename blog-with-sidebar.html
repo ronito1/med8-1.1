@@ -316,7 +316,130 @@ button:focus:not(:focus-visible) {
         margin-top: 15px; /* Adjust the value as needed for more space */
     }
 } 
-</style>
+
+/* Add the new dental-unique-button styles */
+
+
+/* Add the new dental-unique-button styles */
+.dental-unique-button {
+    background-color: #d32f2f;
+    color: white;
+    border: none;
+    padding: 16px 32px;
+    margin-top: 20px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(211, 47, 47, 0.3);
+    position: relative;
+    overflow: hidden;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+}
+
+.dental-unique-button:hover {
+    background-color: #b71c1c;
+    box-shadow: 0 6px 12px rgba(183, 28, 28, 0.4);
+    transform: translateY(-2px);
+    color: white;
+    text-decoration: none;
+}
+
+.dental-unique-button:active {
+    transform: translateY(0);
+}
+
+.dental-unique-button:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(211, 47, 47, 0.3);
+}
+
+/* Ensure button works properly on 1024px screens */
+@media (min-width: 1024px) and (max-width: 1200px) {
+    .dental-unique-button {
+        background-color: #d32f2f;
+        color: white;
+        border: none;
+        padding: 16px 32px;
+        font-size: 15px;
+        font-weight: 600;
+        border-radius: 50px;
+    }
+}
+
+@media (max-width: 768px) {
+    .slider-btn .dental-unique-button {
+        padding: 16px 24px !important;
+        border-radius: 60px !important;
+        margin-right: 50px;
+    }
+}
+@media screen and (min-width: 768px) {
+            .logo {
+                max-height: 60px !important;
+                max-width: 300px !important;
+                margin-bottom: 5px;
+                margin-right: 8px !important;
+                transition: max-height 0.3s ease, max-width 0.3s ease;
+            }
+        }
+        
+        /* Ensure button works properly on 1024px screens */
+        @media (min-width: 1024px) and (max-width: 1200px) {
+            .dental-unique-button {
+                background-color: #d32f2f;
+                color: white;
+                border: none;
+                padding: 16px 32px;
+                font-size: 15px;
+                font-weight: 600;
+                border-radius: 50px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .slider-btn .dental-unique-button {
+                padding: 10px 20px !important;
+                border-radius: 60px !important;
+            }
+
+            /* Mobile styles for dental unique button */
+            .attr-nav .dental-unique-button {
+                padding: 8px 15px !important;
+                font-size: 14px !important;
+                display: inline-block;
+                margin: 5px auto;
+                margin-top: 20px;
+                margin-left: 82px;
+                text-align: center;
+                width: auto;
+                min-width: 160px;
+            }
+
+            .attr-nav {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+            }
+
+            .attr-nav > div {
+                width: 100%;
+                text-align: center;
+            }
+            @media screen and (min-width: 768px) {
+            .logo {
+                max-height: 60px !important;
+                max-width: 300px !important;
+                margin-bottom: 5px;
+                
+                transition: max-height 0.3s ease, max-width 0.3s ease;
+            }
+        }}
+    </style>
 
 
 
@@ -633,15 +756,12 @@ button:focus:not(:focus-visible) {
 
 <!-- Start Atribute Navigation -->
 <div class="attr-nav extra-color">
-                    <div class="themedraft-button-wrapper td-button-el-widget" style="display: flex; align-items: center;">
-                        <a href="contact.html">
-                            <button>
-                                <span class="shadow"></span>
-                                <span class="edge"></span>
-                                <span class="front text"> 📞8277542111</span>
-                            </button>
-                    </div>
-                </div>
+    <div style="text-align: center;">
+        <a href="tel:+918277542111" class="dental-unique-button" id="dentalUniqueBtn">
+            📞 +91 8277542111
+        </a>
+    </div>
+</div>
                 <!-- End Atribute Navigation -->
 
                 <!-- Start Header Navigation -->
@@ -657,7 +777,7 @@ button:focus:not(:focus-visible) {
 
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="navbar-menu">
-                    <ul class="nav navbar-nav navbar-right" data-in="fadeInDown" data-out="fadeOutUp">
+                    <ul class="nav navbar-nav navbar-right" data-in="fadeInDown" data-out="fadeOutUp" style="margin-top: 11px; margin-right: 50px;">
                         <li>
                             <a href="index.html">Home</a>
                         </li>
@@ -1043,7 +1163,7 @@ button:focus:not(:focus-visible) {
                 <div class="col-lg-4 col-md-6 item">
                     <div class="f-item about">
                         <img src="assets/img/logo.png" alt="Delta Dental Care Logo" class="img-fluid mb-4" width="150">                        <p>
-                            At Delta Dental Care, we believe every smile tells a story and we’re here to make yours shine brighter. With a strong foundation built on trust, compassion, and clinical excellence, we’ve grown into one of Bengaluru’s most reliable dental care providers. Our multi-specialty clinics are designed to offer a warm, stress-free experience while delivering advanced dental solutions that are both effective and patient-centric.
+                            At Delta Dental Care, we believe every smile tells a story and we're here to make yours shine brighter. With a strong foundation built on trust, compassion, and clinical excellence, we've grown into one of Bengaluru's most reliable dental care providers. Our multi-specialty clinics are designed to offer a warm, stress-free experience while delivering advanced dental solutions that are both effective and patient-centric.
 
                         </p>
                         <div class="address">
@@ -1104,8 +1224,12 @@ button:focus:not(:focus-visible) {
                                 </div>
                                 <div class="info">
                                     <h5>Phone:</h5>
-                                    <span>+91 9731568006</span>
+                                    <a href="tel:+918277606111" class="contact-link">+91 8277606111</a>
+                                    <a href="tel:+918277542111" class="contact-link">+91 8277542111</a>
+                                    <a href="tel:+918277842111" class="contact-link">+91 8277842111</a>
                                 </div>
+                            </li>
+                            
                             </li>
                         </ul>
                     </div>

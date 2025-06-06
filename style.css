@@ -3554,7 +3554,6 @@ body,
   padding: 35px;
   background: #ffffff;
   text-align: center;
-  border: 2px solid rgba(255, 0, 0, 1);
 }
 
 .consultation-area .process .item i {
@@ -3936,6 +3935,7 @@ body,
 .doctors-area .nav-tabs li a.active {
   background: rgba(255, 0, 0, 1);
   color: #ffffff;
+
 }
 
 .doctors-area .nav-tabs li a i {

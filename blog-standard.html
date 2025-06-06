@@ -453,6 +453,113 @@ button:focus:not(:focus-visible) {
                 transition: max-height 0.3s ease, max-width 0.3s ease;
             }
         }}
+
+.branches-section {
+    padding: 50px 0;
+    background-color: #f8f9fa; /* Light background for contrast */
+}
+
+.container {
+    max-width: 1200px; /* Limit the width of the container */
+    margin: 0 auto; /* Center the container */
+}
+
+.row {
+    display: flex;
+    justify-content: center; /* Center the cards */
+    flex-wrap: wrap; /* Allow wrapping */
+}
+
+.branch-card {
+    background-color: #ffffff; /* White background for cards */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+    overflow: hidden; /* Ensure content stays inside the card */
+    text-align: center; /* Center-align content */
+    padding: 20px; /* Add padding inside the card */
+    min-height: 450px; /* Set a minimum height for uniformity */
+    display: flex; /* Enable flexbox for alignment */
+    flex-direction: column; /* Stack content vertically */
+    justify-content: space-between; /* Distribute content evenly */
+}
+
+.branch-card img {
+    width: 100%; /* Make the image responsive */
+    height: 200px; /* Fixed height for uniformity */
+    object-fit: cover; /* Ensure the image covers the area */
+    border-radius: 10px 10px 0 0; /* Match card border radius */
+    transition: transform 0.3s ease; /* Smooth hover effect for the image */
+}
+
+.branch-card h3 {
+    font-size: 1.5rem;
+    color: #dc3545; /* Theme color */
+    margin: 15px 0 10px; /* Add spacing */
+    font-weight: bold;
+}
+
+.branch-card p {
+    font-size: 1rem;
+    color: #666; /* Subtle text color */
+    margin-bottom: 10px;
+}
+
+.branch-card:hover {
+    transform: translateY(-10px); /* Lift the card on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+}
+
+.branch-card:hover img {
+    transform: scale(1.05); /* Slight zoom effect on the image */
+}
+
+.branch-card:hover h3 {
+    color: #b71c1c; /* Darker shade on hover */
+}
+
+.branch-card:hover p {
+    color: #333; /* Darker text on hover */
+}
+
+.branch-card p:last-child {
+    font-weight: bold;
+    color: #007bff; /* Highlight phone number */
+}
+
+@media (max-width: 768px) {
+    .branch-card {
+        margin-bottom: 20px; /* Add spacing between cards on mobile */
+    }
+}
+
+blockquote {
+    font-style: italic; /* Italicize the text */
+    border-left: 4px solid #007BFF; /* Add a left border */
+    padding: 10px 20px; /* Add padding */
+    margin: 20px 0; /* Add margin */
+    background-color: #f9f9f9; /* Light background color */
+    color: #333; /* Text color */
+    quotes: "“" "”" "‘" "’"; /* Custom quotes */
+}
+
+blockquote::before {
+    content: open-quote; /* Add opening quote */
+}
+
+blockquote::after {
+    content: close-quote; /* Add closing quote */
+}
+
+.branch-image {
+    width: 120%; /* Adjust as needed */
+    height: auto; /* Maintain aspect ratio */
+}
+
+body, div, h1, h2, h3, p, ul, li, a, img, button {
+    text-align: center;
+    margin: 0 auto; /* Center block-level elements */
+}
 </style>
 
 
@@ -631,115 +738,47 @@ button:focus:not(:focus-visible) {
     </div>
     <!-- End Breadcrumb -->
 
-    <!-- Start Blog
-    ============================================= -->
-    <div class="blog-area full-blog blog-standard full-blog default-padding">
+    <!-- Start Branches Section -->
+    <div class="branches-section">
         <div class="container">
-            <div class="blog-items">
-                <div class="row">
-                    <div class="blog-content col-lg-10 offset-lg-1 col-md-12">
-                        <div class="blog-item-box">
-                            <!-- Heading and Introduction -->
-                            <div class="single-item">
-                                <div class="item wow fadeInUp">
-                                    <div class="info">
-                                        <h2 class="text-center mb-4">Accessible. Trusted. Closer to You.</h2>
-                                        <p class="text-center mb-5">
-                                            Delta Dental Care proudly serves patients across Bangalore with three state-of-the-art branches designed to deliver seamless, high-quality dental care in a safe and comforting environment. Each branch is equipped with advanced technology and led by experienced professionals to ensure your dental journey is smooth and stress-free wherever you are.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Single Item -->
-                            <div class="single-item">
-                                <div class="item wow fadeInUp">
-                                    <div class="thumb">
-                                        <a href="#"><img src="assets/img/Clinic photographs/branch1.jpg" alt="Thumb"></a>
-                                        <div class="post-date">
-                                            12 Jul
-                                        </div>
-                                    </div>
-                                    <div class="info">
-                                        <div class="tags">
-                                            <ul>
-                                                <li>
-                                                    <a href="#">Bangalore</a>
-                                                </li>
-                                              
-                                            </ul>
-                                        </div>
-                                        <h4>
-                                            <a href="#">RT Nagar Branch
-                                            </a>
-                                        </h4>
-                                   
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- End Single Item -->
-
-                            <!-- Single Item -->
-                            <div class="single-item">
-                                <div class="item wow fadeInUp">
-                                    <div class="thumb">
-                                        <a href="#"><img src="assets/img/Clinic photographs/branch2.jpg" alt="Thumb"></a>
-                                        <div class="post-date">
-                                            12 Jul
-                                        </div>
-                                    </div>
-                                    <div class="info">
-                                        <div class="tags">
-                                            <ul>
-                                                <li>
-                                                    <a href="#">Bangalore</a>
-                                                </li>
-                                             
-                                            </ul>
-                                        </div>
-                                        <h4>
-                                            <a href="#">Rajajinagar Branch
-                                            </a>
-                                        </h4>
-                                   
-                                    </div>
-                                </div>
-                            </div>
-
-
-
-                            <!-- Single Item -->
-                            <div class="single-item">
-                                <div class="item wow fadeInUp">
-                                    <div class="thumb">
-                                        <a href="#"><img src="assets/img/Clinic photographs/branch3.jpg" alt="Thumb"></a>
-                                        <div class="post-date">
-                                            12 Jul
-                                        </div>
-                                    </div>
-                                    <div class="info">
-                                        <div class="tags">
-                                            <ul>
-                                                <li><a href="#">Bangalore</a></li>
-                                            </ul>
-                                        </div>
-                                        <h4>
-                                            <a href="#">Ulsoor Branch
-                                            </a>
-                                        </h4>
-                                      
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- End Single Item -->
-                        </div>
-                        
-                        
+            <h2 class="text-center mb-4">Bengaluru's Trusted Dental Network</h2>
+            <p class="text-center mb-5">
+                <blockquote>
+                    Dental Care proudly serves patients across Bangalore with three state-of-the-art branches designed to deliver seamless, high-quality dental care in a safe and comforting environment. Each branch is equipped with advanced technology and led by experienced professionals to ensure your dental journey is smooth and stress-free wherever you are.
+                </blockquote>
+            </p>
+            <div class="row justify-content-center">
+                <!-- RT Nagar Branch -->
+                <div class="col-md-4 col-sm-6 mb-4">
+                    <div class="branch-card">
+                        <img src="assets/img/Clinic photographs/branch1.jpg" alt="RT Nagar Branch" style="width: 120%; height: auto;">
+                        <h3>RT Nagar Branch</h3>
+                        <p>#36, CBI Road, HMT Layout, TPV Layout, RT Nagar, Bengaluru, Karnataka 560 032</p>
+                        <p>📞 +91 82775 4211</p>
+                    </div>
+                </div>
+                <!-- Ulsoor Branch -->
+                <div class="col-md-4 col-sm-6 mb-4">
+                    <div class="branch-card">
+                        <img src="assets/img/Clinic photographs/branch2.jpg" alt="Ulsoor Branch" class="branch-image">
+                        <h3>Ulsoor Branch</h3>
+                        <p>#15/5, Cambridge Road, Opposite Frank Anthony Public School, Ulsoor, Bangalore, Karnataka-560008</p>
+                        <p>📞 +91 82776 0611</p>
+                    </div>
+                </div>
+                <!-- Rajajinagar Branch -->
+                <div class="col-md-4 col-sm-6 mb-4">
+                    <div class="branch-card">
+                        <img src="assets/img/Clinic photographs/branch3.jpg" alt="Rajajinagar Branch" class="branch-image">
+                        <h3>Rajajinagar Branch</h3>
+                        <p>#18B, 19th main road, Nagapura, 1st Block, Rajajinagar, Bengaluru, Karnataka-560010</p>
+                        <p>📞 +91 82778 4211</p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- End Blog -->
+    <!-- End Branches Section -->
 
    
     <!-- Start Footer 

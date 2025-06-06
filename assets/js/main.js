@@ -271,11 +271,12 @@
             loop: true,
             margin: 30,
             nav: false,
-            dots: false,
+            dots: true,
             autoplay: true,
-            autoplayTimeout: 3000,
-            autoplaySpeed: 800,
-            autoplayHoverPause: true,
+            autoplayTimeout: 4000,
+            autoplaySpeed: 1000,
+            autoplayHoverPause: false,
+            smartSpeed: 1000,
             navText: [
                 "<i class='fa fa-angle-left'></i>",
                 "<i class='fa fa-angle-right'></i>"
@@ -312,7 +313,7 @@
             autoplayTimeout: 2000,
             autoplaySpeed: 800,
             smartSpeed: 800,
-            autoplayHoverPause: true,
+            autoplayHoverPause: false,
             responsive: {
                 0: {
                     items: 1

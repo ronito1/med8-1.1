@@ -1211,6 +1211,79 @@
                 text-align: center;
             }
         }
+
+        @media (max-width: 768px) {
+    .branches-section h2 {
+        margin-top: 20px; /* Adjust the value as needed */
+    }
+}
+
+.branches-section {
+    padding: 50px 0;
+    background-color: #f8f9fa; /* Light background for contrast */
+}
+
+.branch-card {
+    background-color: #ffffff; /* White background for cards */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+    overflow: hidden; /* Ensure content stays inside the card */
+    text-align: center; /* Center-align content */
+    padding: 20px; /* Add padding inside the card */
+    min-height: 450px; /* Set a minimum height for uniformity */
+    display: flex; /* Enable flexbox for alignment */
+    flex-direction: column; /* Stack content vertically */
+    justify-content: space-between; /* Distribute content evenly */
+}
+.branch-card img {
+    width: 100%; /* Make the image responsive */
+    height: 200px; /* Fixed height for uniformity */
+    object-fit: cover; /* Ensure the image covers the area */
+    border-radius: 10px 10px 0 0; /* Match card border radius */
+    transition: transform 0.3s ease; /* Smooth hover effect for the image */
+}
+
+.branch-card h3 {
+    font-size: 1.5rem;
+    color: #dc3545; /* Theme color */
+    margin: 15px 0 10px; /* Add spacing */
+    font-weight: bold;
+}
+
+.branch-card p {
+    font-size: 1rem;
+    color: #666; /* Subtle text color */
+    margin-bottom: 10px;
+}
+
+.branch-card:hover {
+    transform: translateY(-10px); /* Lift the card on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+}
+
+.branch-card:hover img {
+    transform: scale(1.05); /* Slight zoom effect on the image */
+}
+
+.branch-card:hover h3 {
+    color: #b71c1c; /* Darker shade on hover */
+}
+
+.branch-card:hover p {
+    color: #333; /* Darker text on hover */
+}
+
+.branch-card p:last-child {
+    font-weight: bold;
+    color: #007bff; /* Highlight phone number */
+}
+
+@media (max-width: 768px) {
+    .branch-card {
+        margin-bottom: 20px; /* Add spacing between cards on mobile */
+    }
+}
     </style>
 
 
@@ -1580,6 +1653,53 @@
                 </div>
               
     <!-- End Consultation -->
+
+<!-- Start Branches Section -->
+<div class="branches-section">
+    <div class="container">
+        <h2 class="text-center mb-4">Bengaluru's Trusted Dental Network</h2>
+        <p class="text-center mb-5">
+            <blockquote>
+                Dental Care proudly serves patients across Bangalore with three state-of-the-art branches designed to deliver seamless, high-quality dental care in a safe and comforting environment. Each branch is equipped with advanced technology and led by experienced professionals to ensure your dental journey is smooth and stress-free wherever you are.
+            </blockquote>
+        </p>
+        <div class="row justify-content-center">
+            <!-- RT Nagar Branch -->
+            <div class="col-md-4 col-sm-6 mb-4">
+                <div class="branch-card">
+                    <img src="assets/img/Clinic photographs/branch1.jpg" alt="RT Nagar Branch" style="width: 120%; height: auto;">
+                    <h3>RT Nagar Branch</h3>
+                    <p>#36, CBI Road, HMT Layout, TPV Layout, RT Nagar, Bengaluru, Karnataka 560 032</p>
+                    <p>📞 +91 82775 4211</p>
+                </div>
+            </div>
+            <!-- Ulsoor Branch -->
+            <div class="col-md-4 col-sm-6 mb-4">
+                <div class="branch-card">
+                    <img src="assets/img/Clinic photographs/branch2.jpg" alt="Ulsoor Branch" class="branch-image">
+                    <h3>Ulsoor Branch</h3>
+                    <p>#15/5, Cambridge Road, Opposite Frank Anthony Public School, Ulsoor, Bangalore, Karnataka-560008</p>
+                    <p>📞 +91 82776 0611</p>
+                </div>
+            </div>
+            <!-- Rajajinagar Branch -->
+            <div class="col-md-4 col-sm-6 mb-4">
+                <div class="branch-card">
+                    <img src="assets/img/Clinic photographs/branch3.jpg" alt="Rajajinagar Branch" class="branch-image">
+                    <h3>Rajajinagar Branch</h3>
+                    <p>#18B, 19th main road, Nagapura, 1st Block, Rajajinagar, Bengaluru, Karnataka-560010</p>
+                    <p>📞 +91 82778 4211</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Branches Section -->
+
+
+
+
+    
     <!-- Start Services 
     ============================================= -->
    <!-- Start Services 
@@ -1801,8 +1921,6 @@
     <!-- End Services -->
     </div>
     </div>
-
-        <!-- End Services -->
 
 
 
@@ -2158,13 +2276,13 @@
             <div class="gallery-items-area text-center">
                 <div class="row">
                     <div class="col-md-12 gallery-content">
-                        <div class="mix-item-menu text-center">
+                        <!-- <div class="mix-item-menu text-center">
                             <button class="active" data-filter="*">All</button>
                             <button data-filter=".development">Equipments</button>
                             <button data-filter=".consulting">Clinic 1</button>
                             <button data-filter=".finance">Clinic 2</button>
                             <button data-filter=".branding">Success Stories</button>
-                        </div>
+                        </div> -->
                         <!-- End Mixitup Nav-->
 
                         <div class="magnific-mix-gallery masonary">
@@ -2185,12 +2303,12 @@
                                 <!-- Single Item -->
                                 <div class="pf-item consulting branding">
                                     <div class="effect-box">
-                                        <a href="assets/img/Clinic photographs/full mouth implant postop2.png" class="item popup-link">
-                                            <img src="assets/img/Clinic photographs/full mouth implant postop2.png" alt="thumb">
+                                        <a href="assets/img/services/inner/DENTAL-IMPLATS.png" class="item popup-link">
+                                            <img src="assets/img/services/inner/DENTAL-IMPLATS.png" alt="thumb">
                                         </a>
                                         <div class="info">
                                           <h4><a href="#">Click Me</a></h4>
-                                          <a href="assets/img/Clinic photographs/full mouth implant postop2.png" class="item popup-link"><i class="fa fa-plus"></i></a>
+                                          <a href="assets/img/services/inner/DENTAL-IMPLATS.png" class="item popup-link"><i class="fa fa-plus"></i></a>
                                         </div>
                                     </div>
                                 </div>
@@ -2208,7 +2326,20 @@
                                     </div>
                                 </div>
                                 <!-- End Single Item -->
-                                <!-- Single Item -->
+                                   <!-- Single Item -->
+                                <div class="pf-item consulting branding">
+                                    <div class="effect-box">
+                                      <a href="assets/img/services/inner/aesthetic.png" class="item popup-link">
+                                            <img src="assets/img/services/inner/aesthetic.png" alt="thumb">
+                                        </a>
+                                          <div class="info">
+                                          <h4><a href="#">Click Me</a></h4>
+                                          <a href="assets/img/services/inner/aesthetic.png" class="item popup-link"><i class="fa fa-plus"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- End Single Item -->
+                                   <!-- Single Item -->
                                 <div class="pf-item finance">
                                     <div class="effect-box">
                                         <a href="assets/img/Clinic photographs/corridor.JPG" class="item popup-link">
@@ -2220,7 +2351,6 @@
                                         </div>
                                     </div>
                                 </div>
-                                <!-- End Single Item -->
                                 <!-- Single Item -->
                                 <div class="pf-item capital development">
                                     <div class="effect-box">
@@ -2234,18 +2364,83 @@
                                     </div>
                                 </div>
                                 <!-- End Single Item -->
-                                <!-- Single Item -->
-                                <div class="pf-item consulting branding">
+                                  <!-- Single Item -->
+                                  <div class="pf-item development capital">
                                     <div class="effect-box">
-                                      <a href="assets/img/Clinic photographs/veneers postop.png" class="item popup-link">
-                                            <img src="assets/img/Clinic photographs/veneers postop.png" alt="thumb">
+                                        <a href="assets/img/services/inner/DI---01.png" class="item popup-link">
+                                            <img src="assets/img/services/inner/DI---01.png" alt="thumb">
                                         </a>
-                                          <div class="info">
+                                        <div class="info">
                                           <h4><a href="#">Click Me</a></h4>
-                                          <a href="assets/img/Clinic photographs/veneers postop.png" class="item popup-link"><i class="fa fa-plus"></i></a>
+                                          <a href="assets/img/services/inner/DI---01.png" class="item popup-link"><i class="fa fa-plus"></i></a>
                                         </div>
                                     </div>
                                 </div>
+                                <!-- End Single Item -->
+                                <!-- Single Item -->
+                                <div class="pf-item consulting branding">
+                                    <div class="effect-box">
+                                        <a href="assets/img/bg teeth3.jpg" class="item popup-link">
+                                            <img src="assets/img/bg teeth3.jpg" alt="thumb">
+                                        </a>
+                                        <div class="info">
+                                          <h4><a href="#">Click Me</a></h4>
+                                          <a href="assets/img/bg teeth3.jpg" class="item popup-link"><i class="fa fa-plus"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- End Single Item -->
+                                <!-- Single Item -->
+                                <div class="pf-item consulting finance">
+                                    <div class="effect-box">
+                                        <a href="assets/img/bg teeth.jpg" class="item popup-link">
+                                            <img src="assets/img/bg teeth.jpg" alt="thumb">
+                                        </a>
+                                        <div class="info">
+                                          <h4><a href="#">Click Me</a></h4>
+                                          <a href="assets/img/bg teeth.jpg" class="item popup-link"><i class="fa fa-plus"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- End Single Item -->
+                                   <!-- Single Item -->
+                                <div class="pf-item consulting branding">
+                                    <div class="effect-box">
+                                      <a href="assets/img/in3.JPG" class="item popup-link">
+                                            <img src="assets/img/in3.JPG" alt="thumb">
+                                        </a>
+                                          <div class="info">
+                                          <h4><a href="#">Click Me</a></h4>
+                                          <a href="assets/img/in3.JPG" class="item popup-link"><i class="fa fa-plus"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- End Single Item -->
+                                   <!-- Single Item -->
+                                <div class="pf-item finance">
+                                    <div class="effect-box">
+                                        <a href="assets/img/recp4.JPG" class="item popup-link">
+                                            <img src="assets/img/recp4.JPG" alt="thumb">
+                                        </a>
+                                        <div class="info">
+                                          <h4><a href="#">Click Me</a></h4>
+                                          <a href="assets/img/recp4.JPG" class="item popup-link"><i class="fa fa-plus"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Single Item -->
+                                <div class="pf-item capital development">
+                                    <div class="effect-box">
+                                        <a href="assets/img/hd5.jpg" class="item popup-link">
+                                            <img src="assets/img/hd5.jpg" alt="thumb">
+                                        </a>
+                                        <div class="info">
+                                          <h4><a href="#">Click Me</a></h4>
+                                          <a href="assets/img/hd5.jpg" class="item popup-link"><i class="fa fa-plus"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                              
                                 <!-- Single Item -->
                             </div>
                         </div>

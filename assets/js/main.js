@@ -271,7 +271,7 @@
             loop: true,
             margin: 30,
             nav: false,
-            dots: true,
+            dots: false,
             autoplay: true,
             autoplayTimeout: 4000,
             autoplaySpeed: 1000,

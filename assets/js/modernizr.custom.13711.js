@@ -7,9 +7,10 @@
     }
 
     @media (max-width: 768px) { /* Adjust the max-width as needed for your mobile breakpoint */
-        .sticky-footer {
-            display: block; /* Show on mobile devices */
-        }
+                .sticky-footer {
+                    display: block; /* Show on mobile devices */
+                    margin-top: 3px; /* Reduce the top margin for mobile devices */
+                }
     }
 
     .mobile-only {
@@ -148,9 +149,10 @@ button:focus:not(:focus-visible) {
     }
 
     @media (max-width: 768px) { /* Adjust the max-width as needed for your mobile breakpoint */
-        .sticky-footer {
-            display: block; /* Show on mobile devices */
-        }
+                .sticky-footer {
+                    display: block; /* Show on mobile devices */
+                    margin-top: 3px; /* Reduce the top margin for mobile devices */
+                }
     }
 
     .mobile-only {
@@ -168,9 +170,10 @@ button:focus:not(:focus-visible) {
     }
 
     @media (max-width: 768px) { /* Adjust the max-width as needed for your mobile breakpoint */
-        .sticky-footer {
-            display: block; /* Show on mobile devices */
-        }
+                .sticky-footer {
+                    display: block; /* Show on mobile devices */
+                    margin-top: 3px; /* Reduce the top margin for mobile devices */
+                }
     }
 
     .mobile-only {
@@ -234,9 +237,10 @@ button:focus:not(:focus-visible) {
     }
 
     @media (max-width: 768px) { /* Adjust the max-width as needed for your mobile breakpoint */
-        .sticky-footer {
-            display: block; /* Show on mobile devices */
-        }
+                .sticky-footer {
+                    display: block; /* Show on mobile devices */
+                    margin-top: 3px; /* Reduce the top margin for mobile devices */
+                }
     }
 
     .mobile-only {
@@ -375,9 +379,10 @@ button:focus:not(:focus-visible) {
     }
 
     @media (max-width: 768px) { /* Adjust the max-width as needed for your mobile breakpoint */
-        .sticky-footer {
-            display: block; /* Show on mobile devices */
-        }
+                .sticky-footer {
+                    display: block; /* Show on mobile devices */
+                    margin-top: 3px; /* Reduce the top margin for mobile devices */
+                }
     }
 
     .mobile-only {
@@ -395,9 +400,10 @@ button:focus:not(:focus-visible) {
     }
 
     @media (max-width: 768px) { /* Adjust the max-width as needed for your mobile breakpoint */
-        .sticky-footer {
-            display: block; /* Show on mobile devices */
-        }
+                .sticky-footer {
+                    display: block; /* Show on mobile devices */
+                    margin-top: 3px; /* Reduce the top margin for mobile devices */
+                }
     }
 
     .mobile-only {
